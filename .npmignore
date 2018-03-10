@@ -25,3 +25,4 @@ yarn.lock
 package-lock.json
 shrinkwrap*
 renovate*
+/lib/arguments/data.yaml

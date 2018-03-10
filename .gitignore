@@ -16,6 +16,7 @@ temp.*
 *.temp
 *.tern-project
 *.tern-project.json
+/lib/arguments/data.json
 
 # Logs
 logs

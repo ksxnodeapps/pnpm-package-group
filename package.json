@@ -49,6 +49,7 @@
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash 'sh/clean.sh'",
     "fix": "bash 'sh/fix.sh'",
+    "prepublishOnly": "bash 'sh/test.sh'",
     "test": "bash 'sh/test.sh'"
   }
 }
