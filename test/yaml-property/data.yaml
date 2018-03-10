@@ -1,0 +1,10 @@
+object:
+  abc: 123
+  def: 456
+
+array:
+  - abc
+  - def
+
+string: >-
+  Hello, World!!
