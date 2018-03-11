@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getYamlProperty should throws an error when path is not a string but a function 1`] = `"Path is not a string"`;
+
+exports[`getYamlProperty should throws an error when path is not a string but a null 1`] = `"Path is not a string"`;
+
+exports[`getYamlProperty should throws an error when path is not a string but a number 1`] = `"Path is not a string"`;
+
+exports[`getYamlProperty should throws an error when path is not a string but an object 1`] = `"Path is not a string"`;
+
+exports[`getYamlProperty should throws an error when path is not a string but an undefined 1`] = `"Path is not a string"`;

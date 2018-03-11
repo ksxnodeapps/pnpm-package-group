@@ -76,4 +76,23 @@ describe('getYamlProperty', () => {
       })
     })
   })
+
+  describe('should throws an error', () => {
+    const testError = (xpath, error) => () =>
+      expect(() => getYamlProperty(xpath)).toThrow(error)
+
+    it('when provided entity does not exist', testError('Does not exist', /ENOENT/))
+    it('when provided entity is a directory', testError(__dirname, /directory/i))
+
+    describe('when path is not a string', () => {
+      const testErrSnap = xpath => () =>
+        expect(() => getYamlProperty(xpath)).toThrowErrorMatchingSnapshot()
+
+      it('but a null', testErrSnap(null))
+      it('but an undefined', testErrSnap(undefined))
+      it('but a number', testErrSnap(12.34))
+      it('but an object', testErrSnap({abc: 123}))
+      it('but a function', testErrSnap(() => 123))
+    })
+  })
 })
