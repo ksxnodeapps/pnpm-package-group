@@ -1,8 +1,19 @@
 usage: |-
   $ $0 [options] [arguments]
 
-example: |-
-  $ $0 --local=local-packages packages.yaml
+example:
+  - cmd: $0 packages.yaml
+    desc: Basic use
+  - cmd: $0 --local=local-packages packages.yaml
+    desc: Specify target directory
+  - cmd: $0 packages.yaml/foo/bar
+    desc: Install only group foo.bar in packages.yaml
+  - cmd: $0 /abc/def/packages.yaml/foo/bar
+    desc: Combine filesystem path and json path
+  - cmd: $0 file1.yaml/foo/bar1 file1.yaml/foo/bar2 file2.yaml/foo/bar1 file2.yaml/foo/bar2
+    desc: Filter files and groups
+  - cmd: $0 *.yaml/foo/{bar1,bar2}
+    desc: Using blob pattern (UNIX Shell only)
 
 options:
   help:
