@@ -1,1 +1,5 @@
 testRegex: (test|spec|check)\.jsx?$
+coveragePathIgnorePatterns:
+  - /node_modules/
+  - <rootDir>/check/
+  - <rootDir>/test/
