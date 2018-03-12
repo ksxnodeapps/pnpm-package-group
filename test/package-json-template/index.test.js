@@ -3,13 +3,13 @@ const data = require('../../lib/package-json-template/data')
 const main = require('../../lib/package-json-template')
 
 describe('data', () => {
-  it('stays unchanged', () => {
+  it('should stay unchanged', () => {
     expect(data).toMatchSnapshot()
   })
 })
 
 describe('main module', () => {
-  it('stays unchanged', () => {
+  it('should stay unchanged', () => {
     expect(main).toMatchSnapshot()
   })
 

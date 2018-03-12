@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`data stays unchanged 1`] = `
+exports[`data should stay unchanged 1`] = `
 Object {
   "description": "Just a transational directory",
   "name": "TransationalDirectory",
@@ -9,7 +9,7 @@ Object {
 }
 `;
 
-exports[`main module stays unchanged 1`] = `
+exports[`main module should stay unchanged 1`] = `
 Object {
   "json": "{
   \\"name\\": \\"TransationalDirectory\\",
