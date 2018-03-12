@@ -2,7 +2,7 @@
 const main = require('../../lib/exit-status-names')
 
 describe('main module', () => {
-  it('should stays unchanged', () => {
+  it('should stay unchanged', () => {
     expect(main).toMatchSnapshot()
   })
 })
