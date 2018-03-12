@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`main module stays the same 1`] = `
+Object {
+  "enums": Object {
+    "arguments": 2,
+    "empty-input": 5,
+    "filesystem": 6,
+    "other": 1,
+    "parsing-error": 3,
+    "schema": 7,
+    "stdin": 4,
+    "success": 0,
+  },
+  "exit": [Function],
+  "get": [Function],
+  "names": Array [
+    "success",
+    "other",
+    "arguments",
+    "parsing-error",
+    "stdin",
+    "empty-input",
+    "filesystem",
+    "schema",
+  ],
+}
+`;
