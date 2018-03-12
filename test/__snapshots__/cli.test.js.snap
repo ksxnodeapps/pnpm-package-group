@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`program --help 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "$ index.js [options] [arguments]
+
+Options:
+  --version     Show version number                                    [boolean]
+  --local, -l   Directory contains local packages         [string] [default: \\"\\"]
+  --pnpm        Program to call                       [string] [default: \\"pnpm\\"]
+  --shell       Whether shell is used                  [boolean] [default: true]
+  --quiet-pnpm  Don't print pnpm output               [boolean] [default: false]
+  --help        Show help                                              [boolean]
+
+Examples:
+  index.js packages.yaml                    Basic use
+  index.js --local=local-packages           Specify target directory
+  packages.yaml
+  index.js packages.yaml/foo/bar            Install only group foo.bar in
+                                            packages.yaml
+  index.js /abc/def/packages.yaml/foo/bar   Combine filesystem path and json
+                                            path
+  index.js file1.yaml/foo/bar1              Filter files and groups
+  file1.yaml/foo/bar2 file2.yaml/foo/bar1
+  file2.yaml/foo/bar2
+  index.js *.yaml/foo/{bar1,bar2}           Using blob pattern (UNIX Shell only)
+",
+}
+`;
+
+exports[`program being invoked without arguments 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ argv: 
+   { _: [],
+     version: false,
+     shell: true,
+     'quiet-pnpm': false,
+     quietPnpm: false,
+     help: false,
+     local: '',
+     l: '',
+     pnpm: 'pnpm',
+     '$0': 'index.js' } }",
+}
+`;
