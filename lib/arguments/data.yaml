@@ -44,12 +44,12 @@ options:
     alias: L
     describe: Syntax to install packages locally
     type: string
-    default: '{cmd} install --save {list}'
+    default: 'install --save {list}'
 
   global-syntax:
     alias: G
     describe: Syntax to install packages globally
     type: string
-    default: '{cmd} install --global {list}'
+    default: 'install --global {list}'
 
 env: PNPM_PKG_GROUP

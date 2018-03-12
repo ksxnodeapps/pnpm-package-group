@@ -33,7 +33,7 @@ Object {
     "options": Object {
       "global-syntax": Object {
         "alias": "G",
-        "default": "{cmd} install --global {list}",
+        "default": "install --global {list}",
         "describe": "Syntax to install packages globally",
         "type": "string",
       },
@@ -48,7 +48,7 @@ Object {
       },
       "local-syntax": Object {
         "alias": "L",
-        "default": "{cmd} install --save {list}",
+        "default": "install --save {list}",
         "describe": "Syntax to install packages locally",
         "type": "string",
       },
@@ -101,7 +101,7 @@ Object {
     "options": Object {
       "global-syntax": Object {
         "alias": "G",
-        "default": "{cmd} install --global {list}",
+        "default": "install --global {list}",
         "describe": "Syntax to install packages globally",
         "type": "string",
       },
@@ -116,7 +116,7 @@ Object {
       },
       "local-syntax": Object {
         "alias": "L",
-        "default": "{cmd} install --save {list}",
+        "default": "install --save {list}",
         "describe": "Syntax to install packages locally",
         "type": "string",
       },

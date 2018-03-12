@@ -13,9 +13,9 @@ Options:
   --shell              Whether shell is used           [boolean] [default: true]
   --quiet-pnpm         Don't print pnpm output        [boolean] [default: false]
   --local-syntax, -L   Syntax to install packages locally
-                               [string] [default: \\"{cmd} install --save {list}\\"]
+                                     [string] [default: \\"install --save {list}\\"]
   --global-syntax, -G  Syntax to install packages globally
-                             [string] [default: \\"{cmd} install --global {list}\\"]
+                                   [string] [default: \\"install --global {list}\\"]
   --help               Show help                                       [boolean]
 
 Examples:
@@ -48,12 +48,12 @@ Object {
      local: '',
      l: '',
      pnpm: 'pnpm',
-     'local-syntax': '{cmd} install --save {list}',
-     L: '{cmd} install --save {list}',
-     localSyntax: '{cmd} install --save {list}',
-     'global-syntax': '{cmd} install --global {list}',
-     G: '{cmd} install --global {list}',
-     globalSyntax: '{cmd} install --global {list}',
+     'local-syntax': 'install --save {list}',
+     L: 'install --save {list}',
+     localSyntax: 'install --save {list}',
+     'global-syntax': 'install --global {list}',
+     G: 'install --global {list}',
+     globalSyntax: 'install --global {list}',
      '$0': 'index.js' } }",
 }
 `;
