@@ -7,12 +7,16 @@ Object {
   "stdout": "$ index.js [options] [arguments]
 
 Options:
-  --version     Show version number                                    [boolean]
-  --local, -l   Directory contains local packages         [string] [default: \\"\\"]
-  --pnpm        Program to call                       [string] [default: \\"pnpm\\"]
-  --shell       Whether shell is used                  [boolean] [default: true]
-  --quiet-pnpm  Don't print pnpm output               [boolean] [default: false]
-  --help        Show help                                              [boolean]
+  --version            Show version number                             [boolean]
+  --local, -l          Directory contains local packages  [string] [default: \\"\\"]
+  --pnpm               Program to call                [string] [default: \\"pnpm\\"]
+  --shell              Whether shell is used           [boolean] [default: true]
+  --quiet-pnpm         Don't print pnpm output        [boolean] [default: false]
+  --local-syntax, -L   Syntax to install packages locally
+                               [string] [default: \\"{cmd} install --save {list}\\"]
+  --global-syntax, -G  Syntax to install packages globally
+                             [string] [default: \\"{cmd} install --global {list}\\"]
+  --help               Show help                                       [boolean]
 
 Examples:
   index.js packages.yaml                    Basic use
@@ -44,6 +48,12 @@ Object {
      local: '',
      l: '',
      pnpm: 'pnpm',
+     'local-syntax': '{cmd} install --save {list}',
+     L: '{cmd} install --save {list}',
+     localSyntax: '{cmd} install --save {list}',
+     'global-syntax': '{cmd} install --global {list}',
+     G: '{cmd} install --global {list}',
+     globalSyntax: '{cmd} install --global {list}',
      '$0': 'index.js' } }",
 }
 `;
