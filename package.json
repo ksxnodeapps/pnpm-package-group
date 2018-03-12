@@ -35,6 +35,7 @@
     "@pnpm/types": "^1.7.0",
     "@types/get-stdin": "^5.0.1",
     "@types/js-yaml": "^3.10.1",
+    "@types/string-template": "^1.0.2",
     "jest-cli": "^22.1.4",
     "standard": "^11.0.0",
     "x-iterable": "^6.0.1"
