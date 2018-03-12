@@ -20,6 +20,12 @@
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/@pnpm/types/-/types-1.7.0.tgz#9d66a8bed3fabcd80f288b3e7884b7418b05b5a9"
 
+"@types/execa@^0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@types/execa/-/execa-0.8.1.tgz#0a9398c7661015c7d6c8e09d1f0a4018d5002f6e"
+  dependencies:
+    "@types/node" "*"
+
 "@types/get-stdin@^5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@types/get-stdin/-/get-stdin-5.0.1.tgz#46afbcaf09e94fe025afa07ae994ac3168adbdf3"
@@ -1095,6 +1101,18 @@ execa@^0.7.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
+execa@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-0.9.0.tgz#adb7ce62cf985071f60580deb4a88b9e34712d01"
+  dependencies:
+    cross-spawn "^5.0.1"
+    get-stream "^3.0.0"
+    is-stream "^1.1.0"
+    npm-run-path "^2.0.0"
+    p-finally "^1.0.0"
+    signal-exit "^3.0.0"
+    strip-eof "^1.0.0"
+
 exit@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/exit/-/exit-0.1.2.tgz#0632638f8d877cc82107d30a0fff1a17cba1cd0c"
@@ -1329,7 +1347,7 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-"fs-force-action-as-string@github:ksxnodemodules/fs-force-action-as-string":
+fs-force-action-as-string@ksxnodemodules/fs-force-action-as-string:
   version "0.0.0"
   resolved "https://codeload.github.com/ksxnodemodules/fs-force-action-as-string/tar.gz/2913726b38973ae2038a5b777a8ac2938ae2f765"
 
@@ -1363,7 +1381,7 @@ fs-force-mkdir@^1.4.0:
     fs-one-promise-queue "^1.0.0"
     try-promise "^1.0.0"
 
-"fs-force-utils@github:ksxnodemodules/fs-force-utils#v0.0.0":
+fs-force-utils@ksxnodemodules/fs-force-utils#v0.0.0:
   version "0.0.0"
   resolved "https://codeload.github.com/ksxnodemodules/fs-force-utils/tar.gz/045ba6b68a3f00598173a3aaf8c3b8c14ff3b62f"
   dependencies:
@@ -3043,7 +3061,7 @@ progress@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.0.tgz#8a1be366bf8fc23db2bd23f10c6fe920b4389d1f"
 
-"promise-queue@github:ksxnodemodules/promise-queue#v1.0.1":
+promise-queue@ksxnodemodules/promise-queue#v1.0.1:
   version "1.0.1"
   resolved "https://codeload.github.com/ksxnodemodules/promise-queue/tar.gz/5773019c5b20c3ccf3a6e888a502af6aac56d88c"
   dependencies:
