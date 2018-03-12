@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`data stays unchanged 1`] = `
+Object {
+  "description": "Just a transational directory",
+  "name": "TransationalDirectory",
+  "private": true,
+  "version": "0.0.0",
+}
+`;
+
+exports[`main module stays unchanged 1`] = `
+Object {
+  "json": "{
+  \\"name\\": \\"TransationalDirectory\\",
+  \\"version\\": \\"0.0.0\\",
+  \\"description\\": \\"Just a transational directory\\",
+  \\"private\\": true
+}",
+  "object": Object {
+    "description": "Just a transational directory",
+    "name": "TransationalDirectory",
+    "private": true,
+    "version": "0.0.0",
+  },
+}
+`;
