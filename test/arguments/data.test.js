@@ -9,7 +9,7 @@ const yaml = require('js-yaml').safeLoad(getText('data.yaml'))
 const json = JSON.parse(getText('data.json'))
 
 describe('data.yaml and data.json', () => {
-  it('should stay unchanged', () => {
+  it('stays unchanged', () => {
     expect({yaml, json}).toMatchSnapshot()
   })
 

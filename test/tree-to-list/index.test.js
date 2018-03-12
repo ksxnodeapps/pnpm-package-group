@@ -18,7 +18,7 @@ describe('exported entity', () => {
       expect(convert(input)).toEqual(output)
     })
 
-    it('should stay unchanged', () => {
+    it('stays unchanged', () => {
       expect(convert(input)).toMatchSnapshot()
     })
   })

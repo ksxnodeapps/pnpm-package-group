@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`data.yaml and data.json should stay unchanged 1`] = `
+exports[`data.yaml and data.json stays unchanged 1`] = `
 Object {
   "json": Object {
     "env": "PNPM_PKG_GROUP",
