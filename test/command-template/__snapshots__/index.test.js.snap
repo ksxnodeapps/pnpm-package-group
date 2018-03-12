@@ -1,0 +1,3466 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`exported entity has .createContext 1`] = `
+Array [
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {list} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {argv} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {arguments} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {pkgs} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {packages} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {list} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {argv} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {arguments} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {pkgs} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {packages} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {list} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {argv} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {arguments} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {pkgs} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {packages} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {list} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {argv} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {arguments} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {pkgs} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {packages} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {list} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {argv} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {arguments} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {pkgs} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {packages} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "argv": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "packages": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "pkgs": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {list} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {argv} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {arguments} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {pkgs} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {packages} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {list} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {argv} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {arguments} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {pkgs} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {packages} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {list} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {argv} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {arguments} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {pkgs} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {packages} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {list} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {argv} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {arguments} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {pkgs} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {packages} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {list} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {argv} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {arguments} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {pkgs} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {packages} end",
+    },
+    "output": Object {
+      "arguments": Array [
+        123,
+        456,
+        789,
+      ],
+      "argv": Array [
+        123,
+        456,
+        789,
+      ],
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "packages": Array [
+        123,
+        456,
+        789,
+      ],
+      "pkgs": Array [
+        123,
+        456,
+        789,
+      ],
+    },
+  },
+]
+`;
+
+exports[`exported entity has .createString 1`] = `
+Array [
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {list} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {argv} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {arguments} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {pkgs} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {packages} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {list} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {argv} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {arguments} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {pkgs} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {packages} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {list} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {argv} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {arguments} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {pkgs} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {packages} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {list} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {argv} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {arguments} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {pkgs} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {packages} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {list} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {argv} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {arguments} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {pkgs} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {packages} end",
+    },
+    "output": "begin abc def ghi middle abc def ghi end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {list} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {argv} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {arguments} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {pkgs} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {packages} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {list} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {argv} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {arguments} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {pkgs} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {packages} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {list} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {argv} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {arguments} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {pkgs} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {packages} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {list} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {argv} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {arguments} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {pkgs} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {packages} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {list} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {argv} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {arguments} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {pkgs} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {packages} end",
+    },
+    "output": "begin 123 456 789 middle 123 456 789 end",
+  },
+]
+`;
+
+exports[`exported entity stays unchanged 1`] = `
+Array [
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {list} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {argv} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {arguments} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {pkgs} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {list} middle {packages} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {list} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {argv} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {arguments} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {pkgs} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {argv} middle {packages} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {list} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {argv} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {arguments} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {pkgs} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {arguments} middle {packages} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {list} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {argv} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {arguments} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {pkgs} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {pkgs} middle {packages} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {list} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {argv} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {arguments} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {pkgs} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        "abc",
+        "def",
+        "ghi",
+      ],
+      "tmpl": "begin {packages} middle {packages} end",
+    },
+    "output": Array [
+      "begin",
+      "abc",
+      "def",
+      "ghi",
+      "middle",
+      "abc",
+      "def",
+      "ghi",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {list} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {argv} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {arguments} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {pkgs} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {list} middle {packages} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {list} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {argv} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {arguments} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {pkgs} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {argv} middle {packages} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {list} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {argv} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {arguments} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {pkgs} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {arguments} middle {packages} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {list} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {argv} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {arguments} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {pkgs} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {pkgs} middle {packages} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {list} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {argv} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {arguments} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {pkgs} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+  Object {
+    "input": Object {
+      "list": Array [
+        123,
+        456,
+        789,
+      ],
+      "tmpl": "begin {packages} middle {packages} end",
+    },
+    "output": Array [
+      "begin",
+      "123",
+      "456",
+      "789",
+      "middle",
+      "123",
+      "456",
+      "789",
+      "end",
+    ],
+  },
+]
+`;
