@@ -1,0 +1,106 @@
+- description: Simple
+  input:
+    abc:
+      - lorem
+      - ipsum
+    def:
+      foo:
+        - dolor
+        - sit
+        - amet
+      bar:
+        - consectetur
+- description: Nested
+  input:
+    __flat: false
+    abc:
+      - lorem
+      - ipsum
+    def:
+      foo:
+        - dolor
+        - sit
+        - amet
+      bar:
+        - consectetur
+- description: Flat
+  input:
+    __flat: true
+    abc:
+      - lorem
+      - ipsum
+    def:
+      foo:
+        - dolor
+        - sit
+        - amet
+      bar:
+        - consectetur
+- description: Mix
+  input:
+    __flat: false
+    abc:
+      - lorem
+      - ipsum
+    def:
+      __flat: true
+      foo:
+        - dolor
+        - sit
+        - amet
+      bar:
+        - consectetur
+      baz:
+        inherit:
+          abc:
+            - loremz
+            - ipsumz
+          def:
+            foo:
+              - dolorz
+              - sitz
+              - ametz
+            bar:
+              - consecteturz
+        local:
+          __flat: false
+          abc:
+            - loremzz
+            - ipsumzz
+          def:
+            foo:
+              - dolorzz
+              - sitzz
+              - ametzz
+            bar:
+              - consecteturzz
+        global:
+          __flat: true
+          abc:
+            - loremzzz
+            - ipsumzzz
+          def:
+            foo:
+              - dolorzzz
+              - sitzzz
+              - ametzzz
+            bar:
+              - consecteturzzz
+- description: Noise Elimitation
+  input:
+    __noise: 123
+    _noise: 456
+    abc:
+      - lorem
+      - ipsum
+    def:
+      foo:
+        - dolor
+        - sit
+        - amet
+      bar:
+        - consectetur
+- description: Array Rejection
+  input: [abc, def, ghi]
+- description: String Rejection
+  input: hello

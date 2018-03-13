@@ -2,6 +2,7 @@
 const path = require('path')
 const fs = require('fs')
 const yaml = require('js-yaml')
+const jtry = require('just-try')
 const convert = require('../../lib/tree-to-list')
 
 describe('exported entity', () => {
@@ -11,15 +12,28 @@ describe('exported entity', () => {
     const readYamlFile = basename =>
       yaml.safeLoad(fs.readFileSync(path.resolve(__dirname, basename), 'utf8'))
 
-    const input = readYamlFile('input.yaml')
-    const output = readYamlFile('output.yaml')
+    const fn = x => jtry(
+      () => convert(x),
+      ({name, message}) => ({
+        'err-name': name,
+        'err-msg': message
+      })
+    )
+
+    const received = readYamlFile('input.yaml')
+      .map(({input, description}) => ({
+        output: fn(input),
+        description
+      }))
+
+    const expected = readYamlFile('output.yaml')
 
     it('gives result equal to output.yaml', () => {
-      expect(convert(input)).toEqual(output)
+      expect(received).toEqual(expected)
     })
 
     it('stays unchanged', () => {
-      expect(convert(input)).toMatchSnapshot()
+      expect(received).toMatchSnapshot()
     })
   })
 })
