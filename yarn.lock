@@ -2417,6 +2417,10 @@ jsx-ast-utils@^2.0.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/just-try/-/just-try-1.1.1.tgz#68b0c29ea8cc2f56e6590b29a010e69121f8cab4"
 
+just-try@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/just-try/-/just-try-2.0.1.tgz#c404b1b439cbd14b76e4497a2c2f14552238a96c"
+
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"

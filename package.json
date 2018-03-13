@@ -37,6 +37,7 @@
     "@types/js-yaml": "^3.10.1",
     "@types/string-template": "^1.0.2",
     "jest-cli": "^22.1.4",
+    "just-try": "^2.0.1",
     "standard": "^11.0.0",
     "x-iterable": "^6.0.1"
   },
