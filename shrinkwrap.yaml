@@ -1,5 +1,5 @@
 dependencies:
-  '@types/execa': 0.8.1
+  '@types/execa': 0.9.0
   execa: 0.10.0
   fs-force: 3.1.1
   get-stdin: 6.0.0
@@ -18,30 +18,30 @@ devDependencies:
   standard: 11.0.1
   x-iterable: 6.0.1
 packages:
-  /@babel/code-frame/7.0.0-beta.41:
+  /@babel/code-frame/7.0.0-beta.42:
     dependencies:
-      '@babel/highlight': 7.0.0-beta.41
+      '@babel/highlight': 7.0.0-beta.42
     dev: true
     resolution:
-      integrity: sha512-omQT0n9EW38xfMCY7cCW/PAT55igUX9c9cMq6QN4EjxCcelcrocwMJ6H4JP4BGrQ+OHdJAQPM9/Eaa2Yce4Aug==
-  /@babel/highlight/7.0.0-beta.41:
+      integrity: sha512-L8i94FLSyaLQpRfDo/qqSm8Ndb44zMtXParXo0MebJICG1zoCCL4+GkzUOlB4BNTRSXXQdb3feam/qw7bKPipQ==
+  /@babel/highlight/7.0.0-beta.42:
     dependencies:
       chalk: 2.3.2
       esutils: 2.0.2
       js-tokens: 3.0.2
     dev: true
     resolution:
-      integrity: sha512-5RURdqgHmXdg775Dr6GIFaVatHaPtaVgMF29jvWgkm8LP/B3MjZR/TOhkpbIBChqFzTn7uQKiBR3002pGjKY7Q==
+      integrity: sha512-X3Ur/A/lIbbP8W0pmwgqtDXIxhQmxPaiwY9SKP7kF9wvZfjZRwMvbJE92ozUhF3UDK3DCKaV7oGqmI1rP/zqWA==
   /@pnpm/types/1.7.0:
     dev: true
     resolution:
       integrity: sha512-pn7g4uxcofWTNG/cxmKvkMK2lxr4OUIhrQDrEVYEdVhW0WkWztsHkFrYjFgfNzPbYu3ITlB3T6aSVjCoJQTOlw==
-  /@types/execa/0.8.1:
+  /@types/execa/0.9.0:
     dependencies:
       '@types/node': 9.4.7
     dev: false
     resolution:
-      integrity: sha512-7dsoPp7r33mdPcxukSrs9WVQgI96fiqffC7K4XvXJnSrTtJov3x1CJUgid7msJ8yCbfkmXJoKJ3HXyQIwZD0NQ==
+      integrity: sha512-mgfd93RhzjYBUHHV532turHC2j4l/qxsF/PbfDmprHDEUHmNZGlDn1CEsulGK3AfsPdhkWzZQT/S/k0UGhLGsA==
   /@types/get-stdin/5.0.1:
     dependencies:
       '@types/node': 9.4.7
@@ -2465,7 +2465,7 @@ packages:
       jest-message-util: 22.4.0
       jest-snapshot: 22.4.0
       jest-util: 22.4.1
-      source-map-support: 0.5.3
+      source-map-support: 0.5.4
     dev: true
     resolution:
       integrity: sha512-KZaIHpXQ0AIlvQJFCU0uoXxtz5GG47X14r9upMe7VXE55UazoMZBFnQb9TX2HoYX2/AxJYnjHuvwKVCFqOrEtw==
@@ -2485,7 +2485,7 @@ packages:
       integrity: sha512-03m3issxUXpWMwDYTfmL8hRNewUB0yCRTeXPm+eq058rZxLHD9f5NtSSO98CWHqe4UyISIxd9Ao9iDVjHWd2qg==
   /jest-message-util/22.4.0:
     dependencies:
-      '@babel/code-frame': 7.0.0-beta.41
+      '@babel/code-frame': 7.0.0-beta.42
       chalk: 2.3.2
       micromatch: 2.3.11
       slash: 1.0.0
@@ -3332,7 +3332,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-ITXW36ejWMBprJsXh3YogihFD/o=
-      tarball: 'http://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.1.tgz'
   /pinkie/2.0.4:
     dev: true
     engines:
@@ -3915,12 +3914,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-try0/JqxPLF9nOjvSta7tVondkP5dwgyLDjVoyMDlmjugT2lRZ1OfsrYTkCd2hkDnJTKRbO/Rl3orm8vlsUzbA==
-  /source-map-support/0.5.3:
+  /source-map-support/0.5.4:
     dependencies:
       source-map: 0.6.1
     dev: true
     resolution:
-      integrity: sha512-eKkTgWYeBOQqFGXRfKabMFdnWepo51vWqEdoeikaEPFiJC7MCU5j2h4+6Q8npkZTeLGbSyecZvRxiSoWl3rh+w==
+      integrity: sha512-PETSPG6BjY1AHs2t64vS2aqAgu6dMIMXJULWFBGbh2Gr8nVLbCFDo6i/RMMvviIQ2h1Z8+5gQhVKSn2je9nmdg==
   /source-map-url/0.4.0:
     dev: true
     resolution:
@@ -4614,7 +4613,7 @@ shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
   '@pnpm/types': ^1.7.0
-  '@types/execa': ^0.8.1
+  '@types/execa': ^0.9.0
   '@types/get-stdin': ^5.0.1
   '@types/js-yaml': ^3.10.1
   '@types/string-template': ^1.0.2
