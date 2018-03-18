@@ -1,32 +1,32 @@
 - description: Simple # Equal to 'Nested'
   output:
-    - path: /abc
+    - path: abc/
       data: [lorem, ipsum]
-    - path: /def/foo
+    - path: def/foo/
       data: [dolor, sit, amet]
-    - path: /def/bar
+    - path: def/bar/
       data: [consectetur]
 - description: Nested
   output:
-    - path: /abc
+    - path: abc/
       data: [lorem, ipsum]
-    - path: /def/foo
+    - path: def/foo/
       data: [dolor, sit, amet]
-    - path: /def/bar
+    - path: def/bar/
       data: [consectetur]
 - description: Flat
   output:
-    - path: /
+    - path: ''
       data: [lorem, ipsum, dolor, sit, amet, consectur]
 - description: Mix
   output:
-    - path: /abc # default -> nested
+    - path: abc/ # default -> nested
       data: [lorem, ipsum]
-    - path: /def # flat
+    - path: def/ # flat
       data: [
         dolor, sit, amet, consectur,
         loremz, ipsumz, dolorz, sitz, ametz, consecturz,
         loremzz, ipsumzz, dolorzz, sitzz, ametzz, consecturzz
       ]
-    - path: /def/baz/global # nested
+    - path: def/baz/global/ # nested
       data: [loremzzz, ipsumzzz, dolorzzz, sitzzz, ametzzz, consecturzzz]
