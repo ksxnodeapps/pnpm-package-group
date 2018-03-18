@@ -100,7 +100,7 @@
         - amet
       bar:
         - consectetur
-- description: Array Rejection
-  input: [abc, def, ghi]
-- description: String Rejection
-  input: hello
+# - description: Array Rejection
+#   input: [abc, def, ghi]
+# - description: String Rejection
+#   input: hello

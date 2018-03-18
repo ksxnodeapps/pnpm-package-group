@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`exported entity when being called with input.yaml stays unchanged 1`] = `
+Array [
+  Object {
+    "description": "Simple",
+    "output": Array [
+      Object {
+        "data": Array [
+          "lorem",
+          "ipsum",
+        ],
+        "path": "abc/",
+      },
+      Object {
+        "data": Array [
+          "dolor",
+          "sit",
+          "amet",
+        ],
+        "path": "def/foo/",
+      },
+      Object {
+        "data": Array [
+          "consectetur",
+        ],
+        "path": "def/bar/",
+      },
+    ],
+  },
+  Object {
+    "description": "Nested",
+    "output": Array [
+      Object {
+        "data": Array [
+          "lorem",
+          "ipsum",
+        ],
+        "path": "abc/",
+      },
+      Object {
+        "data": Array [
+          "dolor",
+          "sit",
+          "amet",
+        ],
+        "path": "def/foo/",
+      },
+      Object {
+        "data": Array [
+          "consectetur",
+        ],
+        "path": "def/bar/",
+      },
+    ],
+  },
+  Object {
+    "description": "Flat",
+    "output": Array [
+      Object {
+        "data": Array [
+          "lorem",
+          "ipsum",
+        ],
+        "path": "abc/",
+      },
+      Object {
+        "data": Array [
+          "dolor",
+          "sit",
+          "amet",
+        ],
+        "path": "def/foo/",
+      },
+      Object {
+        "data": Array [
+          "consectetur",
+        ],
+        "path": "def/bar/",
+      },
+    ],
+  },
+  Object {
+    "description": "Mix",
+    "output": Array [
+      Object {
+        "data": Array [
+          "lorem",
+          "ipsum",
+        ],
+        "path": "abc/",
+      },
+      Object {
+        "data": Array [
+          "dolor",
+          "sit",
+          "amet",
+        ],
+        "path": "def/foo/",
+      },
+      Object {
+        "data": Array [
+          "consectetur",
+        ],
+        "path": "def/bar/",
+      },
+      Object {
+        "data": Array [
+          "loremz",
+          "ipsumz",
+        ],
+        "path": "def/baz/inherit/abc/",
+      },
+      Object {
+        "data": Array [
+          "dolorz",
+          "sitz",
+          "ametz",
+        ],
+        "path": "def/baz/inherit/def/foo/",
+      },
+      Object {
+        "data": Array [
+          "consecteturz",
+        ],
+        "path": "def/baz/inherit/def/bar/",
+      },
+      Object {
+        "data": Array [
+          "loremzz",
+          "ipsumzz",
+        ],
+        "path": "def/baz/local/abc/",
+      },
+      Object {
+        "data": Array [
+          "dolorzz",
+          "sitzz",
+          "ametzz",
+        ],
+        "path": "def/baz/local/def/foo/",
+      },
+      Object {
+        "data": Array [
+          "consecteturzz",
+        ],
+        "path": "def/baz/local/def/bar/",
+      },
+      Object {
+        "data": Array [
+          "loremzzz",
+          "ipsumzzz",
+        ],
+        "path": "def/baz/global/abc/",
+      },
+      Object {
+        "data": Array [
+          "dolorzzz",
+          "sitzzz",
+          "ametzzz",
+        ],
+        "path": "def/baz/global/def/foo/",
+      },
+      Object {
+        "data": Array [
+          "consecteturzzz",
+        ],
+        "path": "def/baz/global/def/bar/",
+      },
+    ],
+  },
+  Object {
+    "description": "Noise Elimitation",
+    "output": Array [
+      Object {
+        "data": Array [
+          "lorem",
+          "ipsum",
+        ],
+        "path": "abc/",
+      },
+      Object {
+        "data": Array [
+          "dolor",
+          "sit",
+          "amet",
+        ],
+        "path": "def/foo/",
+      },
+      Object {
+        "data": Array [
+          "consectetur",
+        ],
+        "path": "def/bar/",
+      },
+    ],
+  },
+]
+`;
