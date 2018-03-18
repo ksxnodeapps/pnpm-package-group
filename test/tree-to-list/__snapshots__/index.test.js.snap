@@ -61,22 +61,12 @@ Array [
         "data": Array [
           "lorem",
           "ipsum",
-        ],
-        "path": "abc/",
-      },
-      Object {
-        "data": Array [
           "dolor",
           "sit",
           "amet",
-        ],
-        "path": "def/foo/",
-      },
-      Object {
-        "data": Array [
           "consectetur",
         ],
-        "path": "def/bar/",
+        "path": "",
       },
     ],
   },
@@ -95,42 +85,28 @@ Array [
           "dolor",
           "sit",
           "amet",
-        ],
-        "path": "def/foo/",
-      },
-      Object {
-        "data": Array [
           "consectetur",
-        ],
-        "path": "def/bar/",
-      },
-      Object {
-        "data": Array [
           "loremz",
           "ipsumz",
-        ],
-        "path": "def/baz/inherit/abc/",
-      },
-      Object {
-        "data": Array [
           "dolorz",
           "sitz",
           "ametz",
-        ],
-        "path": "def/baz/inherit/def/foo/",
-      },
-      Object {
-        "data": Array [
           "consecteturz",
+          "loremzzz",
+          "ipsumzzz",
+          "dolorzzz",
+          "sitzzz",
+          "ametzzz",
+          "consecteturzzz",
         ],
-        "path": "def/baz/inherit/def/bar/",
+        "path": "def/",
       },
       Object {
         "data": Array [
           "loremzz",
           "ipsumzz",
         ],
-        "path": "def/baz/local/abc/",
+        "path": "def/abc/",
       },
       Object {
         "data": Array [
@@ -138,34 +114,13 @@ Array [
           "sitzz",
           "ametzz",
         ],
-        "path": "def/baz/local/def/foo/",
+        "path": "def/def/foo/",
       },
       Object {
         "data": Array [
           "consecteturzz",
         ],
-        "path": "def/baz/local/def/bar/",
-      },
-      Object {
-        "data": Array [
-          "loremzzz",
-          "ipsumzzz",
-        ],
-        "path": "def/baz/global/abc/",
-      },
-      Object {
-        "data": Array [
-          "dolorzzz",
-          "sitzzz",
-          "ametzzz",
-        ],
-        "path": "def/baz/global/def/foo/",
-      },
-      Object {
-        "data": Array [
-          "consecteturzzz",
-        ],
-        "path": "def/baz/global/def/bar/",
+        "path": "def/def/bar/",
       },
     ],
   },
