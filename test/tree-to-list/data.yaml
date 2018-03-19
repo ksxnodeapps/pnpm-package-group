@@ -73,7 +73,7 @@ flat:
         - dolor
         - sit
         - amet
-        - consectur
+        - consectetur
 mix:
   description: Mixing nested and flat together
   input:
@@ -135,19 +135,19 @@ mix:
         - dolor
         - sit
         - amet
-        - consectur
+        - consectetur
         - loremz
         - ipsumz
         - dolorz
         - sitz
         - ametz
-        - consecturz
+        - consecteturz
         - loremzz
         - ipsumzz
         - dolorzz
         - sitzz
         - ametzz
-        - consecturzz
+        - consecteturzz
     - path: def/baz/global/
       data:
         - loremzzz
@@ -155,7 +155,7 @@ mix:
         - dolorzzz
         - sitzzz
         - ametzzz
-        - consecturzzz
+        - consecteturzzz
 noisy:
   description: Ignore names begin with '_'
   input:
