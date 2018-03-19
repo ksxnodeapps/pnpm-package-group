@@ -141,7 +141,7 @@ Object {
           "loremzz",
           "ipsumzz",
         ],
-        "path": "def/abc/",
+        "path": "def/baz/local/abc/",
       },
       Object {
         "data": Array [
@@ -149,13 +149,13 @@ Object {
           "sitzz",
           "ametzz",
         ],
-        "path": "def/def/foo/",
+        "path": "def/baz/local/def/foo/",
       },
       Object {
         "data": Array [
           "consecteturzz",
         ],
-        "path": "def/def/bar/",
+        "path": "def/baz/local/def/bar/",
       },
     ],
   },
