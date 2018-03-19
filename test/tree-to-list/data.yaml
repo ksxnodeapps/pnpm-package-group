@@ -142,12 +142,6 @@ mix:
         - sitz
         - ametz
         - consecteturz
-        - loremzz
-        - ipsumzz
-        - dolorzz
-        - sitzz
-        - ametzz
-        - consecteturzz
     - path: def/baz/local/abc/
       data:
         - loremzz
