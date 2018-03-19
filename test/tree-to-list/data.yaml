@@ -148,6 +148,18 @@ mix:
         - sitzz
         - ametzz
         - consecteturzz
+    - path: def/baz/local/abc/
+      data:
+        - loremzz
+        - ipsumzz
+    - path: def/baz/local/def/foo/
+      data:
+        - dolorzz
+        - sitzz
+        - ametzz
+    - path: def/baz/local/def/bar/
+      data:
+        - consecteturzz
     - path: def/baz/global/
       data:
         - loremzzz
