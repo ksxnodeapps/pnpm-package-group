@@ -3,15 +3,14 @@ const path = require('path')
 const fs = require('fs')
 const yaml = require('js-yaml')
 const jtry = require('just-try')
+const objUtils = require('../../lib/object-utils')
 const convert = require('../../lib/tree-to-list')
+const data = yaml.safeLoad(fs.readFileSync(path.resolve(__dirname, 'data.yaml'), 'utf8'))
 
 describe('exported entity', () => {
   it('is a function', () => expect(typeof convert).toBe('function'))
 
-  describe('when being called with input.yaml', () => {
-    const readYamlFile = basename =>
-      yaml.safeLoad(fs.readFileSync(path.resolve(__dirname, basename), 'utf8'))
-
+  describe('when being called', () => {
     const fn = x => jtry(
       () => convert(x),
       ({name, message}) => ({
@@ -20,20 +19,29 @@ describe('exported entity', () => {
       })
     )
 
-    const received = readYamlFile('input.yaml')
-      .map(({input, description}) => ({
-        output: fn(input),
-        description
-      }))
-
-    const expected = readYamlFile('output.yaml')
-
-    it('gives result equal to output.yaml', () => {
-      expect(received).toEqual(expected)
+    describe('works as expected', () => {
+      Object.entries(data).forEach(
+        ([title, {description, input, output}]) => {
+          it(`${title.toUpperCase()}: ${description}`, () => {
+            expect(fn(input)).toEqual(output)
+          })
+        }
+      )
     })
 
     it('stays unchanged', () => {
-      expect(received).toMatchSnapshot()
+      expect(Object
+        .entries(data)
+        .map(([title, {description, input}]) => [
+          title,
+          {
+            description,
+            input,
+            output: fn(input)
+          }
+        ])
+        .reduce(objUtils.entriesReducer, {})
+      ).toMatchSnapshot()
     })
   })
 })

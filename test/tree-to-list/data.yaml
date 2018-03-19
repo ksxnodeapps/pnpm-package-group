@@ -1,4 +1,5 @@
-- description: Simple
+simple:
+  description: Simplest form (nested)
   input:
     abc:
       - lorem
@@ -10,7 +11,21 @@
         - amet
       bar:
         - consectetur
-- description: Nested
+  output:
+    - path: abc/
+      data:
+        - lorem
+        - ipsum
+    - path: def/foo/
+      data:
+        - dolor
+        - sit
+        - amet
+    - path: def/bar/
+      data:
+        - consectetur
+nested:
+  description: Nested (explicitly set __flat to false)
   input:
     __flat: false
     abc:
@@ -23,7 +38,21 @@
         - amet
       bar:
         - consectetur
-- description: Flat
+  output:
+    - path: abc/
+      data:
+        - lorem
+        - ipsum
+    - path: def/foo/
+      data:
+        - dolor
+        - sit
+        - amet
+    - path: def/bar/
+      data:
+        - consectetur
+flat:
+  description: Flat (explicitly set __flat to true)
   input:
     __flat: true
     abc:
@@ -36,7 +65,17 @@
         - amet
       bar:
         - consectetur
-- description: Mix
+  output:
+    - path: ''
+      data:
+        - lorem
+        - ipsum
+        - dolor
+        - sit
+        - amet
+        - consectur
+mix:
+  description: Mixing nested and flat together
   input:
     __flat: false
     abc:
@@ -86,7 +125,39 @@
               - ametzzz
             bar:
               - consecteturzzz
-- description: Noise Elimitation
+  output:
+    - path: abc/
+      data:
+        - lorem
+        - ipsum
+    - path: def/
+      data:
+        - dolor
+        - sit
+        - amet
+        - consectur
+        - loremz
+        - ipsumz
+        - dolorz
+        - sitz
+        - ametz
+        - consecturz
+        - loremzz
+        - ipsumzz
+        - dolorzz
+        - sitzz
+        - ametzz
+        - consecturzz
+    - path: def/baz/global/
+      data:
+        - loremzzz
+        - ipsumzzz
+        - dolorzzz
+        - sitzzz
+        - ametzzz
+        - consecturzzz
+noisy:
+  description: Ignore names begin with '_'
   input:
     __noise: 123
     _noise: 456
@@ -100,7 +171,16 @@
         - amet
       bar:
         - consectetur
-# - description: Array Rejection
-#   input: [abc, def, ghi]
-# - description: String Rejection
-#   input: hello
+  output:
+    - path: abc/
+      data:
+        - lorem
+        - ipsum
+    - path: def/foo/
+      data:
+        - dolor
+        - sit
+        - amet
+    - path: def/bar/
+      data:
+        - consectetur

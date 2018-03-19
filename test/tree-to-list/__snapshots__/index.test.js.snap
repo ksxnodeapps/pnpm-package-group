@@ -1,61 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`exported entity when being called with input.yaml stays unchanged 1`] = `
-Array [
-  Object {
-    "description": "Simple",
-    "output": Array [
-      Object {
-        "data": Array [
-          "lorem",
-          "ipsum",
+exports[`exported entity when being called stays unchanged 1`] = `
+Object {
+  "flat": Object {
+    "description": "Flat (explicitly set __flat to true)",
+    "input": Object {
+      "__flat": true,
+      "abc": Array [
+        "lorem",
+        "ipsum",
+      ],
+      "def": Object {
+        "bar": Array [
+          "consectetur",
         ],
-        "path": "abc/",
-      },
-      Object {
-        "data": Array [
+        "foo": Array [
           "dolor",
           "sit",
           "amet",
         ],
-        "path": "def/foo/",
       },
-      Object {
-        "data": Array [
-          "consectetur",
-        ],
-        "path": "def/bar/",
-      },
-    ],
-  },
-  Object {
-    "description": "Nested",
-    "output": Array [
-      Object {
-        "data": Array [
-          "lorem",
-          "ipsum",
-        ],
-        "path": "abc/",
-      },
-      Object {
-        "data": Array [
-          "dolor",
-          "sit",
-          "amet",
-        ],
-        "path": "def/foo/",
-      },
-      Object {
-        "data": Array [
-          "consectetur",
-        ],
-        "path": "def/bar/",
-      },
-    ],
-  },
-  Object {
-    "description": "Flat",
+    },
     "output": Array [
       Object {
         "data": Array [
@@ -70,8 +35,78 @@ Array [
       },
     ],
   },
-  Object {
-    "description": "Mix",
+  "mix": Object {
+    "description": "Mixing nested and flat together",
+    "input": Object {
+      "__flat": false,
+      "abc": Array [
+        "lorem",
+        "ipsum",
+      ],
+      "def": Object {
+        "__flat": true,
+        "bar": Array [
+          "consectetur",
+        ],
+        "baz": Object {
+          "global": Object {
+            "__flat": true,
+            "abc": Array [
+              "loremzzz",
+              "ipsumzzz",
+            ],
+            "def": Object {
+              "bar": Array [
+                "consecteturzzz",
+              ],
+              "foo": Array [
+                "dolorzzz",
+                "sitzzz",
+                "ametzzz",
+              ],
+            },
+          },
+          "inherit": Object {
+            "abc": Array [
+              "loremz",
+              "ipsumz",
+            ],
+            "def": Object {
+              "bar": Array [
+                "consecteturz",
+              ],
+              "foo": Array [
+                "dolorz",
+                "sitz",
+                "ametz",
+              ],
+            },
+          },
+          "local": Object {
+            "__flat": false,
+            "abc": Array [
+              "loremzz",
+              "ipsumzz",
+            ],
+            "def": Object {
+              "bar": Array [
+                "consecteturzz",
+              ],
+              "foo": Array [
+                "dolorzz",
+                "sitzz",
+                "ametzz",
+              ],
+            },
+          },
+        },
+        "foo": Array [
+          "dolor",
+          "sit",
+          "amet",
+        ],
+      },
+    },
     "output": Array [
       Object {
         "data": Array [
@@ -124,8 +159,25 @@ Array [
       },
     ],
   },
-  Object {
-    "description": "Noise Elimitation",
+  "nested": Object {
+    "description": "Nested (explicitly set __flat to false)",
+    "input": Object {
+      "__flat": false,
+      "abc": Array [
+        "lorem",
+        "ipsum",
+      ],
+      "def": Object {
+        "bar": Array [
+          "consectetur",
+        ],
+        "foo": Array [
+          "dolor",
+          "sit",
+          "amet",
+        ],
+      },
+    },
     "output": Array [
       Object {
         "data": Array [
@@ -150,5 +202,91 @@ Array [
       },
     ],
   },
-]
+  "noisy": Object {
+    "description": "Ignore names begin with '_'",
+    "input": Object {
+      "__noise": 123,
+      "_noise": 456,
+      "abc": Array [
+        "lorem",
+        "ipsum",
+      ],
+      "def": Object {
+        "bar": Array [
+          "consectetur",
+        ],
+        "foo": Array [
+          "dolor",
+          "sit",
+          "amet",
+        ],
+      },
+    },
+    "output": Array [
+      Object {
+        "data": Array [
+          "lorem",
+          "ipsum",
+        ],
+        "path": "abc/",
+      },
+      Object {
+        "data": Array [
+          "dolor",
+          "sit",
+          "amet",
+        ],
+        "path": "def/foo/",
+      },
+      Object {
+        "data": Array [
+          "consectetur",
+        ],
+        "path": "def/bar/",
+      },
+    ],
+  },
+  "simple": Object {
+    "description": "Simplest form (nested)",
+    "input": Object {
+      "abc": Array [
+        "lorem",
+        "ipsum",
+      ],
+      "def": Object {
+        "bar": Array [
+          "consectetur",
+        ],
+        "foo": Array [
+          "dolor",
+          "sit",
+          "amet",
+        ],
+      },
+    },
+    "output": Array [
+      Object {
+        "data": Array [
+          "lorem",
+          "ipsum",
+        ],
+        "path": "abc/",
+      },
+      Object {
+        "data": Array [
+          "dolor",
+          "sit",
+          "amet",
+        ],
+        "path": "def/foo/",
+      },
+      Object {
+        "data": Array [
+          "consectetur",
+        ],
+        "path": "def/bar/",
+      },
+    ],
+  },
+}
 `;
