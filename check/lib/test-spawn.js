@@ -1,4 +1,5 @@
 'use strict'
+const {envMod} = require('../../lib/path-env')
 
 function main ({
   path = require('path'),
@@ -11,8 +12,7 @@ function main ({
   const {
     [`JEST_${envMiddleName}_EXECUTABLE`]: executable = defaultExecutable,
     [`JEST_${envMiddleName}_ARGV`]: spawnArguments = '[]',
-    [`JEST_${envMiddleName}_SKIP`]: skipSpawnTesting = 'false',
-    PATH = ''
+    [`JEST_${envMiddleName}_SKIP`]: skipSpawnTesting = 'false'
   } = env
 
   const wdir = path.resolve(__dirname, '../..')
@@ -35,13 +35,9 @@ function main ({
       {
         cwd: wdir,
         shell: true,
-        env: {
-          ...env,
-          PATH: PATH
-            .split(path.delimiter)
-            .concat(...module.paths.map(x => path.resolve(x, '.bin')))
-            .join(path.delimiter)
-        }
+        env: envMod()
+          .surround(...module.paths.map(x => path.resolve(x, '.bin')))
+          .get()
       })
 
     if (stdout === null) console.warn('respose.stdout is null')
