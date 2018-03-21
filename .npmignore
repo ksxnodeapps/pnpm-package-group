@@ -1,6 +1,7 @@
 
 *.log
 quick-test
+integration-test
 test
 /check
 tmp
