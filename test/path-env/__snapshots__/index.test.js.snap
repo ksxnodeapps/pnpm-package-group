@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`envMod has enough properties 1`] = `
+Array [
+  "env",
+  "name",
+  "pathVar",
+  "pathMod",
+  "alter",
+  "append",
+  "prepend",
+  "surround",
+  "get",
+]
+`;
+
+exports[`pathString has enough properties 1`] = `
+Array [
+  "string",
+  "array",
+  "append",
+  "prepend",
+  "surround",
+  "toString",
+]
+`;
+
+exports[`split function stays unchanged 1`] = `
+Array [
+  "abc",
+  "def",
+  "ghi",
+]
+`;
