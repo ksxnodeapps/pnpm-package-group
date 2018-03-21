@@ -25,7 +25,7 @@ simple:
       data:
         - consectetur
 nested:
-  description: Nested (explicitly set __flat to false)
+  description: Explicitly set __flat to false
   input:
     __flat: false
     abc:
@@ -52,7 +52,7 @@ nested:
       data:
         - consectetur
 flat:
-  description: Flat (explicitly set __flat to true)
+  description: Explicitly set __flat to true
   input:
     __flat: true
     abc:

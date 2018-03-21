@@ -3,7 +3,7 @@
 exports[`exported entity when being called stays unchanged 1`] = `
 Object {
   "flat": Object {
-    "description": "Flat (explicitly set __flat to true)",
+    "description": "Explicitly set __flat to true",
     "input": Object {
       "__flat": true,
       "abc": Array [
@@ -165,7 +165,7 @@ Object {
     ],
   },
   "nested": Object {
-    "description": "Nested (explicitly set __flat to false)",
+    "description": "Explicitly set __flat to false",
     "input": Object {
       "__flat": false,
       "abc": Array [
