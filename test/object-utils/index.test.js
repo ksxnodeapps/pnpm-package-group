@@ -19,3 +19,18 @@ describe('entriesReducer', () => {
     })
   })
 })
+
+describe('merge function', () => {
+  it('works', () => {
+    const args = Array.from('abcdef').map(x => ({arr: [x]}))
+    expect(subject.merge(...args)).toEqual({arr: Array.from('abcdef')})
+  })
+
+  it('stays unchanged', () => {
+    expect(subject.merge(
+      ...Array
+        .from('abcdef')
+        .map(x => ({arr: [x], [x]: x.toUpperCase()}))
+    )).toMatchSnapshot()
+  })
+})
