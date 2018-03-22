@@ -30,30 +30,57 @@ Examples:
   file1.yaml/foo/bar2 file2.yaml/foo/bar1
   file2.yaml/foo/bar2
   index.js *.yaml/foo/{bar1,bar2}           Using blob pattern (UNIX Shell only)
+
 ",
 }
 `;
 
-exports[`program being invoked without arguments 1`] = `
+exports[`program being invoked with neither arguments nor stdin  1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) Invalid type of tree
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with stdin which contain invalid syntax 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with stdin which contain valid syntax and schema 1`] = `
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ argv: 
-   { _: [],
-     version: false,
-     shell: true,
-     'quiet-pnpm': false,
-     quietPnpm: false,
-     help: false,
-     local: '',
-     l: '',
-     pnpm: 'pnpm',
-     'local-syntax': 'install --save {list}',
-     L: 'install --save {list}',
-     localSyntax: 'install --save {list}',
-     'global-syntax': 'install --global {list}',
-     G: 'install --global {list}',
-     globalSyntax: 'install --global {list}',
-     '$0': 'index.js' } }",
+  "stdout": "{ list: 
+   [ { path: 'Nested/a/', data: [Array] },
+     { path: 'Nested/c/d/', data: [Array] },
+     { path: 'Nested/c/e/', data: [Array] },
+     { path: 'Flat/', data: [Array] },
+     { path: 'DividedFlat/a/', data: [Array] },
+     { path: 'DividedFlat/i/', data: [Array] },
+     { path: 'SelectiveNested/a/b/', data: [Array] },
+     { path: 'SelectiveNested/a/e/', data: [Array] },
+     { path: 'SelectiveNested/i/', data: [Array] },
+     { path: 'SelectiveNested/i/l/q/r/s/', data: [Array] },
+     { path: 'SelectiveNested/i/l/q/u/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with stdin which contain valid syntax but invalid schema 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) Invalid type of tree
+",
+  "stdout": "",
 }
 `;

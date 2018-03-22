@@ -1,0 +1,82 @@
+Nested:
+  __flat: false
+  a:
+    - b
+  c:
+    d:
+      - e
+    e:
+      - f
+Flat:
+  __flat: true
+  a:
+    b:
+      - c
+      - d
+    e:
+      - f
+      - g
+  i:
+    j:
+      - k
+    l:
+      m:
+        - n
+      o:
+        - p
+      q:
+        r:
+          s:
+            - t
+        u:
+          - v
+DividedFlat:
+  __flat: true
+  a:
+    __flat: true
+    b:
+      - c
+      - d
+    e:
+      - f
+      - g
+  i:
+    __flat: true
+    j:
+      - k
+    l:
+      m:
+        - n
+      o:
+        - p
+      q:
+        r:
+          s:
+            - t
+        u:
+          - v
+SelectiveNested:
+  a:
+    __flat: false
+    b:
+      - c
+      - d
+    e:
+      - f
+      - g
+  i:
+    __flat: true
+    j:
+      - k
+    l:
+      m:
+        - n
+      o:
+        - p
+      q:
+        __flat: false
+        r:
+          s:
+            - t
+        u:
+          - v
