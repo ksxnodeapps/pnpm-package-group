@@ -1,10 +1,10 @@
 'use strict'
-const execa = require('execa')
+const {spawnSync} = require('child_process')
 const executable = require.resolve('../index.js')
 
 const trackSpawnSnap = (argv = [], options) => () => {
-  const {code: status, stdout, stderr} = execa.sync(executable, argv, options)
-  expect({status, stdout, stderr}).toMatchSnapshot()
+  const {status, stdout, stderr} = spawnSync(executable, argv, options)
+  expect({status, stdout: String(stdout), stderr: String(stderr)}).toMatchSnapshot()
 }
 
 describe('program', () => {
