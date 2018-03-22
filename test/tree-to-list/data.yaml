@@ -190,3 +190,20 @@ noisy:
     - path: def/bar/
       data:
         - consectetur
+invalid-root:
+  description: Throw error if root is not an object
+  input: Wow, a string
+  output:
+    err-name: TypeError
+    err-msg: Invalid type of tree
+invalid-branch:
+  description: Throw error if a branch is not an object
+  input:
+    valid:
+      - lorem
+      - ipsum
+    invalid: >-
+      This is a string, not an object
+  output:
+    err-name: TypeError
+    err-msg: Invalid type of tree

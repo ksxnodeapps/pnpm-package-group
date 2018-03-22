@@ -35,6 +35,28 @@ Object {
       },
     ],
   },
+  "invalid-branch": Object {
+    "description": "Throw error if a branch is not an object",
+    "input": Object {
+      "invalid": "This is a string, not an object",
+      "valid": Array [
+        "lorem",
+        "ipsum",
+      ],
+    },
+    "output": Object {
+      "err-msg": "Invalid type of tree",
+      "err-name": "TypeError",
+    },
+  },
+  "invalid-root": Object {
+    "description": "Throw error if root is not an object",
+    "input": "Wow, a string",
+    "output": Object {
+      "err-msg": "Invalid type of tree",
+      "err-name": "TypeError",
+    },
+  },
   "mix": Object {
     "description": "Mixing nested and flat together",
     "input": Object {
