@@ -8,7 +8,8 @@ Object {
 
 Options:
   --version            Show version number                             [boolean]
-  --local, -l          Directory contains local packages  [string] [default: \\"\\"]
+  --local, -l          Directory contains package.json and local packages
+                                                      [string] [default: \\"pkgs\\"]
   --pnpm               Program to call                [string] [default: \\"pnpm\\"]
   --shell              Whether shell is used           [boolean] [default: true]
   --quiet-pnpm         Don't print pnpm output        [boolean] [default: false]

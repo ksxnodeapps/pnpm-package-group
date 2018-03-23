@@ -21,9 +21,9 @@ options:
 
   local:
     alias: l
-    describe: Directory contains local packages
+    describe: Directory contains package.json and local packages
     type: string
-    default: ''
+    default: 'pkgs'
 
   pnpm:
     describe: Program to call
