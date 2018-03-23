@@ -44,6 +44,316 @@ Object {
 }
 `;
 
+exports[`program being invoked with paths input/invalid-schema.yaml --local=virtual-env/target 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) Invalid type of tree
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/invalid-schema.yaml input/invalid-syntax.txt --local=virtual-env/target 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/invalid-schema.yaml input/invalid-syntax.txt without options 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/invalid-schema.yaml without options 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) Invalid type of tree
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/invalid-syntax.txt --local=virtual-env/target 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/invalid-syntax.txt without options 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml --local=virtual-env/target 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: 
+   [ { path: 'Nested/a/', data: [Array] },
+     { path: 'Nested/c/d/', data: [Array] },
+     { path: 'Nested/c/e/', data: [Array] },
+     { path: 'Flat/', data: [Array] },
+     { path: 'DividedFlat/a/', data: [Array] },
+     { path: 'DividedFlat/i/', data: [Array] },
+     { path: 'SelectiveNested/a/b/', data: [Array] },
+     { path: 'SelectiveNested/a/e/', data: [Array] },
+     { path: 'SelectiveNested/i/', data: [Array] },
+     { path: 'SelectiveNested/i/l/q/r/s/', data: [Array] },
+     { path: 'SelectiveNested/i/l/q/u/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml input/invalid-schema.yaml --local=virtual-env/target 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) Invalid type of tree
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml input/invalid-schema.yaml input/invalid-syntax.txt --local=virtual-env/target 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml input/invalid-schema.yaml input/invalid-syntax.txt without options 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml input/invalid-schema.yaml without options 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) Invalid type of tree
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml input/invalid-syntax.txt --local=virtual-env/target 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml input/invalid-syntax.txt without options 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml without options 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: 
+   [ { path: 'Nested/a/', data: [Array] },
+     { path: 'Nested/c/d/', data: [Array] },
+     { path: 'Nested/c/e/', data: [Array] },
+     { path: 'Flat/', data: [Array] },
+     { path: 'DividedFlat/a/', data: [Array] },
+     { path: 'DividedFlat/i/', data: [Array] },
+     { path: 'SelectiveNested/a/b/', data: [Array] },
+     { path: 'SelectiveNested/a/e/', data: [Array] },
+     { path: 'SelectiveNested/i/', data: [Array] },
+     { path: 'SelectiveNested/i/l/q/r/s/', data: [Array] },
+     { path: 'SelectiveNested/i/l/q/u/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/DividedFlat --local=virtual-env/target 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: [ { path: 'a/', data: [Array] }, { path: 'i/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/DividedFlat without options 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: [ { path: 'a/', data: [Array] }, { path: 'i/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/Flat --local=virtual-env/target 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: [ { path: '', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/Flat without options 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: [ { path: '', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/Flat/i/l --local=virtual-env/target 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: 
+   [ { path: 'm/', data: [Array] },
+     { path: 'o/', data: [Array] },
+     { path: 'q/r/s/', data: [Array] },
+     { path: 'q/u/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/Flat/i/l without options 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: 
+   [ { path: 'm/', data: [Array] },
+     { path: 'o/', data: [Array] },
+     { path: 'q/r/s/', data: [Array] },
+     { path: 'q/u/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/Nested --local=virtual-env/target 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: 
+   [ { path: 'a/', data: [Array] },
+     { path: 'c/d/', data: [Array] },
+     { path: 'c/e/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/Nested without options 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: 
+   [ { path: 'a/', data: [Array] },
+     { path: 'c/d/', data: [Array] },
+     { path: 'c/e/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/Nested/c --local=virtual-env/target 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: [ { path: 'd/', data: [Array] }, { path: 'e/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/Nested/c without options 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: [ { path: 'd/', data: [Array] }, { path: 'e/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/SelectiveNested --local=virtual-env/target 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: 
+   [ { path: 'a/b/', data: [Array] },
+     { path: 'a/e/', data: [Array] },
+     { path: 'i/', data: [Array] },
+     { path: 'i/l/q/r/s/', data: [Array] },
+     { path: 'i/l/q/u/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/SelectiveNested without options 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "{ list: 
+   [ { path: 'a/b/', data: [Array] },
+     { path: 'a/e/', data: [Array] },
+     { path: 'i/', data: [Array] },
+     { path: 'i/l/q/r/s/', data: [Array] },
+     { path: 'i/l/q/u/', data: [Array] } ],
+  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+",
+}
+`;
+
 exports[`program being invoked with stdin which contain invalid syntax 1`] = `
 Object {
   "status": 7,
