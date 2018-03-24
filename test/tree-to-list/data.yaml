@@ -12,6 +12,8 @@ simple:
       bar:
         - consectetur
   output:
+    - path: '((GLOBAL))'
+      data: []
     - path: abc/
       data:
         - lorem
@@ -39,6 +41,8 @@ nested:
       bar:
         - consectetur
   output:
+    - path: '((GLOBAL))'
+      data: []
     - path: abc/
       data:
         - lorem
@@ -66,7 +70,61 @@ flat:
       bar:
         - consectetur
   output:
+    - path: '((GLOBAL))'
+      data: []
     - path: ''
+      data:
+        - lorem
+        - ipsum
+        - dolor
+        - sit
+        - amet
+        - consectetur
+local:
+  input:
+    __global: false
+    abc:
+      - lorem
+      - ipsum
+    def:
+      foo:
+        - dolor
+        - sit
+        - amet
+      bar:
+        - consectetur
+  output:
+    - path: '((GLOBAL))'
+      data: []
+    - path: abc/
+      data:
+        - lorem
+        - ipsum
+    - path: def/foo/
+      data:
+        - dolor
+        - sit
+        - amet
+    - path: def/bar/
+      data:
+        - consectetur
+global:
+  input:
+    __global: true
+    abc:
+      - lorem
+      - ipsum
+    def:
+      foo:
+        - dolor
+        - sit
+        - amet
+      bar:
+        - consectetur
+  output:
+    - path: '((GLOBAL))'
+      data: []
+    - path: '((GLOBAL))'
       data:
         - lorem
         - ipsum
@@ -125,7 +183,44 @@ mix:
               - ametzzz
             bar:
               - consecteturzzz
+        global:
+          __global: true
+          abc:
+            - loremg
+            - ipsumg
+          def:
+            __flat: true
+            __global: false
+            foo:
+              - dolorg
+              - sitg
+              - ametg
+            bar:
+              - consecteturg
+        mixglobal:
+          __global: false
+          abc:
+            - loremgg
+            - ipsumgg
+          def:
+            __global: true
+            foo:
+              - dolorggg
+              - sitggg
+              - ametggg
+            bar:
+              - consecteturggg
   output:
+    - path: '((GLOBAL))'
+      data: []
+    - path: '((GLOBAL))'
+      data:
+        - loremg
+        - ipsumg
+        - dolorggg
+        - sitggg
+        - ametggg
+        - consecturggg
     - path: abc/
       data:
         - lorem
@@ -162,6 +257,12 @@ mix:
         - sitzzz
         - ametzzz
         - consecteturzzz
+    - path: def/baz/global/def/
+      data:
+        - dolorg
+        - sitg
+        - ametg
+        - consecteturg
 noisy:
   description: Ignore names begin with '_'
   input:
@@ -178,6 +279,8 @@ noisy:
       bar:
         - consectetur
   output:
+    - path: '((GLOBAL))'
+      data: []
     - path: abc/
       data:
         - lorem
