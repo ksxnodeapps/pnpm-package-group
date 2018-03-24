@@ -71,7 +71,7 @@ Object {
           "consectetur",
         ],
         "baz": Object {
-          "global": Object {
+          "flat": Object {
             "__flat": true,
             "abc": Array [
               "loremzzz",
@@ -104,7 +104,7 @@ Object {
               ],
             },
           },
-          "local": Object {
+          "nested": Object {
             "__flat": false,
             "abc": Array [
               "loremzz",
@@ -157,7 +157,7 @@ Object {
           "loremzz",
           "ipsumzz",
         ],
-        "path": "def/baz/local/abc/",
+        "path": "def/baz/nested/abc/",
       },
       Object {
         "data": Array [
@@ -165,13 +165,13 @@ Object {
           "sitzz",
           "ametzz",
         ],
-        "path": "def/baz/local/def/foo/",
+        "path": "def/baz/nested/def/foo/",
       },
       Object {
         "data": Array [
           "consecteturzz",
         ],
-        "path": "def/baz/local/def/bar/",
+        "path": "def/baz/nested/def/bar/",
       },
       Object {
         "data": Array [
@@ -182,7 +182,7 @@ Object {
           "ametzzz",
           "consecteturzzz",
         ],
-        "path": "def/baz/global/",
+        "path": "def/baz/flat/",
       },
     ],
   },

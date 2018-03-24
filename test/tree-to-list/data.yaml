@@ -101,7 +101,7 @@ mix:
               - ametz
             bar:
               - consecteturz
-        local:
+        nested:
           __flat: false
           abc:
             - loremzz
@@ -113,7 +113,7 @@ mix:
               - ametzz
             bar:
               - consecteturzz
-        global:
+        flat:
           __flat: true
           abc:
             - loremzzz
