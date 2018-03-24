@@ -142,19 +142,19 @@ mix:
         - sitz
         - ametz
         - consecteturz
-    - path: def/baz/local/abc/
+    - path: def/baz/nested/abc/
       data:
         - loremzz
         - ipsumzz
-    - path: def/baz/local/def/foo/
+    - path: def/baz/nested/def/foo/
       data:
         - dolorzz
         - sitzz
         - ametzz
-    - path: def/baz/local/def/bar/
+    - path: def/baz/nested/def/bar/
       data:
         - consecteturzz
-    - path: def/baz/global/
+    - path: def/baz/flat/
       data:
         - loremzzz
         - ipsumzzz
