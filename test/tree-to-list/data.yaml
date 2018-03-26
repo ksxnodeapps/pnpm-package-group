@@ -81,6 +81,7 @@ flat:
         - amet
         - consectetur
 local:
+  description: Excplicitly set __global to false
   input:
     __global: false
     abc:
@@ -109,6 +110,7 @@ local:
       data:
         - consectetur
 global:
+  description: Excplicitly set __global to true
   input:
     __global: true
     abc:
