@@ -27,9 +27,9 @@ simple:
       data:
         - consectetur
 nested:
-  description: Explicitly set __flat to false
+  description: Explicitly set __struct to 'flat'
   input:
-    __flat: false
+    __struct: 'flat'
     abc:
       - lorem
       - ipsum
@@ -56,9 +56,9 @@ nested:
       data:
         - consectetur
 flat:
-  description: Explicitly set __flat to true
+  description: Explicitly set __struct to 'flat'
   input:
-    __flat: true
+    __struct: 'flat'
     abc:
       - lorem
       - ipsum
@@ -80,39 +80,10 @@ flat:
         - sit
         - amet
         - consectetur
-local:
-  description: Excplicitly set __global to false
-  input:
-    __global: false
-    abc:
-      - lorem
-      - ipsum
-    def:
-      foo:
-        - dolor
-        - sit
-        - amet
-      bar:
-        - consectetur
-  output:
-    - path: '((GLOBAL))'
-      data: []
-    - path: abc/
-      data:
-        - lorem
-        - ipsum
-    - path: def/foo/
-      data:
-        - dolor
-        - sit
-        - amet
-    - path: def/bar/
-      data:
-        - consectetur
 global:
-  description: Excplicitly set __global to true
+  description: Excplicitly set __struct to 'global'
   input:
-    __global: true
+    __struct: 'global'
     abc:
       - lorem
       - ipsum
@@ -135,14 +106,14 @@ global:
         - amet
         - consectetur
 mix:
-  description: Mixing nested and flat together
+  description: Mixing nested, flat and global together
   input:
-    __flat: false
+    __struct: 'flat'
     abc:
       - lorem
       - ipsum
     def:
-      __flat: true
+      __struct: 'flat'
       foo:
         - dolor
         - sit
@@ -162,7 +133,7 @@ mix:
             bar:
               - consecteturz
         nested:
-          __flat: false
+          __struct: 'flat'
           abc:
             - loremzz
             - ipsumzz
@@ -174,7 +145,7 @@ mix:
             bar:
               - consecteturzz
         flat:
-          __flat: true
+          __struct: 'flat'
           abc:
             - loremzzz
             - ipsumzzz
@@ -186,13 +157,12 @@ mix:
             bar:
               - consecteturzzz
         global:
-          __global: true
+          __struct: 'global'
           abc:
             - loremg
             - ipsumg
           def:
-            __flat: true
-            __global: false
+            __struct: 'flat'
             foo:
               - dolorg
               - sitg
@@ -200,12 +170,12 @@ mix:
             bar:
               - consecteturg
         mixglobal:
-          __global: false
+          __struct: 'nested'
           abc:
             - loremgg
             - ipsumgg
           def:
-            __global: true
+            __struct: 'global'
             foo:
               - dolorggg
               - sitggg
@@ -312,3 +282,13 @@ invalid-branch:
   output:
     err-name: TypeError
     err-msg: Invalid type of tree
+invalid-struct:
+  description: Throw error if __struct is invalid
+  input:
+    invalid:
+      __struct: 'blahblah'
+      abc:
+        - def
+  output:
+    err-name: Error
+    err-msg: Invalid value of __struct
