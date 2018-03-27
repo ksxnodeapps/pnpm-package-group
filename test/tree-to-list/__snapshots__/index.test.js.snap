@@ -3,9 +3,46 @@
 exports[`exported entity when being called stays unchanged 1`] = `
 Object {
   "flat": Object {
-    "description": "Explicitly set __flat to true",
+    "description": "Explicitly set __struct to 'flat'",
     "input": Object {
-      "__flat": true,
+      "__struct": "flat",
+      "abc": Array [
+        "lorem",
+        "ipsum",
+      ],
+      "def": Object {
+        "bar": Array [
+          "consectetur",
+        ],
+        "foo": Array [
+          "dolor",
+          "sit",
+          "amet",
+        ],
+      },
+    },
+    "output": Array [
+      Object {
+        "data": Array [],
+        "path": "((GLOBAL))",
+      },
+      Object {
+        "data": Array [
+          "lorem",
+          "ipsum",
+          "dolor",
+          "sit",
+          "amet",
+          "consectetur",
+        ],
+        "path": "",
+      },
+    ],
+  },
+  "global": Object {
+    "description": "Excplicitly set __struct to 'global'",
+    "input": Object {
+      "__struct": "global",
       "abc": Array [
         "lorem",
         "ipsum",
@@ -31,7 +68,7 @@ Object {
           "amet",
           "consectetur",
         ],
-        "path": "",
+        "path": "((GLOBAL))",
       },
     ],
   },
@@ -57,22 +94,37 @@ Object {
       "err-name": "TypeError",
     },
   },
-  "mix": Object {
-    "description": "Mixing nested and flat together",
+  "invalid-struct": Object {
+    "description": "Throw error if __struct is invalid",
     "input": Object {
-      "__flat": false,
+      "invalid": Object {
+        "__struct": "blahblah",
+        "abc": Array [
+          "def",
+        ],
+      },
+    },
+    "output": Object {
+      "err-msg": "Invalid value of __struct",
+      "err-name": "Error",
+    },
+  },
+  "mix": Object {
+    "description": "Mixing nested, flat and global together",
+    "input": Object {
+      "__struct": "nested",
       "abc": Array [
         "lorem",
         "ipsum",
       ],
       "def": Object {
-        "__flat": true,
+        "__struct": "flat",
         "bar": Array [
           "consectetur",
         ],
         "baz": Object {
           "flat": Object {
-            "__flat": true,
+            "__struct": "flat",
             "abc": Array [
               "loremzzz",
               "ipsumzzz",
@@ -85,6 +137,24 @@ Object {
                 "dolorzzz",
                 "sitzzz",
                 "ametzzz",
+              ],
+            },
+          },
+          "global": Object {
+            "__struct": "global",
+            "abc": Array [
+              "loremg",
+              "ipsumg",
+            ],
+            "def": Object {
+              "__struct": "flat",
+              "bar": Array [
+                "consecteturg",
+              ],
+              "foo": Array [
+                "dolorg",
+                "sitg",
+                "ametg",
               ],
             },
           },
@@ -104,8 +174,26 @@ Object {
               ],
             },
           },
+          "mixglobal": Object {
+            "__struct": "nested",
+            "abc": Array [
+              "loremgg",
+              "ipsumgg",
+            ],
+            "def": Object {
+              "__struct": "global",
+              "bar": Array [
+                "consecteturggg",
+              ],
+              "foo": Array [
+                "dolorggg",
+                "sitggg",
+                "ametggg",
+              ],
+            },
+          },
           "nested": Object {
-            "__flat": false,
+            "__struct": "nested",
             "abc": Array [
               "loremzz",
               "ipsumzz",
@@ -130,6 +218,17 @@ Object {
       },
     },
     "output": Array [
+      Object {
+        "data": Array [
+          "loremg",
+          "ipsumg",
+          "dolorggg",
+          "sitggg",
+          "ametggg",
+          "consecteturggg",
+        ],
+        "path": "((GLOBAL))",
+      },
       Object {
         "data": Array [
           "lorem",
@@ -184,12 +283,28 @@ Object {
         ],
         "path": "def/baz/flat/",
       },
+      Object {
+        "data": Array [
+          "dolorg",
+          "sitg",
+          "ametg",
+          "consecteturg",
+        ],
+        "path": "def/baz/global/def/",
+      },
+      Object {
+        "data": Array [
+          "loremgg",
+          "ipsumgg",
+        ],
+        "path": "def/baz/mixglobal/abc/",
+      },
     ],
   },
   "nested": Object {
-    "description": "Explicitly set __flat to false",
+    "description": "Explicitly set __struct to 'nested'",
     "input": Object {
-      "__flat": false,
+      "__struct": "nested",
       "abc": Array [
         "lorem",
         "ipsum",
@@ -206,6 +321,10 @@ Object {
       },
     },
     "output": Array [
+      Object {
+        "data": Array [],
+        "path": "((GLOBAL))",
+      },
       Object {
         "data": Array [
           "lorem",
@@ -251,6 +370,10 @@ Object {
     },
     "output": Array [
       Object {
+        "data": Array [],
+        "path": "((GLOBAL))",
+      },
+      Object {
         "data": Array [
           "lorem",
           "ipsum",
@@ -292,6 +415,10 @@ Object {
       },
     },
     "output": Array [
+      Object {
+        "data": Array [],
+        "path": "((GLOBAL))",
+      },
       Object {
         "data": Array [
           "lorem",
