@@ -60,10 +60,12 @@ describe('program', () => {
 
     fn('input/valid.yaml/Nested')
     fn('input/valid.yaml/Flat')
+    fn('input/valid.yaml/Global')
     fn('input/valid.yaml/DividedFlat')
     fn('input/valid.yaml/SelectiveNested')
 
     fn('input/valid.yaml/Nested/c')
-    fn('input/valid.yaml/Flat/i/l') // NOTE: should be flat, but I'll deal with it later
+    fn('input/valid.yaml/Flat/i/l')
+    fn('input/valid.yaml/Global/i/l/p')
   })
 })
