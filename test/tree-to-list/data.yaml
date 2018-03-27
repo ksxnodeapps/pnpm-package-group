@@ -27,9 +27,9 @@ simple:
       data:
         - consectetur
 nested:
-  description: Explicitly set __struct to 'flat'
+  description: Explicitly set __struct to 'nested'
   input:
-    __struct: 'flat'
+    __struct: 'nested'
     abc:
       - lorem
       - ipsum
@@ -133,7 +133,7 @@ mix:
             bar:
               - consecteturz
         nested:
-          __struct: 'flat'
+          __struct: 'nested'
           abc:
             - loremzz
             - ipsumzz
