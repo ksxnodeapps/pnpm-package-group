@@ -231,6 +231,10 @@ mix:
         - sitg
         - ametg
         - consecteturg
+    - path: def/baz/mixglobal/abc/
+      data:
+        - loremgg
+        - ipsumgg
 noisy:
   description: Ignore names begin with '_'
   input:
