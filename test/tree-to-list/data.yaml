@@ -96,8 +96,6 @@ global:
         - consectetur
   output:
     - path: '((GLOBAL))'
-      data: []
-    - path: '((GLOBAL))'
       data:
         - lorem
         - ipsum
@@ -108,7 +106,7 @@ global:
 mix:
   description: Mixing nested, flat and global together
   input:
-    __struct: 'flat'
+    __struct: 'nested'
     abc:
       - lorem
       - ipsum
@@ -184,15 +182,13 @@ mix:
               - consecteturggg
   output:
     - path: '((GLOBAL))'
-      data: []
-    - path: '((GLOBAL))'
       data:
         - loremg
         - ipsumg
         - dolorggg
         - sitggg
         - ametggg
-        - consecturggg
+        - consecteturggg
     - path: abc/
       data:
         - lorem
