@@ -37,6 +37,7 @@
     "@types/deepmerge": "^2.1.0",
     "@types/get-stdin": "^5.0.1",
     "@types/js-yaml": "^3.10.1",
+    "@types/ramda": "^0.25.20",
     "@types/string-template": "^1.0.2",
     "jest-cli": "^22.1.4",
     "just-try": "^2.0.1",
