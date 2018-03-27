@@ -111,23 +111,35 @@ exports[`program being invoked with paths input/valid.yaml --local=virtual-env/t
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [Array] },
-     { path: 'Nested/a/', data: [Array] },
-     { path: 'Nested/c/d/', data: [Array] },
-     { path: 'Nested/c/e/', data: [Array] },
-     { path: 'Flat/', data: [Array] },
-     { path: 'DividedFlat/a/', data: [Array] },
-     { path: 'DividedFlat/i/', data: [Array] },
-     { path: 'SelectiveNested/a/b/', data: [Array] },
-     { path: 'SelectiveNested/a/e/', data: [Array] },
-     { path: 'SelectiveNested/i/', data: [Array] },
-     { path: 'SelectiveNested/i/l/q/r/s/', data: [Array] },
-     { path: 'SelectiveNested/i/l/q/u/', data: [Array] },
-     { path: 'Mix/a/', data: [Array] },
-     { path: 'Mix/i/l/m/', data: [Array] },
-     { path: 'Mix/i/l/o/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "Called fake pnpm with arguments: [ 'install',
+  '--global',
+  'c',
+  'd',
+  'f',
+  'g',
+  'k',
+  'n',
+  'p',
+  't',
+  'v',
+  'k',
+  't',
+  'v' ]
+LOCAL [ { path: 'Nested/a/', data: [ 'b' ] },
+  { path: 'Nested/c/d/', data: [ 'e' ] },
+  { path: 'Nested/c/e/', data: [ 'f' ] },
+  { path: 'Flat/',
+    data: [ 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ] },
+  { path: 'DividedFlat/a/', data: [ 'c', 'd', 'f', 'g' ] },
+  { path: 'DividedFlat/i/', data: [ 'k', 'n', 'p', 't', 'v' ] },
+  { path: 'SelectiveNested/a/b/', data: [ 'c', 'd' ] },
+  { path: 'SelectiveNested/a/e/', data: [ 'f', 'g' ] },
+  { path: 'SelectiveNested/i/', data: [ 'k', 'n', 'p' ] },
+  { path: 'SelectiveNested/i/l/q/r/s/', data: [ 't' ] },
+  { path: 'SelectiveNested/i/l/q/u/', data: [ 'v' ] },
+  { path: 'Mix/a/', data: [ 'c', 'd', 'f', 'g' ] },
+  { path: 'Mix/i/l/m/', data: [ 'n' ] },
+  { path: 'Mix/i/l/o/', data: [ 'p' ] } ]
 ",
 }
 `;
@@ -198,23 +210,35 @@ exports[`program being invoked with paths input/valid.yaml without options 1`] =
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [Array] },
-     { path: 'Nested/a/', data: [Array] },
-     { path: 'Nested/c/d/', data: [Array] },
-     { path: 'Nested/c/e/', data: [Array] },
-     { path: 'Flat/', data: [Array] },
-     { path: 'DividedFlat/a/', data: [Array] },
-     { path: 'DividedFlat/i/', data: [Array] },
-     { path: 'SelectiveNested/a/b/', data: [Array] },
-     { path: 'SelectiveNested/a/e/', data: [Array] },
-     { path: 'SelectiveNested/i/', data: [Array] },
-     { path: 'SelectiveNested/i/l/q/r/s/', data: [Array] },
-     { path: 'SelectiveNested/i/l/q/u/', data: [Array] },
-     { path: 'Mix/a/', data: [Array] },
-     { path: 'Mix/i/l/m/', data: [Array] },
-     { path: 'Mix/i/l/o/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "Called fake pnpm with arguments: [ 'install',
+  '--global',
+  'c',
+  'd',
+  'f',
+  'g',
+  'k',
+  'n',
+  'p',
+  't',
+  'v',
+  'k',
+  't',
+  'v' ]
+LOCAL [ { path: 'Nested/a/', data: [ 'b' ] },
+  { path: 'Nested/c/d/', data: [ 'e' ] },
+  { path: 'Nested/c/e/', data: [ 'f' ] },
+  { path: 'Flat/',
+    data: [ 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ] },
+  { path: 'DividedFlat/a/', data: [ 'c', 'd', 'f', 'g' ] },
+  { path: 'DividedFlat/i/', data: [ 'k', 'n', 'p', 't', 'v' ] },
+  { path: 'SelectiveNested/a/b/', data: [ 'c', 'd' ] },
+  { path: 'SelectiveNested/a/e/', data: [ 'f', 'g' ] },
+  { path: 'SelectiveNested/i/', data: [ 'k', 'n', 'p' ] },
+  { path: 'SelectiveNested/i/l/q/r/s/', data: [ 't' ] },
+  { path: 'SelectiveNested/i/l/q/u/', data: [ 'v' ] },
+  { path: 'Mix/a/', data: [ 'c', 'd', 'f', 'g' ] },
+  { path: 'Mix/i/l/m/', data: [ 'n' ] },
+  { path: 'Mix/i/l/o/', data: [ 'p' ] } ]
 ",
 }
 `;
@@ -223,11 +247,9 @@ exports[`program being invoked with paths input/valid.yaml/DividedFlat --local=v
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [] },
-     { path: 'a/', data: [Array] },
-     { path: 'i/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "[INFO] No global packages. Skipping.
+LOCAL [ { path: 'a/', data: [ 'c', 'd', 'f', 'g' ] },
+  { path: 'i/', data: [ 'k', 'n', 'p', 't', 'v' ] } ]
 ",
 }
 `;
@@ -236,11 +258,9 @@ exports[`program being invoked with paths input/valid.yaml/DividedFlat without o
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [] },
-     { path: 'a/', data: [Array] },
-     { path: 'i/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "[INFO] No global packages. Skipping.
+LOCAL [ { path: 'a/', data: [ 'c', 'd', 'f', 'g' ] },
+  { path: 'i/', data: [ 'k', 'n', 'p', 't', 'v' ] } ]
 ",
 }
 `;
@@ -249,10 +269,9 @@ exports[`program being invoked with paths input/valid.yaml/Flat --local=virtual-
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [] },
-     { path: '', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "[INFO] No global packages. Skipping.
+LOCAL [ { path: '',
+    data: [ 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ] } ]
 ",
 }
 `;
@@ -261,10 +280,9 @@ exports[`program being invoked with paths input/valid.yaml/Flat without options 
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [] },
-     { path: '', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "[INFO] No global packages. Skipping.
+LOCAL [ { path: '',
+    data: [ 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ] } ]
 ",
 }
 `;
@@ -273,13 +291,11 @@ exports[`program being invoked with paths input/valid.yaml/Flat/i/l --local=virt
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [] },
-     { path: 'm/', data: [Array] },
-     { path: 'o/', data: [Array] },
-     { path: 'q/r/s/', data: [Array] },
-     { path: 'q/u/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "[INFO] No global packages. Skipping.
+LOCAL [ { path: 'm/', data: [ 'n' ] },
+  { path: 'o/', data: [ 'p' ] },
+  { path: 'q/r/s/', data: [ 't' ] },
+  { path: 'q/u/', data: [ 'v' ] } ]
 ",
 }
 `;
@@ -288,14 +304,50 @@ exports[`program being invoked with paths input/valid.yaml/Flat/i/l without opti
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [] },
-     { path: 'm/', data: [Array] },
-     { path: 'o/', data: [Array] },
-     { path: 'q/r/s/', data: [Array] },
-     { path: 'q/u/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "[INFO] No global packages. Skipping.
+LOCAL [ { path: 'm/', data: [ 'n' ] },
+  { path: 'o/', data: [ 'p' ] },
+  { path: 'q/r/s/', data: [ 't' ] },
+  { path: 'q/u/', data: [ 'v' ] } ]
 ",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/Global --local=virtual-env/target 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "Called fake pnpm with arguments: [ 'install', '--global', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+[INFO] No local packages. Skipping.
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/Global without options 1`] = `
+Object {
+  "status": 0,
+  "stderr": "",
+  "stdout": "Called fake pnpm with arguments: [ 'install', '--global', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+[INFO] No local packages. Skipping.
+",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/Global/i/l/p --local=virtual-env/target 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) Cannot convert undefined or null to object
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths input/valid.yaml/Global/i/l/p without options 1`] = `
+Object {
+  "status": 7,
+  "stderr": "[ERROR] (schema) Cannot convert undefined or null to object
+",
+  "stdout": "",
 }
 `;
 
@@ -303,12 +355,10 @@ exports[`program being invoked with paths input/valid.yaml/Nested --local=virtua
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [] },
-     { path: 'a/', data: [Array] },
-     { path: 'c/d/', data: [Array] },
-     { path: 'c/e/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "[INFO] No global packages. Skipping.
+LOCAL [ { path: 'a/', data: [ 'b' ] },
+  { path: 'c/d/', data: [ 'e' ] },
+  { path: 'c/e/', data: [ 'f' ] } ]
 ",
 }
 `;
@@ -317,12 +367,10 @@ exports[`program being invoked with paths input/valid.yaml/Nested without option
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [] },
-     { path: 'a/', data: [Array] },
-     { path: 'c/d/', data: [Array] },
-     { path: 'c/e/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "[INFO] No global packages. Skipping.
+LOCAL [ { path: 'a/', data: [ 'b' ] },
+  { path: 'c/d/', data: [ 'e' ] },
+  { path: 'c/e/', data: [ 'f' ] } ]
 ",
 }
 `;
@@ -331,11 +379,8 @@ exports[`program being invoked with paths input/valid.yaml/Nested/c --local=virt
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [] },
-     { path: 'd/', data: [Array] },
-     { path: 'e/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "[INFO] No global packages. Skipping.
+LOCAL [ { path: 'd/', data: [ 'e' ] }, { path: 'e/', data: [ 'f' ] } ]
 ",
 }
 `;
@@ -344,11 +389,8 @@ exports[`program being invoked with paths input/valid.yaml/Nested/c without opti
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [] },
-     { path: 'd/', data: [Array] },
-     { path: 'e/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "[INFO] No global packages. Skipping.
+LOCAL [ { path: 'd/', data: [ 'e' ] }, { path: 'e/', data: [ 'f' ] } ]
 ",
 }
 `;
@@ -357,14 +399,12 @@ exports[`program being invoked with paths input/valid.yaml/SelectiveNested --loc
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [] },
-     { path: 'a/b/', data: [Array] },
-     { path: 'a/e/', data: [Array] },
-     { path: 'i/', data: [Array] },
-     { path: 'i/l/q/r/s/', data: [Array] },
-     { path: 'i/l/q/u/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "[INFO] No global packages. Skipping.
+LOCAL [ { path: 'a/b/', data: [ 'c', 'd' ] },
+  { path: 'a/e/', data: [ 'f', 'g' ] },
+  { path: 'i/', data: [ 'k', 'n', 'p' ] },
+  { path: 'i/l/q/r/s/', data: [ 't' ] },
+  { path: 'i/l/q/u/', data: [ 'v' ] } ]
 ",
 }
 `;
@@ -373,14 +413,12 @@ exports[`program being invoked with paths input/valid.yaml/SelectiveNested witho
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [] },
-     { path: 'a/b/', data: [Array] },
-     { path: 'a/e/', data: [Array] },
-     { path: 'i/', data: [Array] },
-     { path: 'i/l/q/r/s/', data: [Array] },
-     { path: 'i/l/q/u/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "[INFO] No global packages. Skipping.
+LOCAL [ { path: 'a/b/', data: [ 'c', 'd' ] },
+  { path: 'a/e/', data: [ 'f', 'g' ] },
+  { path: 'i/', data: [ 'k', 'n', 'p' ] },
+  { path: 'i/l/q/r/s/', data: [ 't' ] },
+  { path: 'i/l/q/u/', data: [ 'v' ] } ]
 ",
 }
 `;
@@ -400,23 +438,35 @@ exports[`program being invoked with stdin which contain valid syntax and schema 
 Object {
   "status": 0,
   "stderr": "",
-  "stdout": "{ list: 
-   [ { path: '((GLOBAL))', data: [Array] },
-     { path: 'Nested/a/', data: [Array] },
-     { path: 'Nested/c/d/', data: [Array] },
-     { path: 'Nested/c/e/', data: [Array] },
-     { path: 'Flat/', data: [Array] },
-     { path: 'DividedFlat/a/', data: [Array] },
-     { path: 'DividedFlat/i/', data: [Array] },
-     { path: 'SelectiveNested/a/b/', data: [Array] },
-     { path: 'SelectiveNested/a/e/', data: [Array] },
-     { path: 'SelectiveNested/i/', data: [Array] },
-     { path: 'SelectiveNested/i/l/q/r/s/', data: [Array] },
-     { path: 'SelectiveNested/i/l/q/u/', data: [Array] },
-     { path: 'Mix/a/', data: [Array] },
-     { path: 'Mix/i/l/m/', data: [Array] },
-     { path: 'Mix/i/l/o/', data: [Array] } ],
-  pnpm: '/home/khai/programming/pnpm-package-group/integration-test/virtual-env/bin/pnpm' }
+  "stdout": "Called fake pnpm with arguments: [ 'install',
+  '--global',
+  'c',
+  'd',
+  'f',
+  'g',
+  'k',
+  'n',
+  'p',
+  't',
+  'v',
+  'k',
+  't',
+  'v' ]
+LOCAL [ { path: 'Nested/a/', data: [ 'b' ] },
+  { path: 'Nested/c/d/', data: [ 'e' ] },
+  { path: 'Nested/c/e/', data: [ 'f' ] },
+  { path: 'Flat/',
+    data: [ 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ] },
+  { path: 'DividedFlat/a/', data: [ 'c', 'd', 'f', 'g' ] },
+  { path: 'DividedFlat/i/', data: [ 'k', 'n', 'p', 't', 'v' ] },
+  { path: 'SelectiveNested/a/b/', data: [ 'c', 'd' ] },
+  { path: 'SelectiveNested/a/e/', data: [ 'f', 'g' ] },
+  { path: 'SelectiveNested/i/', data: [ 'k', 'n', 'p' ] },
+  { path: 'SelectiveNested/i/l/q/r/s/', data: [ 't' ] },
+  { path: 'SelectiveNested/i/l/q/u/', data: [ 'v' ] },
+  { path: 'Mix/a/', data: [ 'c', 'd', 'f', 'g' ] },
+  { path: 'Mix/i/l/m/', data: [ 'n' ] },
+  { path: 'Mix/i/l/o/', data: [ 'p' ] } ]
 ",
 }
 `;
