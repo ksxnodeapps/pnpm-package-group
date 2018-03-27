@@ -2,6 +2,8 @@
 
 exports[`program --help 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "$ index.js [options] [arguments]
@@ -38,6 +40,8 @@ Examples:
 
 exports[`program being invoked with neither arguments nor stdin  1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) Invalid type of tree
 ",
@@ -47,6 +51,8 @@ Object {
 
 exports[`program being invoked with paths input/invalid-schema.yaml --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) Invalid type of tree
 ",
@@ -56,6 +62,8 @@ Object {
 
 exports[`program being invoked with paths input/invalid-schema.yaml input/invalid-syntax.txt --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
     abc: def: ghi
@@ -67,6 +75,8 @@ Object {
 
 exports[`program being invoked with paths input/invalid-schema.yaml input/invalid-syntax.txt without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
     abc: def: ghi
@@ -78,6 +88,8 @@ Object {
 
 exports[`program being invoked with paths input/invalid-schema.yaml without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) Invalid type of tree
 ",
@@ -87,6 +99,8 @@ Object {
 
 exports[`program being invoked with paths input/invalid-syntax.txt --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
     abc: def: ghi
@@ -98,6 +112,8 @@ Object {
 
 exports[`program being invoked with paths input/invalid-syntax.txt without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
     abc: def: ghi
@@ -109,6 +125,8 @@ Object {
 
 exports[`program being invoked with paths input/valid.yaml --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "Called fake pnpm with arguments: [ 'install',
@@ -146,6 +164,8 @@ LOCAL [ { path: 'Nested/a/', data: [ 'b' ] },
 
 exports[`program being invoked with paths input/valid.yaml input/invalid-schema.yaml --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) Invalid type of tree
 ",
@@ -155,6 +175,8 @@ Object {
 
 exports[`program being invoked with paths input/valid.yaml input/invalid-schema.yaml input/invalid-syntax.txt --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
     abc: def: ghi
@@ -166,6 +188,8 @@ Object {
 
 exports[`program being invoked with paths input/valid.yaml input/invalid-schema.yaml input/invalid-syntax.txt without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
     abc: def: ghi
@@ -177,6 +201,8 @@ Object {
 
 exports[`program being invoked with paths input/valid.yaml input/invalid-schema.yaml without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) Invalid type of tree
 ",
@@ -186,6 +212,8 @@ Object {
 
 exports[`program being invoked with paths input/valid.yaml input/invalid-syntax.txt --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
     abc: def: ghi
@@ -197,6 +225,8 @@ Object {
 
 exports[`program being invoked with paths input/valid.yaml input/invalid-syntax.txt without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
     abc: def: ghi
@@ -208,6 +238,8 @@ Object {
 
 exports[`program being invoked with paths input/valid.yaml without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "Called fake pnpm with arguments: [ 'install',
@@ -245,6 +277,8 @@ LOCAL [ { path: 'Nested/a/', data: [ 'b' ] },
 
 exports[`program being invoked with paths input/valid.yaml/DividedFlat --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "[INFO] No global packages. Skipping.
@@ -256,6 +290,8 @@ LOCAL [ { path: 'a/', data: [ 'c', 'd', 'f', 'g' ] },
 
 exports[`program being invoked with paths input/valid.yaml/DividedFlat without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "[INFO] No global packages. Skipping.
@@ -267,6 +303,8 @@ LOCAL [ { path: 'a/', data: [ 'c', 'd', 'f', 'g' ] },
 
 exports[`program being invoked with paths input/valid.yaml/Flat --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "[INFO] No global packages. Skipping.
@@ -278,6 +316,8 @@ LOCAL [ { path: '',
 
 exports[`program being invoked with paths input/valid.yaml/Flat without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "[INFO] No global packages. Skipping.
@@ -289,6 +329,8 @@ LOCAL [ { path: '',
 
 exports[`program being invoked with paths input/valid.yaml/Flat/i/l --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "[INFO] No global packages. Skipping.
@@ -302,6 +344,8 @@ LOCAL [ { path: 'm/', data: [ 'n' ] },
 
 exports[`program being invoked with paths input/valid.yaml/Flat/i/l without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "[INFO] No global packages. Skipping.
@@ -315,6 +359,8 @@ LOCAL [ { path: 'm/', data: [ 'n' ] },
 
 exports[`program being invoked with paths input/valid.yaml/Global --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "Called fake pnpm with arguments: [ 'install', '--global', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
@@ -325,6 +371,8 @@ Object {
 
 exports[`program being invoked with paths input/valid.yaml/Global without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "Called fake pnpm with arguments: [ 'install', '--global', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
@@ -335,6 +383,8 @@ Object {
 
 exports[`program being invoked with paths input/valid.yaml/Global/i/l/p --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) Cannot convert undefined or null to object
 ",
@@ -344,6 +394,8 @@ Object {
 
 exports[`program being invoked with paths input/valid.yaml/Global/i/l/p without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) Cannot convert undefined or null to object
 ",
@@ -353,6 +405,8 @@ Object {
 
 exports[`program being invoked with paths input/valid.yaml/Nested --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "[INFO] No global packages. Skipping.
@@ -365,6 +419,8 @@ LOCAL [ { path: 'a/', data: [ 'b' ] },
 
 exports[`program being invoked with paths input/valid.yaml/Nested without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "[INFO] No global packages. Skipping.
@@ -377,6 +433,8 @@ LOCAL [ { path: 'a/', data: [ 'b' ] },
 
 exports[`program being invoked with paths input/valid.yaml/Nested/c --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "[INFO] No global packages. Skipping.
@@ -387,6 +445,8 @@ LOCAL [ { path: 'd/', data: [ 'e' ] }, { path: 'e/', data: [ 'f' ] } ]
 
 exports[`program being invoked with paths input/valid.yaml/Nested/c without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "[INFO] No global packages. Skipping.
@@ -397,6 +457,8 @@ LOCAL [ { path: 'd/', data: [ 'e' ] }, { path: 'e/', data: [ 'f' ] } ]
 
 exports[`program being invoked with paths input/valid.yaml/SelectiveNested --local=virtual-env/target 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "[INFO] No global packages. Skipping.
@@ -411,6 +473,8 @@ LOCAL [ { path: 'a/b/', data: [ 'c', 'd' ] },
 
 exports[`program being invoked with paths input/valid.yaml/SelectiveNested without options 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "[INFO] No global packages. Skipping.
@@ -425,6 +489,8 @@ LOCAL [ { path: 'a/b/', data: [ 'c', 'd' ] },
 
 exports[`program being invoked with stdin which contain invalid syntax 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
     abc: def: ghi
@@ -436,6 +502,8 @@ Object {
 
 exports[`program being invoked with stdin which contain valid syntax and schema 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 0,
   "stderr": "",
   "stdout": "Called fake pnpm with arguments: [ 'install',
@@ -473,6 +541,8 @@ LOCAL [ { path: 'Nested/a/', data: [ 'b' ] },
 
 exports[`program being invoked with stdin which contain valid syntax but invalid schema 1`] = `
 Object {
+  "error": undefined,
+  "signal": null,
   "status": 7,
   "stderr": "[ERROR] (schema) Invalid type of tree
 ",
