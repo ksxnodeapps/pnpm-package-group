@@ -1,5 +1,5 @@
 Nested:
-  __flat: false
+  __struct: 'nested'
   a:
     - b
   c:
@@ -8,7 +8,30 @@ Nested:
     e:
       - f
 Flat:
-  __flat: true
+  __struct: 'flat'
+  a:
+    b:
+      - c
+      - d
+    e:
+      - f
+      - g
+  i:
+    j:
+      - k
+    l:
+      m:
+        - n
+      o:
+        - p
+      q:
+        r:
+          s:
+            - t
+        u:
+          - v
+Global:
+  __struct: 'global'
   a:
     b:
       - c
@@ -31,9 +54,9 @@ Flat:
         u:
           - v
 DividedFlat:
-  __flat: true
+  __struct: 'flat'
   a:
-    __flat: true
+    __struct: 'flat'
     b:
       - c
       - d
@@ -41,7 +64,7 @@ DividedFlat:
       - f
       - g
   i:
-    __flat: true
+    __struct: 'flat'
     j:
       - k
     l:
@@ -57,7 +80,7 @@ DividedFlat:
           - v
 SelectiveNested:
   a:
-    __flat: false
+    __struct: 'nested'
     b:
       - c
       - d
@@ -65,7 +88,7 @@ SelectiveNested:
       - f
       - g
   i:
-    __flat: true
+    __struct: 'flat'
     j:
       - k
     l:
@@ -74,7 +97,33 @@ SelectiveNested:
       o:
         - p
       q:
-        __flat: false
+        __struct: 'nested'
+        r:
+          s:
+            - t
+        u:
+          - v
+Mix:
+  __struct: 'global'
+  a:
+    __struct: 'flat'
+    b:
+      - c
+      - d
+    e:
+      - f
+      - g
+  i:
+    j:
+      - k
+    l:
+      __struct: 'nested'
+      m:
+        - n
+      o:
+        - p
+      q:
+        __struct: 'global'
         r:
           s:
             - t
