@@ -11,8 +11,8 @@ const env = envMod()
   .get()
 
 const trackSpawnSnap = (argv = [], options = {}) => () => {
-  const {status, stdout, stderr} = spawnSync(executable, argv, {env, ...options})
-  expect({status, stdout: String(stdout), stderr: String(stderr)}).toMatchSnapshot()
+  const {status, stdout, stderr} = spawnSync(executable, argv, {encoding: 'utf8', env, ...options})
+  expect({status, stdout, stderr}).toMatchSnapshot()
 }
 
 const realpath = name =>
