@@ -9,17 +9,22 @@ Object {
   "stdout": "$ index.js [options] [arguments]
 
 Options:
-  --version            Show version number                             [boolean]
-  --local, -l          Directory contains package.json and local packages
-                                                      [string] [default: \\"pkgs\\"]
-  --pnpm               Program to call                [string] [default: \\"pnpm\\"]
-  --shell              Whether shell is used           [boolean] [default: true]
-  --quiet-pnpm         Don't print pnpm output        [boolean] [default: false]
-  --local-syntax, -L   Syntax to install packages locally
+  --version                       Show version number                  [boolean]
+  --local, -l                     Directory that contains local tree
+                                                  [string] [default: \\"__tree__\\"]
+  --packages-location, --pkg-loc  Directory that contains package.json and
+                                  node_modules    [string] [default: \\"__pkgs__\\"]
+  --pnpm                          Program to call     [string] [default: \\"pnpm\\"]
+  --shell                         Whether shell is used[boolean] [default: true]
+  --quiet                         Don't print anything[boolean] [default: false]
+  --quiet-pnpm                    Don't print pnpm output
+                                                      [boolean] [default: false]
+  --quiet-step                    Don't print steps   [boolean] [default: false]
+  --local-syntax, -L              Syntax to install packages locally
                                      [string] [default: \\"install --save {list}\\"]
-  --global-syntax, -G  Syntax to install packages globally
+  --global-syntax, -G             Syntax to install packages globally
                                    [string] [default: \\"install --global {list}\\"]
-  --help               Show help                                       [boolean]
+  --help                          Show help                            [boolean]
 
 Examples:
   index.js packages.yaml                    Basic use
@@ -49,7 +54,33 @@ Object {
 }
 `;
 
-exports[`program being invoked with paths input/invalid-schema.yaml --local=virtual-env/target 1`] = `
+exports[`program being invoked with paths ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --local=explicitly-specified-target 1`] = `
+Object {
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt without options 1`] = `
+Object {
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml --local=explicitly-specified-target 1`] = `
 Object {
   "error": undefined,
   "signal": null,
@@ -60,33 +91,7 @@ Object {
 }
 `;
 
-exports[`program being invoked with paths input/invalid-schema.yaml input/invalid-syntax.txt --local=virtual-env/target 1`] = `
-Object {
-  "error": undefined,
-  "signal": null,
-  "status": 7,
-  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
-    abc: def: ghi
-            ^
-",
-  "stdout": "",
-}
-`;
-
-exports[`program being invoked with paths input/invalid-schema.yaml input/invalid-syntax.txt without options 1`] = `
-Object {
-  "error": undefined,
-  "signal": null,
-  "status": 7,
-  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
-    abc: def: ghi
-            ^
-",
-  "stdout": "",
-}
-`;
-
-exports[`program being invoked with paths input/invalid-schema.yaml without options 1`] = `
+exports[`program being invoked with paths ../../input/invalid-schema.yaml without options 1`] = `
 Object {
   "error": undefined,
   "signal": null,
@@ -97,7 +102,7 @@ Object {
 }
 `;
 
-exports[`program being invoked with paths input/invalid-syntax.txt --local=virtual-env/target 1`] = `
+exports[`program being invoked with paths ../../input/invalid-syntax.txt --local=explicitly-specified-target 1`] = `
 Object {
   "error": undefined,
   "signal": null,
@@ -110,7 +115,7 @@ Object {
 }
 `;
 
-exports[`program being invoked with paths input/invalid-syntax.txt without options 1`] = `
+exports[`program being invoked with paths ../../input/invalid-syntax.txt without options 1`] = `
 Object {
   "error": undefined,
   "signal": null,
@@ -123,13 +128,90 @@ Object {
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml --local=virtual-env/target 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --local=explicitly-specified-target 1`] = `
+Object {
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt without options 1`] = `
+Object {
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml --local=explicitly-specified-target 1`] = `
+Object {
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "[ERROR] (schema) Invalid type of tree
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml without options 1`] = `
+Object {
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "[ERROR] (schema) Invalid type of tree
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-syntax.txt --local=explicitly-specified-target 1`] = `
+Object {
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-syntax.txt without options 1`] = `
+Object {
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+",
+  "stdout": "",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml --local=explicitly-specified-target 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "Called fake pnpm with arguments: [ 'install',
+  "stdout": "[INFO] BEGIN
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v, k, t, v
+Called fake pnpm with arguments: [ 'install',
   '--global',
   'c',
   'd',
@@ -143,106 +225,65 @@ Object {
   'k',
   't',
   'v' ]
-LOCAL [ { path: 'Nested/a/', data: [ 'b' ] },
-  { path: 'Nested/c/d/', data: [ 'e' ] },
-  { path: 'Nested/c/e/', data: [ 'f' ] },
-  { path: 'Flat/',
-    data: [ 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ] },
-  { path: 'DividedFlat/a/', data: [ 'c', 'd', 'f', 'g' ] },
-  { path: 'DividedFlat/i/', data: [ 'k', 'n', 'p', 't', 'v' ] },
-  { path: 'SelectiveNested/a/b/', data: [ 'c', 'd' ] },
-  { path: 'SelectiveNested/a/e/', data: [ 'f', 'g' ] },
-  { path: 'SelectiveNested/i/', data: [ 'k', 'n', 'p' ] },
-  { path: 'SelectiveNested/i/l/q/r/s/', data: [ 't' ] },
-  { path: 'SelectiveNested/i/l/q/u/', data: [ 'v' ] },
-  { path: 'Mix/a/', data: [ 'c', 'd', 'f', 'g' ] },
-  { path: 'Mix/i/l/m/', data: [ 'n' ] },
-  { path: 'Mix/i/l/o/', data: [ 'p' ] } ]
+[INFO] Installing local packages
+[INFO] Location: Nested/a/
+[INFO] Packages: b
+[INFO] Creating package.json
+[INFO] Location: Nested/c/d/
+[INFO] Packages: e
+[INFO] Creating package.json
+[INFO] Location: Nested/c/e/
+[INFO] Packages: f
+[INFO] Creating package.json
+[INFO] Location: Flat/
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+[INFO] Creating package.json
+[INFO] Location: DividedFlat/a/
+[INFO] Packages: c, d, f, g
+[INFO] Creating package.json
+[INFO] Location: DividedFlat/i/
+[INFO] Packages: k, n, p, t, v
+[INFO] Creating package.json
+[INFO] Location: SelectiveNested/a/b/
+[INFO] Packages: c, d
+[INFO] Creating package.json
+[INFO] Location: SelectiveNested/a/e/
+[INFO] Packages: f, g
+[INFO] Creating package.json
+[INFO] Location: SelectiveNested/i/
+[INFO] Packages: k, n, p
+[INFO] Creating package.json
+[INFO] Location: SelectiveNested/i/l/q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+[INFO] Location: SelectiveNested/i/l/q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+[INFO] Location: Mix/a/
+[INFO] Packages: c, d, f, g
+[INFO] Creating package.json
+[INFO] Location: Mix/i/l/m/
+[INFO] Packages: n
+[INFO] Creating package.json
+[INFO] Location: Mix/i/l/o/
+[INFO] Packages: p
+[INFO] Creating package.json
+[INFO] Status { global: 0, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml input/invalid-schema.yaml --local=virtual-env/target 1`] = `
-Object {
-  "error": undefined,
-  "signal": null,
-  "status": 7,
-  "stderr": "[ERROR] (schema) Invalid type of tree
-",
-  "stdout": "",
-}
-`;
-
-exports[`program being invoked with paths input/valid.yaml input/invalid-schema.yaml input/invalid-syntax.txt --local=virtual-env/target 1`] = `
-Object {
-  "error": undefined,
-  "signal": null,
-  "status": 7,
-  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
-    abc: def: ghi
-            ^
-",
-  "stdout": "",
-}
-`;
-
-exports[`program being invoked with paths input/valid.yaml input/invalid-schema.yaml input/invalid-syntax.txt without options 1`] = `
-Object {
-  "error": undefined,
-  "signal": null,
-  "status": 7,
-  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
-    abc: def: ghi
-            ^
-",
-  "stdout": "",
-}
-`;
-
-exports[`program being invoked with paths input/valid.yaml input/invalid-schema.yaml without options 1`] = `
-Object {
-  "error": undefined,
-  "signal": null,
-  "status": 7,
-  "stderr": "[ERROR] (schema) Invalid type of tree
-",
-  "stdout": "",
-}
-`;
-
-exports[`program being invoked with paths input/valid.yaml input/invalid-syntax.txt --local=virtual-env/target 1`] = `
-Object {
-  "error": undefined,
-  "signal": null,
-  "status": 7,
-  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
-    abc: def: ghi
-            ^
-",
-  "stdout": "",
-}
-`;
-
-exports[`program being invoked with paths input/valid.yaml input/invalid-syntax.txt without options 1`] = `
-Object {
-  "error": undefined,
-  "signal": null,
-  "status": 7,
-  "stderr": "[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
-    abc: def: ghi
-            ^
-",
-  "stdout": "",
-}
-`;
-
-exports[`program being invoked with paths input/valid.yaml without options 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml without options 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "Called fake pnpm with arguments: [ 'install',
+  "stdout": "[INFO] BEGIN
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v, k, t, v
+Called fake pnpm with arguments: [ 'install',
   '--global',
   'c',
   'd',
@@ -256,132 +297,206 @@ Object {
   'k',
   't',
   'v' ]
-LOCAL [ { path: 'Nested/a/', data: [ 'b' ] },
-  { path: 'Nested/c/d/', data: [ 'e' ] },
-  { path: 'Nested/c/e/', data: [ 'f' ] },
-  { path: 'Flat/',
-    data: [ 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ] },
-  { path: 'DividedFlat/a/', data: [ 'c', 'd', 'f', 'g' ] },
-  { path: 'DividedFlat/i/', data: [ 'k', 'n', 'p', 't', 'v' ] },
-  { path: 'SelectiveNested/a/b/', data: [ 'c', 'd' ] },
-  { path: 'SelectiveNested/a/e/', data: [ 'f', 'g' ] },
-  { path: 'SelectiveNested/i/', data: [ 'k', 'n', 'p' ] },
-  { path: 'SelectiveNested/i/l/q/r/s/', data: [ 't' ] },
-  { path: 'SelectiveNested/i/l/q/u/', data: [ 'v' ] },
-  { path: 'Mix/a/', data: [ 'c', 'd', 'f', 'g' ] },
-  { path: 'Mix/i/l/m/', data: [ 'n' ] },
-  { path: 'Mix/i/l/o/', data: [ 'p' ] } ]
+[INFO] Installing local packages
+[INFO] Location: Nested/a/
+[INFO] Packages: b
+[INFO] Location: Nested/c/d/
+[INFO] Packages: e
+[INFO] Location: Nested/c/e/
+[INFO] Packages: f
+[INFO] Location: Flat/
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+[INFO] Location: DividedFlat/a/
+[INFO] Packages: c, d, f, g
+[INFO] Location: DividedFlat/i/
+[INFO] Packages: k, n, p, t, v
+[INFO] Location: SelectiveNested/a/b/
+[INFO] Packages: c, d
+[INFO] Location: SelectiveNested/a/e/
+[INFO] Packages: f, g
+[INFO] Location: SelectiveNested/i/
+[INFO] Packages: k, n, p
+[INFO] Location: SelectiveNested/i/l/q/r/s/
+[INFO] Packages: t
+[INFO] Location: SelectiveNested/i/l/q/u/
+[INFO] Packages: v
+[INFO] Location: Mix/a/
+[INFO] Packages: c, d, f, g
+[INFO] Location: Mix/i/l/m/
+[INFO] Packages: n
+[INFO] Location: Mix/i/l/o/
+[INFO] Packages: p
+[INFO] Status { global: 0, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/DividedFlat --local=virtual-env/target 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/DividedFlat --local=explicitly-specified-target 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "[INFO] No global packages. Skipping.
-LOCAL [ { path: 'a/', data: [ 'c', 'd', 'f', 'g' ] },
-  { path: 'i/', data: [ 'k', 'n', 'p', 't', 'v' ] } ]
+  "stdout": "[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] Installing local packages
+[INFO] Location: a/
+[INFO] Packages: c, d, f, g
+[INFO] Location: i/
+[INFO] Packages: k, n, p, t, v
+[INFO] Creating package.json
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/DividedFlat without options 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/DividedFlat without options 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "[INFO] No global packages. Skipping.
-LOCAL [ { path: 'a/', data: [ 'c', 'd', 'f', 'g' ] },
-  { path: 'i/', data: [ 'k', 'n', 'p', 't', 'v' ] } ]
+  "stdout": "[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] Installing local packages
+[INFO] Location: a/
+[INFO] Packages: c, d, f, g
+[INFO] Location: i/
+[INFO] Packages: k, n, p, t, v
+[INFO] Creating package.json
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/Flat --local=virtual-env/target 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/Flat --local=explicitly-specified-target 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "[INFO] No global packages. Skipping.
-LOCAL [ { path: '',
-    data: [ 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ] } ]
+  "stdout": "[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] Installing local packages
+[INFO] Location: 
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+[INFO] Creating package.json
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/Flat without options 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/Flat without options 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "[INFO] No global packages. Skipping.
-LOCAL [ { path: '',
-    data: [ 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ] } ]
+  "stdout": "[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] Installing local packages
+[INFO] Location: 
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+[INFO] Creating package.json
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/Flat/i/l --local=virtual-env/target 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/Flat/i/l --local=explicitly-specified-target 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "[INFO] No global packages. Skipping.
-LOCAL [ { path: 'm/', data: [ 'n' ] },
-  { path: 'o/', data: [ 'p' ] },
-  { path: 'q/r/s/', data: [ 't' ] },
-  { path: 'q/u/', data: [ 'v' ] } ]
+  "stdout": "[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] Installing local packages
+[INFO] Location: m/
+[INFO] Packages: n
+[INFO] Creating package.json
+[INFO] Location: o/
+[INFO] Packages: p
+[INFO] Creating package.json
+[INFO] Location: q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+[INFO] Location: q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/Flat/i/l without options 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/Flat/i/l without options 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "[INFO] No global packages. Skipping.
-LOCAL [ { path: 'm/', data: [ 'n' ] },
-  { path: 'o/', data: [ 'p' ] },
-  { path: 'q/r/s/', data: [ 't' ] },
-  { path: 'q/u/', data: [ 'v' ] } ]
+  "stdout": "[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] Installing local packages
+[INFO] Location: m/
+[INFO] Packages: n
+[INFO] Creating package.json
+[INFO] Location: o/
+[INFO] Packages: p
+[INFO] Creating package.json
+[INFO] Location: q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+[INFO] Location: q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/Global --local=virtual-env/target 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/Global --local=explicitly-specified-target 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "Called fake pnpm with arguments: [ 'install', '--global', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+  "stdout": "[INFO] BEGIN
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+Called fake pnpm with arguments: [ 'install', '--global', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] No local packages. Skipping.
+[INFO] Status { global: 0, local: undefined, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/Global without options 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/Global without options 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "Called fake pnpm with arguments: [ 'install', '--global', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+  "stdout": "[INFO] BEGIN
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+Called fake pnpm with arguments: [ 'install', '--global', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] No local packages. Skipping.
+[INFO] Status { global: 0, local: undefined, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/Global/i/l/p --local=virtual-env/target 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/Global/i/l/p --local=explicitly-specified-target 1`] = `
 Object {
   "error": undefined,
   "signal": null,
@@ -392,7 +507,7 @@ Object {
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/Global/i/l/p without options 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/Global/i/l/p without options 1`] = `
 Object {
   "error": undefined,
   "signal": null,
@@ -403,86 +518,150 @@ Object {
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/Nested --local=virtual-env/target 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/Nested --local=explicitly-specified-target 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "[INFO] No global packages. Skipping.
-LOCAL [ { path: 'a/', data: [ 'b' ] },
-  { path: 'c/d/', data: [ 'e' ] },
-  { path: 'c/e/', data: [ 'f' ] } ]
+  "stdout": "[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] Installing local packages
+[INFO] Location: a/
+[INFO] Packages: b
+[INFO] Creating package.json
+[INFO] Location: c/d/
+[INFO] Packages: e
+[INFO] Creating package.json
+[INFO] Location: c/e/
+[INFO] Packages: f
+[INFO] Creating package.json
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/Nested without options 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/Nested without options 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "[INFO] No global packages. Skipping.
-LOCAL [ { path: 'a/', data: [ 'b' ] },
-  { path: 'c/d/', data: [ 'e' ] },
-  { path: 'c/e/', data: [ 'f' ] } ]
+  "stdout": "[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] Installing local packages
+[INFO] Location: a/
+[INFO] Packages: b
+[INFO] Creating package.json
+[INFO] Location: c/d/
+[INFO] Packages: e
+[INFO] Creating package.json
+[INFO] Location: c/e/
+[INFO] Packages: f
+[INFO] Creating package.json
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/Nested/c --local=virtual-env/target 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/Nested/c --local=explicitly-specified-target 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "[INFO] No global packages. Skipping.
-LOCAL [ { path: 'd/', data: [ 'e' ] }, { path: 'e/', data: [ 'f' ] } ]
+  "stdout": "[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] Installing local packages
+[INFO] Location: d/
+[INFO] Packages: e
+[INFO] Creating package.json
+[INFO] Location: e/
+[INFO] Packages: f
+[INFO] Creating package.json
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/Nested/c without options 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/Nested/c without options 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "[INFO] No global packages. Skipping.
-LOCAL [ { path: 'd/', data: [ 'e' ] }, { path: 'e/', data: [ 'f' ] } ]
+  "stdout": "[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] Installing local packages
+[INFO] Location: d/
+[INFO] Packages: e
+[INFO] Creating package.json
+[INFO] Location: e/
+[INFO] Packages: f
+[INFO] Creating package.json
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/SelectiveNested --local=virtual-env/target 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/SelectiveNested --local=explicitly-specified-target 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "[INFO] No global packages. Skipping.
-LOCAL [ { path: 'a/b/', data: [ 'c', 'd' ] },
-  { path: 'a/e/', data: [ 'f', 'g' ] },
-  { path: 'i/', data: [ 'k', 'n', 'p' ] },
-  { path: 'i/l/q/r/s/', data: [ 't' ] },
-  { path: 'i/l/q/u/', data: [ 'v' ] } ]
+  "stdout": "[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] Installing local packages
+[INFO] Location: a/b/
+[INFO] Packages: c, d
+[INFO] Creating package.json
+[INFO] Location: a/e/
+[INFO] Packages: f, g
+[INFO] Creating package.json
+[INFO] Location: i/
+[INFO] Packages: k, n, p
+[INFO] Location: i/l/q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+[INFO] Location: i/l/q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
 
-exports[`program being invoked with paths input/valid.yaml/SelectiveNested without options 1`] = `
+exports[`program being invoked with paths ../../input/valid.yaml/SelectiveNested without options 1`] = `
 Object {
   "error": undefined,
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "[INFO] No global packages. Skipping.
-LOCAL [ { path: 'a/b/', data: [ 'c', 'd' ] },
-  { path: 'a/e/', data: [ 'f', 'g' ] },
-  { path: 'i/', data: [ 'k', 'n', 'p' ] },
-  { path: 'i/l/q/r/s/', data: [ 't' ] },
-  { path: 'i/l/q/u/', data: [ 'v' ] } ]
+  "stdout": "[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] Installing local packages
+[INFO] Location: a/b/
+[INFO] Packages: c, d
+[INFO] Creating package.json
+[INFO] Location: a/e/
+[INFO] Packages: f, g
+[INFO] Creating package.json
+[INFO] Location: i/
+[INFO] Packages: k, n, p
+[INFO] Location: i/l/q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+[INFO] Location: i/l/q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
@@ -506,7 +685,10 @@ Object {
   "signal": null,
   "status": 0,
   "stderr": "",
-  "stdout": "Called fake pnpm with arguments: [ 'install',
+  "stdout": "[INFO] BEGIN
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v, k, t, v
+Called fake pnpm with arguments: [ 'install',
   '--global',
   'c',
   'd',
@@ -520,21 +702,51 @@ Object {
   'k',
   't',
   'v' ]
-LOCAL [ { path: 'Nested/a/', data: [ 'b' ] },
-  { path: 'Nested/c/d/', data: [ 'e' ] },
-  { path: 'Nested/c/e/', data: [ 'f' ] },
-  { path: 'Flat/',
-    data: [ 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ] },
-  { path: 'DividedFlat/a/', data: [ 'c', 'd', 'f', 'g' ] },
-  { path: 'DividedFlat/i/', data: [ 'k', 'n', 'p', 't', 'v' ] },
-  { path: 'SelectiveNested/a/b/', data: [ 'c', 'd' ] },
-  { path: 'SelectiveNested/a/e/', data: [ 'f', 'g' ] },
-  { path: 'SelectiveNested/i/', data: [ 'k', 'n', 'p' ] },
-  { path: 'SelectiveNested/i/l/q/r/s/', data: [ 't' ] },
-  { path: 'SelectiveNested/i/l/q/u/', data: [ 'v' ] },
-  { path: 'Mix/a/', data: [ 'c', 'd', 'f', 'g' ] },
-  { path: 'Mix/i/l/m/', data: [ 'n' ] },
-  { path: 'Mix/i/l/o/', data: [ 'p' ] } ]
+[INFO] Installing local packages
+[INFO] Location: Nested/a/
+[INFO] Packages: b
+[INFO] Creating package.json
+[INFO] Location: Nested/c/d/
+[INFO] Packages: e
+[INFO] Creating package.json
+[INFO] Location: Nested/c/e/
+[INFO] Packages: f
+[INFO] Creating package.json
+[INFO] Location: Flat/
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+[INFO] Creating package.json
+[INFO] Location: DividedFlat/a/
+[INFO] Packages: c, d, f, g
+[INFO] Creating package.json
+[INFO] Location: DividedFlat/i/
+[INFO] Packages: k, n, p, t, v
+[INFO] Creating package.json
+[INFO] Location: SelectiveNested/a/b/
+[INFO] Packages: c, d
+[INFO] Creating package.json
+[INFO] Location: SelectiveNested/a/e/
+[INFO] Packages: f, g
+[INFO] Creating package.json
+[INFO] Location: SelectiveNested/i/
+[INFO] Packages: k, n, p
+[INFO] Creating package.json
+[INFO] Location: SelectiveNested/i/l/q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+[INFO] Location: SelectiveNested/i/l/q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+[INFO] Location: Mix/a/
+[INFO] Packages: c, d, f, g
+[INFO] Creating package.json
+[INFO] Location: Mix/i/l/m/
+[INFO] Packages: n
+[INFO] Creating package.json
+[INFO] Location: Mix/i/l/o/
+[INFO] Packages: p
+[INFO] Creating package.json
+[INFO] Status { global: 0, local: 0, final: 0 }
+[INFO] END
 ",
 }
 `;
