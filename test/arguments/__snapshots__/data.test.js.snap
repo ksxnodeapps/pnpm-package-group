@@ -42,7 +42,7 @@ Object {
       },
       "local": Object {
         "alias": "l",
-        "default": "",
+        "default": "__tree__",
         "describe": "Directory that contains local tree",
         "type": "string",
       },
@@ -54,7 +54,7 @@ Object {
       },
       "packages-location": Object {
         "alias": "pkg-loc",
-        "default": "pkgs",
+        "default": "__pkgs__",
         "describe": "Directory that contains package.json and node_modules",
         "type": "string",
       },
@@ -63,9 +63,19 @@ Object {
         "describe": "Program to call",
         "type": "string",
       },
+      "quiet": Object {
+        "default": false,
+        "describe": "Don't print anything",
+        "type": "boolean",
+      },
       "quiet-pnpm": Object {
         "default": false,
         "describe": "Don't print pnpm output",
+        "type": "boolean",
+      },
+      "quiet-step": Object {
+        "default": false,
+        "describe": "Don't print steps",
         "type": "boolean",
       },
       "shell": Object {
@@ -116,7 +126,7 @@ Object {
       },
       "local": Object {
         "alias": "l",
-        "default": "",
+        "default": "__tree__",
         "describe": "Directory that contains local tree",
         "type": "string",
       },
@@ -128,7 +138,7 @@ Object {
       },
       "packages-location": Object {
         "alias": "pkg-loc",
-        "default": "pkgs",
+        "default": "__pkgs__",
         "describe": "Directory that contains package.json and node_modules",
         "type": "string",
       },
@@ -137,9 +147,19 @@ Object {
         "describe": "Program to call",
         "type": "string",
       },
+      "quiet": Object {
+        "default": false,
+        "describe": "Don't print anything",
+        "type": "boolean",
+      },
       "quiet-pnpm": Object {
         "default": false,
         "describe": "Don't print pnpm output",
+        "type": "boolean",
+      },
+      "quiet-step": Object {
+        "default": false,
+        "describe": "Don't print steps",
         "type": "boolean",
       },
       "shell": Object {

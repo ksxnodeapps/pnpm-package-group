@@ -23,13 +23,13 @@ options:
     alias: l
     describe: Directory that contains local tree
     type: string
-    default: ''
+    default: '__tree__'
 
   packages-location:
     alias: pkg-loc
     describe: Directory that contains package.json and node_modules
     type: string
-    default: pkgs
+    default: '__pkgs__'
 
   pnpm:
     describe: Program to call
@@ -41,8 +41,18 @@ options:
     type: boolean
     default: true
 
+  quiet:
+    describe: Don't print anything
+    type: boolean
+    default: false
+
   quiet-pnpm:
     describe: Don't print pnpm output
+    type: boolean
+    default: false
+
+  quiet-step:
+    describe: Don't print steps
     type: boolean
     default: false
 
