@@ -42,14 +42,20 @@ Object {
       },
       "local": Object {
         "alias": "l",
-        "default": "pkgs",
-        "describe": "Directory contains package.json and local packages",
+        "default": "",
+        "describe": "Directory that contains local tree",
         "type": "string",
       },
       "local-syntax": Object {
         "alias": "L",
         "default": "install --save {list}",
         "describe": "Syntax to install packages locally",
+        "type": "string",
+      },
+      "packages-location": Object {
+        "alias": "pkg-loc",
+        "default": "pkgs",
+        "describe": "Directory that contains package.json and node_modules",
         "type": "string",
       },
       "pnpm": Object {
@@ -110,14 +116,20 @@ Object {
       },
       "local": Object {
         "alias": "l",
-        "default": "pkgs",
-        "describe": "Directory contains package.json and local packages",
+        "default": "",
+        "describe": "Directory that contains local tree",
         "type": "string",
       },
       "local-syntax": Object {
         "alias": "L",
         "default": "install --save {list}",
         "describe": "Syntax to install packages locally",
+        "type": "string",
+      },
+      "packages-location": Object {
+        "alias": "pkg-loc",
+        "default": "pkgs",
+        "describe": "Directory that contains package.json and node_modules",
         "type": "string",
       },
       "pnpm": Object {
