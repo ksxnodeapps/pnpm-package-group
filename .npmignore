@@ -4,6 +4,7 @@ quick-test
 integration-test
 test
 /check
+lib.dev
 tmp
 temp
 tmp.*

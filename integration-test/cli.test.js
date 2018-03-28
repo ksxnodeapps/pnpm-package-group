@@ -3,7 +3,7 @@ const path = require('path')
 const fs = require('fs')
 const process = require('process')
 const {spawnSync} = require('child_process')
-const {envMod} = require('../lib/path-env')
+const {envMod} = require('../lib.dev/path-env')
 const executable = require.resolve('../index.js')
 
 const env = envMod()
