@@ -71,6 +71,30 @@ describe('program', () => {
         '--local=explicitly-specified-target',
         trackSpawnSnap(['--local=explicitly-specified-target', ...xpath])
       )
+
+      it(
+        '--packages-location=top/middle/bottom --local=explicitly-specified-pkgloc',
+        trackSpawnSnap([
+          '--packages-location=top/middle/bottom',
+          '--local=explicitly-specified-pkgloc',
+          ...xpath
+        ])
+      )
+
+      it(
+        '--quiet',
+        trackSpawnSnap(['--quiet'], ...xpath)
+      )
+
+      it(
+        '--quiet-pnpm',
+        trackSpawnSnap(['--quiet-pnpm'], ...xpath)
+      )
+
+      it(
+        '--quiet-step',
+        trackSpawnSnap(['--quiet-step'], ...xpath)
+      )
     })
 
     fn('../../input/valid.yaml')
