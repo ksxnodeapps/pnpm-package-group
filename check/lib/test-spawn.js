@@ -1,5 +1,5 @@
 'use strict'
-const {envMod} = require('../../lib/path-env')
+const {envMod} = require('../../lib.dev/path-env')
 
 function main ({
   path = require('path'),

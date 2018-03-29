@@ -42,8 +42,8 @@ Object {
       },
       "local": Object {
         "alias": "l",
-        "default": "",
-        "describe": "Directory contains local packages",
+        "default": "__tree__",
+        "describe": "Directory that contains local tree",
         "type": "string",
       },
       "local-syntax": Object {
@@ -52,14 +52,30 @@ Object {
         "describe": "Syntax to install packages locally",
         "type": "string",
       },
+      "packages-location": Object {
+        "alias": "pkg-loc",
+        "default": "__pkgs__",
+        "describe": "Directory that contains package.json and node_modules",
+        "type": "string",
+      },
       "pnpm": Object {
         "default": "pnpm",
         "describe": "Program to call",
         "type": "string",
       },
+      "quiet": Object {
+        "default": false,
+        "describe": "Don't print anything",
+        "type": "boolean",
+      },
       "quiet-pnpm": Object {
         "default": false,
         "describe": "Don't print pnpm output",
+        "type": "boolean",
+      },
+      "quiet-step": Object {
+        "default": false,
+        "describe": "Don't print steps",
         "type": "boolean",
       },
       "shell": Object {
@@ -110,8 +126,8 @@ Object {
       },
       "local": Object {
         "alias": "l",
-        "default": "",
-        "describe": "Directory contains local packages",
+        "default": "__tree__",
+        "describe": "Directory that contains local tree",
         "type": "string",
       },
       "local-syntax": Object {
@@ -120,14 +136,30 @@ Object {
         "describe": "Syntax to install packages locally",
         "type": "string",
       },
+      "packages-location": Object {
+        "alias": "pkg-loc",
+        "default": "__pkgs__",
+        "describe": "Directory that contains package.json and node_modules",
+        "type": "string",
+      },
       "pnpm": Object {
         "default": "pnpm",
         "describe": "Program to call",
         "type": "string",
       },
+      "quiet": Object {
+        "default": false,
+        "describe": "Don't print anything",
+        "type": "boolean",
+      },
       "quiet-pnpm": Object {
         "default": false,
         "describe": "Don't print pnpm output",
+        "type": "boolean",
+      },
+      "quiet-step": Object {
+        "default": false,
+        "describe": "Don't print steps",
         "type": "boolean",
       },
       "shell": Object {

@@ -1,0 +1,131 @@
+Nested:
+  __struct: 'nested'
+  a:
+    - b
+  c:
+    d:
+      - e
+    e:
+      - f
+Flat:
+  __struct: 'flat'
+  a:
+    b:
+      - c
+      - d
+    e:
+      - f
+      - g
+  i:
+    j:
+      - k
+    l:
+      m:
+        - n
+      o:
+        - p
+      q:
+        r:
+          s:
+            - t
+        u:
+          - v
+Global:
+  __struct: 'global'
+  a:
+    b:
+      - c
+      - d
+    e:
+      - f
+      - g
+  i:
+    j:
+      - k
+    l:
+      m:
+        - n
+      o:
+        - p
+      q:
+        r:
+          s:
+            - t
+        u:
+          - v
+DividedFlat:
+  __struct: 'flat'
+  a:
+    __struct: 'flat'
+    b:
+      - c
+      - d
+    e:
+      - f
+      - g
+  i:
+    __struct: 'flat'
+    j:
+      - k
+    l:
+      m:
+        - n
+      o:
+        - p
+      q:
+        r:
+          s:
+            - t
+        u:
+          - v
+SelectiveNested:
+  a:
+    __struct: 'nested'
+    b:
+      - c
+      - d
+    e:
+      - f
+      - g
+  i:
+    __struct: 'flat'
+    j:
+      - k
+    l:
+      m:
+        - n
+      o:
+        - p
+      q:
+        __struct: 'nested'
+        r:
+          s:
+            - t
+        u:
+          - v
+Mix:
+  __struct: 'global'
+  a:
+    __struct: 'flat'
+    b:
+      - c
+      - d
+    e:
+      - f
+      - g
+  i:
+    j:
+      - k
+    l:
+      __struct: 'nested'
+      m:
+        - n
+      o:
+        - p
+      q:
+        __struct: 'global'
+        r:
+          s:
+            - t
+        u:
+          - v

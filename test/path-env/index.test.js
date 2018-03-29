@@ -1,6 +1,6 @@
 'use strict'
 const path = require('path')
-const subject = require('../../lib/path-env')
+const subject = require('../../lib.dev/path-env')
 
 const data = (() => {
   const array = ['abc', 'def', 'ghi']

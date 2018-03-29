@@ -2,21 +2,34 @@
 
 exports[`program --help 1`] = `
 Object {
+  "argv": Array [
+    "--help",
+  ],
+  "error": undefined,
+  "signal": null,
   "status": 0,
-  "stderr": "",
-  "stdout": "$ index.js [options] [arguments]
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+$ index.js [options] [arguments]
 
 Options:
-  --version            Show version number                             [boolean]
-  --local, -l          Directory contains local packages  [string] [default: \\"\\"]
-  --pnpm               Program to call                [string] [default: \\"pnpm\\"]
-  --shell              Whether shell is used           [boolean] [default: true]
-  --quiet-pnpm         Don't print pnpm output        [boolean] [default: false]
-  --local-syntax, -L   Syntax to install packages locally
+  --version                       Show version number                  [boolean]
+  --local, -l                     Directory that contains local tree
+                                                  [string] [default: \\"__tree__\\"]
+  --packages-location, --pkg-loc  Directory that contains package.json and
+                                  node_modules    [string] [default: \\"__pkgs__\\"]
+  --pnpm                          Program to call     [string] [default: \\"pnpm\\"]
+  --shell                         Whether shell is used[boolean] [default: true]
+  --quiet                         Don't print anything[boolean] [default: false]
+  --quiet-pnpm                    Don't print pnpm output
+                                                      [boolean] [default: false]
+  --quiet-step                    Don't print steps   [boolean] [default: false]
+  --local-syntax, -L              Syntax to install packages locally
                                      [string] [default: \\"install --save {list}\\"]
-  --global-syntax, -G  Syntax to install packages globally
+  --global-syntax, -G             Syntax to install packages globally
                                    [string] [default: \\"install --global {list}\\"]
-  --help               Show help                                       [boolean]
+  --help                          Show help                            [boolean]
 
 Examples:
   index.js packages.yaml                    Basic use
@@ -30,30 +43,2951 @@ Examples:
   file1.yaml/foo/bar2 file2.yaml/foo/bar1
   file2.yaml/foo/bar2
   index.js *.yaml/foo/{bar1,bar2}           Using blob pattern (UNIX Shell only)
+
+
 ",
 }
 `;
 
-exports[`program being invoked without arguments 1`] = `
+exports[`program being invoked with neither arguments nor stdin  1`] = `
 Object {
+  "argv": Array [],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/invalid-schema.yaml",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/invalid-schema.yaml",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/invalid-schema.yaml",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/invalid-schema.yaml",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/invalid-schema.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/invalid-schema.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/invalid-schema.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/invalid-schema.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-syntax.txt --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-syntax.txt --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-syntax.txt --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-syntax.txt --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-syntax.txt --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-syntax.txt --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-syntax.txt without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/valid.yaml",
+    "../../input/invalid-schema.yaml",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/valid.yaml",
+    "../../input/invalid-schema.yaml",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/valid.yaml",
+    "../../input/invalid-schema.yaml",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/valid.yaml",
+    "../../input/invalid-schema.yaml",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/valid.yaml",
+    "../../input/invalid-schema.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/valid.yaml",
+    "../../input/invalid-schema.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/valid.yaml",
+    "../../input/invalid-schema.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/valid.yaml",
+    "../../input/invalid-schema.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-syntax.txt --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/valid.yaml",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-syntax.txt --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/valid.yaml",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-syntax.txt --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/valid.yaml",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-syntax.txt --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-syntax.txt --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-syntax.txt --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-syntax.txt without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/valid.yaml",
+    "../../input/invalid-syntax.txt",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/valid.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
   "status": 0,
-  "stderr": "",
-  "stdout": "{ argv: 
-   { _: [],
-     version: false,
-     shell: true,
-     'quiet-pnpm': false,
-     quietPnpm: false,
-     help: false,
-     local: '',
-     l: '',
-     pnpm: 'pnpm',
-     'local-syntax': 'install --save {list}',
-     L: 'install --save {list}',
-     localSyntax: 'install --save {list}',
-     'global-syntax': 'install --global {list}',
-     G: 'install --global {list}',
-     globalSyntax: 'install --global {list}',
-     '$0': 'index.js' } }",
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] BEGIN GLOBAL
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v, k, t, v
+Called fake pnpm with arguments: [ 'install',
+  '--global',
+  'c',
+  'd',
+  'f',
+  'g',
+  'k',
+  'n',
+  'p',
+  't',
+  'v',
+  'k',
+  't',
+  'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] END GLOBAL
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: Nested/a/
+[INFO] Packages: b
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Nested/c/d/
+[INFO] Packages: e
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Nested/c/e/
+[INFO] Packages: f
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Flat/
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: DividedFlat/a/
+[INFO] Packages: c, d, f, g
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: DividedFlat/i/
+[INFO] Packages: k, n, p, t, v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/a/b/
+[INFO] Packages: c, d
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/a/e/
+[INFO] Packages: f, g
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/
+[INFO] Packages: k, n, p
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/l/q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 't' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/l/q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/a/
+[INFO] Packages: c, d, f, g
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/i/l/m/
+[INFO] Packages: n
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/i/l/o/
+[INFO] Packages: p
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 14, success: 14, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: 0, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/valid.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] BEGIN GLOBAL
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v, k, t, v
+Called fake pnpm with arguments: [ 'install',
+  '--global',
+  'c',
+  'd',
+  'f',
+  'g',
+  'k',
+  'n',
+  'p',
+  't',
+  'v',
+  'k',
+  't',
+  'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] END GLOBAL
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: Nested/a/
+[INFO] Packages: b
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Nested/c/d/
+[INFO] Packages: e
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Nested/c/e/
+[INFO] Packages: f
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Flat/
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: DividedFlat/a/
+[INFO] Packages: c, d, f, g
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: DividedFlat/i/
+[INFO] Packages: k, n, p, t, v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/a/b/
+[INFO] Packages: c, d
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/a/e/
+[INFO] Packages: f, g
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/
+[INFO] Packages: k, n, p
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/l/q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 't' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/l/q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/a/
+[INFO] Packages: c, d, f, g
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/i/l/m/
+[INFO] Packages: n
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/i/l/o/
+[INFO] Packages: p
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 14, success: 14, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: 0, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/valid.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] BEGIN GLOBAL
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v, k, t, v
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] END GLOBAL
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: Nested/a/
+[INFO] Packages: b
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Nested/c/d/
+[INFO] Packages: e
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Nested/c/e/
+[INFO] Packages: f
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Flat/
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: DividedFlat/a/
+[INFO] Packages: c, d, f, g
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: DividedFlat/i/
+[INFO] Packages: k, n, p, t, v
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/a/b/
+[INFO] Packages: c, d
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/a/e/
+[INFO] Packages: f, g
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/
+[INFO] Packages: k, n, p
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/l/q/r/s/
+[INFO] Packages: t
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/l/q/u/
+[INFO] Packages: v
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/a/
+[INFO] Packages: c, d, f, g
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/i/l/m/
+[INFO] Packages: n
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/i/l/o/
+[INFO] Packages: p
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 14, success: 14, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: 0, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/valid.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] BEGIN GLOBAL
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v, k, t, v
+Called fake pnpm with arguments: [ 'install',
+  '--global',
+  'c',
+  'd',
+  'f',
+  'g',
+  'k',
+  'n',
+  'p',
+  't',
+  'v',
+  'k',
+  't',
+  'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] END GLOBAL
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: Nested/a/
+[INFO] Packages: b
+Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Nested/c/d/
+[INFO] Packages: e
+Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Nested/c/e/
+[INFO] Packages: f
+Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Flat/
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: DividedFlat/a/
+[INFO] Packages: c, d, f, g
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: DividedFlat/i/
+[INFO] Packages: k, n, p, t, v
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/a/b/
+[INFO] Packages: c, d
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/a/e/
+[INFO] Packages: f, g
+Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/
+[INFO] Packages: k, n, p
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/l/q/r/s/
+[INFO] Packages: t
+Called fake pnpm with arguments: [ 'install', '--save', 't' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/l/q/u/
+[INFO] Packages: v
+Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/a/
+[INFO] Packages: c, d, f, g
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/i/l/m/
+[INFO] Packages: n
+Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/i/l/o/
+[INFO] Packages: p
+Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 14, success: 14, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: 0, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/DividedFlat --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/valid.yaml/DividedFlat",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: a/
+[INFO] Packages: c, d, f, g
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/
+[INFO] Packages: k, n, p, t, v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 2, success: 2, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/DividedFlat --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/valid.yaml/DividedFlat",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: a/
+[INFO] Packages: c, d, f, g
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/
+[INFO] Packages: k, n, p, t, v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 2, success: 2, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/DividedFlat --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/valid.yaml/DividedFlat",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: a/
+[INFO] Packages: c, d, f, g
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/
+[INFO] Packages: k, n, p, t, v
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 2, success: 2, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/DividedFlat --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/DividedFlat --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/DividedFlat --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/DividedFlat without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/valid.yaml/DividedFlat",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: a/
+[INFO] Packages: c, d, f, g
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/
+[INFO] Packages: k, n, p, t, v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 2, success: 2, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/valid.yaml/Flat",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: 
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 1, success: 1, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/valid.yaml/Flat",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: 
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 1, success: 1, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/valid.yaml/Flat",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: 
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 1, success: 1, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/valid.yaml/Flat",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: 
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 1, success: 1, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat/i/l --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/valid.yaml/Flat/i/l",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: m/
+[INFO] Packages: n
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: o/
+[INFO] Packages: p
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 't' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 4, success: 4, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat/i/l --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/valid.yaml/Flat/i/l",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: m/
+[INFO] Packages: n
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: o/
+[INFO] Packages: p
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 't' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 4, success: 4, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat/i/l --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/valid.yaml/Flat/i/l",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: m/
+[INFO] Packages: n
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: o/
+[INFO] Packages: p
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: q/r/s/
+[INFO] Packages: t
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: q/u/
+[INFO] Packages: v
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 4, success: 4, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat/i/l --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat/i/l --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat/i/l --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat/i/l without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/valid.yaml/Flat/i/l",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: m/
+[INFO] Packages: n
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: o/
+[INFO] Packages: p
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 't' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 4, success: 4, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/valid.yaml/Global",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] BEGIN GLOBAL
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+Called fake pnpm with arguments: [ 'install', '--global', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] END GLOBAL
+[INFO] No local packages. Skipping.
+[INFO] Status { global: 0, local: undefined, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/valid.yaml/Global",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] BEGIN GLOBAL
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+Called fake pnpm with arguments: [ 'install', '--global', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] END GLOBAL
+[INFO] No local packages. Skipping.
+[INFO] Status { global: 0, local: undefined, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/valid.yaml/Global",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] BEGIN GLOBAL
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] END GLOBAL
+[INFO] No local packages. Skipping.
+[INFO] Status { global: 0, local: undefined, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/valid.yaml/Global",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] BEGIN GLOBAL
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+Called fake pnpm with arguments: [ 'install', '--global', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] END GLOBAL
+[INFO] No local packages. Skipping.
+[INFO] Status { global: 0, local: undefined, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global/i/l/p --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/valid.yaml/Global/i/l/p",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Cannot convert undefined or null to object
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global/i/l/p --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/valid.yaml/Global/i/l/p",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Cannot convert undefined or null to object
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global/i/l/p --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/valid.yaml/Global/i/l/p",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Cannot convert undefined or null to object
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global/i/l/p --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global/i/l/p --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global/i/l/p --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Global/i/l/p without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/valid.yaml/Global/i/l/p",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Cannot convert undefined or null to object
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/valid.yaml/Nested",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: a/
+[INFO] Packages: b
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: c/d/
+[INFO] Packages: e
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: c/e/
+[INFO] Packages: f
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 3, success: 3, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/valid.yaml/Nested",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: a/
+[INFO] Packages: b
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: c/d/
+[INFO] Packages: e
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: c/e/
+[INFO] Packages: f
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 3, success: 3, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/valid.yaml/Nested",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: a/
+[INFO] Packages: b
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: c/d/
+[INFO] Packages: e
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: c/e/
+[INFO] Packages: f
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 3, success: 3, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/valid.yaml/Nested",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: a/
+[INFO] Packages: b
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: c/d/
+[INFO] Packages: e
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: c/e/
+[INFO] Packages: f
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 3, success: 3, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested/c --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/valid.yaml/Nested/c",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: d/
+[INFO] Packages: e
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: e/
+[INFO] Packages: f
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 2, success: 2, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested/c --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/valid.yaml/Nested/c",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: d/
+[INFO] Packages: e
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: e/
+[INFO] Packages: f
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 2, success: 2, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested/c --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/valid.yaml/Nested/c",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: d/
+[INFO] Packages: e
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: e/
+[INFO] Packages: f
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 2, success: 2, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested/c --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested/c --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested/c --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested/c without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/valid.yaml/Nested/c",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: d/
+[INFO] Packages: e
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: e/
+[INFO] Packages: f
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 2, success: 2, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/SelectiveNested --local=explicitly-specified-target 1`] = `
+Object {
+  "argv": Array [
+    "--local=explicitly-specified-target",
+    "../../input/valid.yaml/SelectiveNested",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: a/b/
+[INFO] Packages: c, d
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: a/e/
+[INFO] Packages: f, g
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/
+[INFO] Packages: k, n, p
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/l/q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 't' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/l/q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 5, success: 5, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/SelectiveNested --packages-location=top/middle/bottom --local=explicitly-specified-pkgloc 1`] = `
+Object {
+  "argv": Array [
+    "--packages-location=top/middle/bottom",
+    "--local=explicitly-specified-pkgloc",
+    "../../input/valid.yaml/SelectiveNested",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: a/b/
+[INFO] Packages: c, d
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: a/e/
+[INFO] Packages: f, g
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/
+[INFO] Packages: k, n, p
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/l/q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 't' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/l/q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 5, success: 5, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/SelectiveNested --pnpm=alt-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--pnpm=alt-pnpm",
+    "../../input/valid.yaml/SelectiveNested",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: a/b/
+[INFO] Packages: c, d
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: a/e/
+[INFO] Packages: f, g
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/
+[INFO] Packages: k, n, p
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/l/q/r/s/
+[INFO] Packages: t
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/l/q/u/
+[INFO] Packages: v
+This is alternate pnpm
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 5, success: 5, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/SelectiveNested --quiet 1`] = `
+Object {
+  "argv": Array [
+    "--quiet",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/SelectiveNested --quiet-pnpm 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-pnpm",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/SelectiveNested --quiet-step 1`] = `
+Object {
+  "argv": Array [
+    "--quiet-step",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/SelectiveNested without options 1`] = `
+Object {
+  "argv": Array [
+    "../../input/valid.yaml/SelectiveNested",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] No global packages. Skipping.
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: a/b/
+[INFO] Packages: c, d
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: a/e/
+[INFO] Packages: f, g
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/
+[INFO] Packages: k, n, p
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/l/q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 't' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: i/l/q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 5, success: 5, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: undefined, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with stdin which contain invalid syntax 1`] = `
+Object {
+  "argv": Array [],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
+    abc: def: ghi
+            ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with stdin which contain valid syntax and schema 1`] = `
+Object {
+  "argv": Array [],
+  "error": undefined,
+  "signal": null,
+  "status": 0,
+  "stderr": "(EMPTY STRING)",
+  "stdout": "
+
+[INFO] BEGIN
+[INFO] BEGIN GLOBAL
+[INFO] Installing global packages
+[INFO] Packages: c, d, f, g, k, n, p, t, v, k, t, v
+Called fake pnpm with arguments: [ 'install',
+  '--global',
+  'c',
+  'd',
+  'f',
+  'g',
+  'k',
+  'n',
+  'p',
+  't',
+  'v',
+  'k',
+  't',
+  'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] END GLOBAL
+[INFO] BEGIN LOCAL
+[INFO] Installing local packages
+[INFO] Location: Nested/a/
+[INFO] Packages: b
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Nested/c/d/
+[INFO] Packages: e
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Nested/c/e/
+[INFO] Packages: f
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Flat/
+[INFO] Packages: c, d, f, g, k, n, p, t, v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: DividedFlat/a/
+[INFO] Packages: c, d, f, g
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: DividedFlat/i/
+[INFO] Packages: k, n, p, t, v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/a/b/
+[INFO] Packages: c, d
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/a/e/
+[INFO] Packages: f, g
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/
+[INFO] Packages: k, n, p
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/l/q/r/s/
+[INFO] Packages: t
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 't' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: SelectiveNested/i/l/q/u/
+[INFO] Packages: v
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/a/
+[INFO] Packages: c, d, f, g
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/i/l/m/
+[INFO] Packages: n
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Location: Mix/i/l/o/
+[INFO] Packages: p
+[INFO] Creating package.json
+Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
+[INFO] Step Result { status: 0, signal: null, error: undefined }
+[INFO] Steps { total: 14, success: 14, failure: 0 }
+[INFO] Status { finalExitStatus: 0 }
+[INFO] END LOCAL
+[INFO] Status { global: 0, local: 0, final: 0 }
+[INFO] END
+
+",
+}
+`;
+
+exports[`program being invoked with stdin which contain valid syntax but invalid schema 1`] = `
+Object {
+  "argv": Array [],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
 }
 `;

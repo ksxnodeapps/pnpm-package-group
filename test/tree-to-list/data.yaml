@@ -12,6 +12,8 @@ simple:
       bar:
         - consectetur
   output:
+    - path: '((GLOBAL))'
+      data: []
     - path: abc/
       data:
         - lorem
@@ -25,9 +27,9 @@ simple:
       data:
         - consectetur
 nested:
-  description: Explicitly set __flat to false
+  description: Explicitly set __struct to 'nested'
   input:
-    __flat: false
+    __struct: 'nested'
     abc:
       - lorem
       - ipsum
@@ -39,6 +41,8 @@ nested:
       bar:
         - consectetur
   output:
+    - path: '((GLOBAL))'
+      data: []
     - path: abc/
       data:
         - lorem
@@ -52,9 +56,9 @@ nested:
       data:
         - consectetur
 flat:
-  description: Explicitly set __flat to true
+  description: Explicitly set __struct to 'flat'
   input:
-    __flat: true
+    __struct: 'flat'
     abc:
       - lorem
       - ipsum
@@ -66,6 +70,8 @@ flat:
       bar:
         - consectetur
   output:
+    - path: '((GLOBAL))'
+      data: []
     - path: ''
       data:
         - lorem
@@ -74,15 +80,38 @@ flat:
         - sit
         - amet
         - consectetur
-mix:
-  description: Mixing nested and flat together
+global:
+  description: Excplicitly set __struct to 'global'
   input:
-    __flat: false
+    __struct: 'global'
     abc:
       - lorem
       - ipsum
     def:
-      __flat: true
+      foo:
+        - dolor
+        - sit
+        - amet
+      bar:
+        - consectetur
+  output:
+    - path: '((GLOBAL))'
+      data:
+        - lorem
+        - ipsum
+        - dolor
+        - sit
+        - amet
+        - consectetur
+mix:
+  description: Mixing nested, flat and global together
+  input:
+    __struct: 'nested'
+    abc:
+      - lorem
+      - ipsum
+    def:
+      __struct: 'flat'
       foo:
         - dolor
         - sit
@@ -101,8 +130,8 @@ mix:
               - ametz
             bar:
               - consecteturz
-        local:
-          __flat: false
+        nested:
+          __struct: 'nested'
           abc:
             - loremzz
             - ipsumzz
@@ -113,8 +142,8 @@ mix:
               - ametzz
             bar:
               - consecteturzz
-        global:
-          __flat: true
+        flat:
+          __struct: 'flat'
           abc:
             - loremzzz
             - ipsumzzz
@@ -125,7 +154,41 @@ mix:
               - ametzzz
             bar:
               - consecteturzzz
+        global:
+          __struct: 'global'
+          abc:
+            - loremg
+            - ipsumg
+          def:
+            __struct: 'flat'
+            foo:
+              - dolorg
+              - sitg
+              - ametg
+            bar:
+              - consecteturg
+        mixglobal:
+          __struct: 'nested'
+          abc:
+            - loremgg
+            - ipsumgg
+          def:
+            __struct: 'global'
+            foo:
+              - dolorggg
+              - sitggg
+              - ametggg
+            bar:
+              - consecteturggg
   output:
+    - path: '((GLOBAL))'
+      data:
+        - loremg
+        - ipsumg
+        - dolorggg
+        - sitggg
+        - ametggg
+        - consecteturggg
     - path: abc/
       data:
         - lorem
@@ -142,19 +205,19 @@ mix:
         - sitz
         - ametz
         - consecteturz
-    - path: def/baz/local/abc/
+    - path: def/baz/nested/abc/
       data:
         - loremzz
         - ipsumzz
-    - path: def/baz/local/def/foo/
+    - path: def/baz/nested/def/foo/
       data:
         - dolorzz
         - sitzz
         - ametzz
-    - path: def/baz/local/def/bar/
+    - path: def/baz/nested/def/bar/
       data:
         - consecteturzz
-    - path: def/baz/global/
+    - path: def/baz/flat/
       data:
         - loremzzz
         - ipsumzzz
@@ -162,6 +225,16 @@ mix:
         - sitzzz
         - ametzzz
         - consecteturzzz
+    - path: def/baz/global/def/
+      data:
+        - dolorg
+        - sitg
+        - ametg
+        - consecteturg
+    - path: def/baz/mixglobal/abc/
+      data:
+        - loremgg
+        - ipsumgg
 noisy:
   description: Ignore names begin with '_'
   input:
@@ -178,6 +251,8 @@ noisy:
       bar:
         - consectetur
   output:
+    - path: '((GLOBAL))'
+      data: []
     - path: abc/
       data:
         - lorem
@@ -207,3 +282,13 @@ invalid-branch:
   output:
     err-name: TypeError
     err-msg: Invalid type of tree
+invalid-struct:
+  description: Throw error if __struct is invalid
+  input:
+    invalid:
+      __struct: 'blahblah'
+      abc:
+        - def
+  output:
+    err-name: Error
+    err-msg: Invalid value of __struct
