@@ -77,8 +77,17 @@ describe('program', () => {
     test.only('Skipped', () => {})
   }
 
-  mayTest('--help', trackSpawnSnap(['--help']))
-  mayTest('being invoked with neither arguments nor stdin ', trackSpawnSnap())
+  mayTest(
+    '--help',
+    trackSpawnSnap(['--help']),
+    ['help', 'basic']
+  )
+
+  mayTest(
+    'being invoked with neither arguments nor stdin ',
+    trackSpawnSnap(),
+    ['no-input', 'basic', 'invalid']
+  )
 
   describe('being invoked with stdin', () => {
     const mkopt = file => ({
@@ -88,8 +97,18 @@ describe('program', () => {
     const mkfn = file =>
       trackSpawnSnap([], mkopt(file))
 
-    mayTest('which contain valid syntax and schema', mkfn('input/valid.yaml'))
-    mayTest('which contain valid syntax but invalid schema', mkfn('input/invalid-schema.yaml'))
+    mayTest(
+      'which contain valid syntax and schema',
+      mkfn('input/valid.yaml'),
+      ['stdin', 'valid', 'basic']
+    )
+
+    mayTest(
+      'which contain valid syntax but invalid schema',
+      mkfn('input/invalid-schema.yaml'),
+      ['stdin', 'invalid', 'basic']
+    )
+
     mayTest('which contain invalid syntax', mkfn('input/invalid-syntax.txt'))
   })
 
@@ -146,10 +165,10 @@ describe('program', () => {
     fn(['../../input/invalid-schema.yaml'], ['one-file', 'invalid', 'schema'])
     fn(['../../input/invalid-syntax.txt'], ['one-file', 'invalid', 'syntax'])
 
-    fn(['../../input/valid.yaml', '../../input/invalid-schema.yaml'], ['mix'])
-    fn(['../../input/valid.yaml', '../../input/invalid-syntax.txt'], ['mix'])
-    fn(['../../input/invalid-schema.yaml', '../../input/invalid-syntax.txt'], ['mix'])
-    fn(['../../input/valid.yaml', '../../input/invalid-schema.yaml', '../../input/invalid-syntax.txt'], ['mix'])
+    fn(['../../input/valid.yaml', '../../input/invalid-schema.yaml'], ['mix', 'invalid'])
+    fn(['../../input/valid.yaml', '../../input/invalid-syntax.txt'], ['mix', 'invalid'])
+    fn(['../../input/invalid-schema.yaml', '../../input/invalid-syntax.txt'], ['mix', 'invalid'])
+    fn(['../../input/valid.yaml', '../../input/invalid-schema.yaml', '../../input/invalid-syntax.txt', 'invalid'], ['mix'])
 
     fn(['../../input/valid.yaml/Nested'], ['selective', 'valid'])
     fn(['../../input/valid.yaml/Flat'], ['selective', 'valid'])
