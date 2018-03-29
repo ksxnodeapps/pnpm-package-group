@@ -47,6 +47,10 @@ describe('program', () => {
   fsForce.mkdirSync(workingDirectory)
   process.chdir(workingDirectory)
 
+  if (env.SKIP_INTEGRATION_TEST === 'true') {
+    test.only('Skip Integration Test', () => {})
+  }
+
   it('--help', trackSpawnSnap(['--help']))
   it('being invoked with neither arguments nor stdin ', trackSpawnSnap())
 
