@@ -890,72 +890,58 @@ Called fake pnpm with arguments: [ 'install',
 [INFO] Installing local packages
 [INFO] Location: Nested/a/
 [INFO] Packages: b
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Nested/c/d/
 [INFO] Packages: e
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Nested/c/e/
 [INFO] Packages: f
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Flat/
 [INFO] Packages: c, d, f, g, k, n, p, t, v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: DividedFlat/a/
 [INFO] Packages: c, d, f, g
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: DividedFlat/i/
 [INFO] Packages: k, n, p, t, v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/a/b/
 [INFO] Packages: c, d
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/a/e/
 [INFO] Packages: f, g
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/i/
 [INFO] Packages: k, n, p
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/i/l/q/r/s/
 [INFO] Packages: t
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 't' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/i/l/q/u/
 [INFO] Packages: v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Mix/a/
 [INFO] Packages: c, d, f, g
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Mix/i/l/m/
 [INFO] Packages: n
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Mix/i/l/o/
 [INFO] Packages: p
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 14, success: 14, failure: 0 }
@@ -1005,72 +991,58 @@ Called fake pnpm with arguments: [ 'install',
 [INFO] Installing local packages
 [INFO] Location: Nested/a/
 [INFO] Packages: b
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Nested/c/d/
 [INFO] Packages: e
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Nested/c/e/
 [INFO] Packages: f
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Flat/
 [INFO] Packages: c, d, f, g, k, n, p, t, v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: DividedFlat/a/
 [INFO] Packages: c, d, f, g
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: DividedFlat/i/
 [INFO] Packages: k, n, p, t, v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/a/b/
 [INFO] Packages: c, d
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/a/e/
 [INFO] Packages: f, g
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/i/
 [INFO] Packages: k, n, p
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/i/l/q/r/s/
 [INFO] Packages: t
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 't' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/i/l/q/u/
 [INFO] Packages: v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Mix/a/
 [INFO] Packages: c, d, f, g
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Mix/i/l/m/
 [INFO] Packages: n
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Mix/i/l/o/
 [INFO] Packages: p
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 14, success: 14, failure: 0 }
@@ -1342,7 +1314,6 @@ Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: i/
 [INFO] Packages: k, n, p, t, v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 2, success: 2, failure: 0 }
@@ -1378,7 +1349,6 @@ Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: i/
 [INFO] Packages: k, n, p, t, v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 2, success: 2, failure: 0 }
@@ -1497,7 +1467,6 @@ Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: i/
 [INFO] Packages: k, n, p, t, v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 2, success: 2, failure: 0 }
@@ -1528,7 +1497,6 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: 
 [INFO] Packages: c, d, f, g, k, n, p, t, v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 1, success: 1, failure: 0 }
@@ -1560,7 +1528,6 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: 
 [INFO] Packages: c, d, f, g, k, n, p, t, v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 1, success: 1, failure: 0 }
@@ -1671,7 +1638,6 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: 
 [INFO] Packages: c, d, f, g, k, n, p, t, v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 1, success: 1, failure: 0 }
@@ -1702,22 +1668,18 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: m/
 [INFO] Packages: n
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: o/
 [INFO] Packages: p
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: q/r/s/
 [INFO] Packages: t
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 't' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: q/u/
 [INFO] Packages: v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 4, success: 4, failure: 0 }
@@ -1749,22 +1711,18 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: m/
 [INFO] Packages: n
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: o/
 [INFO] Packages: p
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: q/r/s/
 [INFO] Packages: t
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 't' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: q/u/
 [INFO] Packages: v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 4, success: 4, failure: 0 }
@@ -1887,22 +1845,18 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: m/
 [INFO] Packages: n
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: o/
 [INFO] Packages: p
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: q/r/s/
 [INFO] Packages: t
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 't' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: q/u/
 [INFO] Packages: v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 4, success: 4, failure: 0 }
@@ -2215,17 +2169,14 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: a/
 [INFO] Packages: b
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: c/d/
 [INFO] Packages: e
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: c/e/
 [INFO] Packages: f
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 3, success: 3, failure: 0 }
@@ -2257,17 +2208,14 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: a/
 [INFO] Packages: b
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: c/d/
 [INFO] Packages: e
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: c/e/
 [INFO] Packages: f
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 3, success: 3, failure: 0 }
@@ -2386,17 +2334,14 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: a/
 [INFO] Packages: b
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: c/d/
 [INFO] Packages: e
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: c/e/
 [INFO] Packages: f
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 3, success: 3, failure: 0 }
@@ -2427,12 +2372,10 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: d/
 [INFO] Packages: e
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: e/
 [INFO] Packages: f
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 2, success: 2, failure: 0 }
@@ -2464,12 +2407,10 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: d/
 [INFO] Packages: e
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: e/
 [INFO] Packages: f
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 2, success: 2, failure: 0 }
@@ -2584,12 +2525,10 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: d/
 [INFO] Packages: e
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: e/
 [INFO] Packages: f
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 2, success: 2, failure: 0 }
@@ -2620,12 +2559,10 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: a/b/
 [INFO] Packages: c, d
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: a/e/
 [INFO] Packages: f, g
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: i/
@@ -2634,12 +2571,10 @@ Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: i/l/q/r/s/
 [INFO] Packages: t
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 't' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: i/l/q/u/
 [INFO] Packages: v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 5, success: 5, failure: 0 }
@@ -2671,12 +2606,10 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: a/b/
 [INFO] Packages: c, d
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: a/e/
 [INFO] Packages: f, g
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: i/
@@ -2685,12 +2618,10 @@ Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: i/l/q/r/s/
 [INFO] Packages: t
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 't' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: i/l/q/u/
 [INFO] Packages: v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 5, success: 5, failure: 0 }
@@ -2817,12 +2748,10 @@ Object {
 [INFO] Installing local packages
 [INFO] Location: a/b/
 [INFO] Packages: c, d
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: a/e/
 [INFO] Packages: f, g
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: i/
@@ -2831,12 +2760,10 @@ Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: i/l/q/r/s/
 [INFO] Packages: t
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 't' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: i/l/q/u/
 [INFO] Packages: v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 5, success: 5, failure: 0 }
@@ -2899,72 +2826,58 @@ Called fake pnpm with arguments: [ 'install',
 [INFO] Installing local packages
 [INFO] Location: Nested/a/
 [INFO] Packages: b
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'b' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Nested/c/d/
 [INFO] Packages: e
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'e' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Nested/c/e/
 [INFO] Packages: f
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Flat/
 [INFO] Packages: c, d, f, g, k, n, p, t, v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: DividedFlat/a/
 [INFO] Packages: c, d, f, g
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: DividedFlat/i/
 [INFO] Packages: k, n, p, t, v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/a/b/
 [INFO] Packages: c, d
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/a/e/
 [INFO] Packages: f, g
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/i/
 [INFO] Packages: k, n, p
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/i/l/q/r/s/
 [INFO] Packages: t
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 't' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: SelectiveNested/i/l/q/u/
 [INFO] Packages: v
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Mix/a/
 [INFO] Packages: c, d, f, g
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Mix/i/l/m/
 [INFO] Packages: n
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'n' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Location: Mix/i/l/o/
 [INFO] Packages: p
-[INFO] Creating package.json
 Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
 [INFO] Steps { total: 14, success: 14, failure: 0 }
