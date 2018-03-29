@@ -11,6 +11,32 @@ const env = envMod()
   .surround(path.resolve(__dirname, 'virtual-env/bin'))
   .get()
 
+const mayTest = (() => {
+  const {
+    INTEGRATION_TEST_EXCEPT = '',
+    INTEGRATION_TEST_ONLY = ''
+  } = env
+
+  const ignoredTestCases = INTEGRATION_TEST_EXCEPT.split(/\s+/).filter(Boolean)
+  const exclusiveTestCases = INTEGRATION_TEST_ONLY.split(/\s+/).filter(Boolean)
+
+  const isIgnored = ignoredTestCases.length
+    ? classes => classes.some(x => ignoredTestCases.includes(x))
+    : () => false
+
+  const isExclusive = exclusiveTestCases.length
+    ? classes => classes.some(x => exclusiveTestCases.includes(x))
+    : () => true
+
+  const mayTest = (desc, fn, ...classes) => {
+    if (isIgnored(classes)) return test.skip(desc, fn)
+    if (!isExclusive(classes)) return test.skip(desc, fn)
+    return test(desc, fn)
+  }
+
+  return mayTest
+})()
+
 const trackSpawnSnap = (argv = [], options = {}) => () => {
   const fmtstr = string =>
     string ? `\n\n${string}\n` : '(EMPTY STRING)'
@@ -51,8 +77,8 @@ describe('program', () => {
     test.only('Skipped', () => {})
   }
 
-  it('--help', trackSpawnSnap(['--help']))
-  it('being invoked with neither arguments nor stdin ', trackSpawnSnap())
+  mayTest('--help', trackSpawnSnap(['--help']))
+  mayTest('being invoked with neither arguments nor stdin ', trackSpawnSnap())
 
   describe('being invoked with stdin', () => {
     const mkopt = file => ({
@@ -62,26 +88,26 @@ describe('program', () => {
     const mkfn = file =>
       trackSpawnSnap([], mkopt(file))
 
-    it('which contain valid syntax and schema', mkfn('input/valid.yaml'))
-    it('which contain valid syntax but invalid schema', mkfn('input/invalid-schema.yaml'))
-    it('which contain invalid syntax', mkfn('input/invalid-syntax.txt'))
+    mayTest('which contain valid syntax and schema', mkfn('input/valid.yaml'))
+    mayTest('which contain valid syntax but invalid schema', mkfn('input/invalid-schema.yaml'))
+    mayTest('which contain invalid syntax', mkfn('input/invalid-syntax.txt'))
   })
 
   describe('being invoked with paths', () => {
     const fn = (...xpath) => describe(xpath.join(' '), () => {
-      it('without options', trackSpawnSnap(xpath))
+      mayTest('without options', trackSpawnSnap(xpath))
 
-      it(
+      mayTest(
         '--pnpm=alt-pnpm',
         trackSpawnSnap(['--pnpm=alt-pnpm', ...xpath])
       )
 
-      it(
+      mayTest(
         '--local=explicitly-specified-target',
         trackSpawnSnap(['--local=explicitly-specified-target', ...xpath])
       )
 
-      it(
+      mayTest(
         '--packages-location=top/middle/bottom --local=explicitly-specified-pkgloc',
         trackSpawnSnap([
           '--packages-location=top/middle/bottom',
@@ -90,17 +116,17 @@ describe('program', () => {
         ])
       )
 
-      it(
+      mayTest(
         '--quiet',
         trackSpawnSnap(['--quiet'], ...xpath)
       )
 
-      it(
+      mayTest(
         '--quiet-pnpm',
         trackSpawnSnap(['--quiet-pnpm'], ...xpath)
       )
 
-      it(
+      mayTest(
         '--quiet-step',
         trackSpawnSnap(['--quiet-step'], ...xpath)
       )
