@@ -118,25 +118,28 @@ describe('program', () => {
 
   describe('being invoked with paths', () => {
     const fn = (xpath = [], classes = []) => describe(xpath.join(' '), () => {
-      mayTest(
+      const runTest = (desc = '', fn = () => {}, extraClasses = []) =>
+        mayTest(desc, fn, [...classes, ...extraClasses])
+
+      runTest(
         'without options',
         trackSpawnSnap(xpath),
-        [...classes, 'no-options', 'basic']
+        ['no-options', 'basic']
       )
 
-      mayTest(
+      runTest(
         '--pnpm=alt-pnpm',
         trackSpawnSnap(['--pnpm=alt-pnpm', ...xpath]),
-        [...classes, 'alt-pnpm', 'specified-alt-pnpm']
+        ['alt-pnpm', 'specified-alt-pnpm']
       )
 
-      mayTest(
+      runTest(
         '--local=explicitly-specified-target',
         trackSpawnSnap(['--local=explicitly-specified-target', ...xpath]),
-        [...classes, 'local', 'specified-local']
+        ['local', 'specified-local']
       )
 
-      mayTest(
+      runTest(
         '--packages-location=top/middle/bottom --local=explicitly-specified-pkgloc',
         trackSpawnSnap([
           '--packages-location=top/middle/bottom',
@@ -146,19 +149,19 @@ describe('program', () => {
         ['pkgloc', 'specified-pkgloc']
       )
 
-      mayTest(
+      runTest(
         '--quiet',
         trackSpawnSnap(['--quiet'], ...xpath),
         ['quiet', 'enable-quiet']
       )
 
-      mayTest(
+      runTest(
         '--quiet-pnpm',
         trackSpawnSnap(['--quiet-pnpm'], ...xpath),
         ['quiet-pnpm', 'enable-quiet-pnpm']
       )
 
-      mayTest(
+      runTest(
         '--quiet-step',
         trackSpawnSnap(['--quiet-step'], ...xpath),
         ['quiet-step', 'enable-quiet-step']
