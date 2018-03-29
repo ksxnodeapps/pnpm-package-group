@@ -28,7 +28,7 @@ const mayTest = (() => {
     ? classes => classes.some(x => exclusiveTestCases.includes(x))
     : () => true
 
-  const mayTest = (desc, fn, ...classes) => {
+  const mayTest = (desc = '', fn = () => {}, classes = []) => {
     if (isIgnored(classes)) return test.skip(desc, fn)
     if (!isExclusive(classes)) return test.skip(desc, fn)
     return test(desc, fn)
@@ -94,17 +94,23 @@ describe('program', () => {
   })
 
   describe('being invoked with paths', () => {
-    const fn = (...xpath) => describe(xpath.join(' '), () => {
-      mayTest('without options', trackSpawnSnap(xpath))
+    const fn = (xpath = [], classes = []) => describe(xpath.join(' '), () => {
+      mayTest(
+        'without options',
+        trackSpawnSnap(xpath),
+        [...classes, 'no-options', 'basic']
+      )
 
       mayTest(
         '--pnpm=alt-pnpm',
-        trackSpawnSnap(['--pnpm=alt-pnpm', ...xpath])
+        trackSpawnSnap(['--pnpm=alt-pnpm', ...xpath]),
+        [...classes, 'alt-pnpm', 'specified-alt-pnpm']
       )
 
       mayTest(
         '--local=explicitly-specified-target',
-        trackSpawnSnap(['--local=explicitly-specified-target', ...xpath])
+        trackSpawnSnap(['--local=explicitly-specified-target', ...xpath]),
+        [...classes, 'local', 'specified-local']
       )
 
       mayTest(
@@ -113,42 +119,46 @@ describe('program', () => {
           '--packages-location=top/middle/bottom',
           '--local=explicitly-specified-pkgloc',
           ...xpath
-        ])
+        ]),
+        ['pkgloc', 'specified-pkgloc']
       )
 
       mayTest(
         '--quiet',
-        trackSpawnSnap(['--quiet'], ...xpath)
+        trackSpawnSnap(['--quiet'], ...xpath),
+        ['quiet', 'enable-quiet']
       )
 
       mayTest(
         '--quiet-pnpm',
-        trackSpawnSnap(['--quiet-pnpm'], ...xpath)
+        trackSpawnSnap(['--quiet-pnpm'], ...xpath),
+        ['quiet-pnpm', 'enable-quiet-pnpm']
       )
 
       mayTest(
         '--quiet-step',
-        trackSpawnSnap(['--quiet-step'], ...xpath)
+        trackSpawnSnap(['--quiet-step'], ...xpath),
+        ['quiet-step', 'enable-quiet-step']
       )
     })
 
-    fn('../../input/valid.yaml')
-    fn('../../input/invalid-schema.yaml')
-    fn('../../input/invalid-syntax.txt')
+    fn(['../../input/valid.yaml'], ['one-file', 'valid'])
+    fn(['../../input/invalid-schema.yaml'], ['one-file', 'invalid', 'schema'])
+    fn(['../../input/invalid-syntax.txt'], ['one-file', 'invalid', 'syntax'])
 
-    fn('../../input/valid.yaml', '../../input/invalid-schema.yaml')
-    fn('../../input/valid.yaml', '../../input/invalid-syntax.txt')
-    fn('../../input/invalid-schema.yaml', '../../input/invalid-syntax.txt')
-    fn('../../input/valid.yaml', '../../input/invalid-schema.yaml', '../../input/invalid-syntax.txt')
+    fn(['../../input/valid.yaml', '../../input/invalid-schema.yaml'], ['mix'])
+    fn(['../../input/valid.yaml', '../../input/invalid-syntax.txt'], ['mix'])
+    fn(['../../input/invalid-schema.yaml', '../../input/invalid-syntax.txt'], ['mix'])
+    fn(['../../input/valid.yaml', '../../input/invalid-schema.yaml', '../../input/invalid-syntax.txt'], ['mix'])
 
-    fn('../../input/valid.yaml/Nested')
-    fn('../../input/valid.yaml/Flat')
-    fn('../../input/valid.yaml/Global')
-    fn('../../input/valid.yaml/DividedFlat')
-    fn('../../input/valid.yaml/SelectiveNested')
+    fn(['../../input/valid.yaml/Nested'], ['selective', 'valid'])
+    fn(['../../input/valid.yaml/Flat'], ['selective', 'valid'])
+    fn(['../../input/valid.yaml/Global'], ['selective', 'valid'])
+    fn(['../../input/valid.yaml/DividedFlat'], ['selective', 'valid'])
+    fn(['../../input/valid.yaml/SelectiveNested'], ['selective', 'valid'])
 
-    fn('../../input/valid.yaml/Nested/c')
-    fn('../../input/valid.yaml/Flat/i/l')
-    fn('../../input/valid.yaml/Global/i/l/p')
+    fn(['../../input/valid.yaml/Nested/c'], ['selective', 'valid'])
+    fn(['../../input/valid.yaml/Flat/i/l'], ['selective', 'valid'])
+    fn(['../../input/valid.yaml/Global/i/l/p'], ['selective', 'valid'])
   })
 })
