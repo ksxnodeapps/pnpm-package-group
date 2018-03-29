@@ -1649,7 +1649,7 @@ Object {
 [INFO] No global packages. Skipping.
 [INFO] BEGIN LOCAL
 [INFO] Installing local packages
-[INFO] Location:
+[INFO] Location: ((Current Working Directory))
 [INFO] Packages: c, d, f, g, k, n, p, t, v
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
@@ -1680,7 +1680,7 @@ Object {
 [INFO] No global packages. Skipping.
 [INFO] BEGIN LOCAL
 [INFO] Installing local packages
-[INFO] Location:
+[INFO] Location: ((Current Working Directory))
 [INFO] Packages: c, d, f, g, k, n, p, t, v
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
@@ -1710,7 +1710,7 @@ Object {
 [INFO] No global packages. Skipping.
 [INFO] BEGIN LOCAL
 [INFO] Installing local packages
-[INFO] Location:
+[INFO] Location: ((Current Working Directory))
 [INFO] Packages: c, d, f, g, k, n, p, t, v
 This is alternate pnpm
 [INFO] Step Result { status: 0, signal: null, error: undefined }
@@ -1790,7 +1790,7 @@ Object {
 [INFO] No global packages. Skipping.
 [INFO] BEGIN LOCAL
 [INFO] Installing local packages
-[INFO] Location:
+[INFO] Location: ((Current Working Directory))
 [INFO] Packages: c, d, f, g, k, n, p, t, v
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
