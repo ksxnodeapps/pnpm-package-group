@@ -27,7 +27,6 @@
     "get-stdin": "^6.0.0",
     "js-yaml": "^3.10.0",
     "number-enum": "^2.1.1",
-    "pnpm": "^1.30.2",
     "ramda": "^0.25.0",
     "string-template": "^1.0.0",
     "yargs": "^11.0.0"
@@ -43,6 +42,9 @@
     "just-try": "^2.0.1",
     "standard": "^11.0.0",
     "x-iterable": "^6.0.1"
+  },
+  "optionalDependencies": {
+    "pnpm": "^1.37.3"
   },
   "engines": {
     "node": ">= 8.9.0"
