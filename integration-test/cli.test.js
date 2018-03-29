@@ -106,10 +106,14 @@ describe('program', () => {
     mayTest(
       'which contain valid syntax but invalid schema',
       mkfn('input/invalid-schema.yaml'),
-      ['stdin', 'invalid', 'basic']
+      ['stdin', 'invalid', 'schema', 'basic']
     )
 
-    mayTest('which contain invalid syntax', mkfn('input/invalid-syntax.txt'))
+    mayTest(
+      'which contain invalid syntax',
+      mkfn('input/invalid-syntax.txt'),
+      ['stdin', 'invalid', 'syntax', 'basic']
+    )
   })
 
   describe('being invoked with paths', () => {
