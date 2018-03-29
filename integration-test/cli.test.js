@@ -48,7 +48,7 @@ describe('program', () => {
   process.chdir(workingDirectory)
 
   if (env.SKIP_INTEGRATION_TEST === 'true') {
-    test.only('Skip Integration Test', () => {})
+    test.only('Skipped', () => {})
   }
 
   it('--help', trackSpawnSnap(['--help']))
