@@ -172,7 +172,7 @@ describe('program', () => {
     fn(['../../input/valid.yaml', '../../input/invalid-schema.yaml'], ['mix', 'invalid'])
     fn(['../../input/valid.yaml', '../../input/invalid-syntax.txt'], ['mix', 'invalid'])
     fn(['../../input/invalid-schema.yaml', '../../input/invalid-syntax.txt'], ['mix', 'invalid'])
-    fn(['../../input/valid.yaml', '../../input/invalid-schema.yaml', '../../input/invalid-syntax.txt', 'invalid'], ['mix'])
+    fn(['../../input/valid.yaml', '../../input/invalid-schema.yaml', '../../input/invalid-syntax.txt'], ['mix', 'invalid'])
 
     fn(['../../input/valid.yaml/Nested'], ['selective', 'valid'])
     fn(['../../input/valid.yaml/Flat'], ['selective', 'valid'])
