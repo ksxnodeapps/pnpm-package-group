@@ -68,6 +68,11 @@ describe('program', () => {
       it('without options', trackSpawnSnap(xpath))
 
       it(
+        '--pnpm=alt-pnpm',
+        trackSpawnSnap(['--pnpm=alt-pnpm', ...xpath])
+      )
+
+      it(
         '--local=explicitly-specified-target',
         trackSpawnSnap(['--local=explicitly-specified-target', ...xpath])
       )
