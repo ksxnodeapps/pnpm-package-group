@@ -31,6 +31,12 @@ options:
     type: string
     default: '__pkgs__'
 
+  latest:
+    alias: ['u', 'update']
+    describe: Add '@latest' suffix
+    type: boolean
+    default: false
+
   pnpm:
     describe: Program to call
     type: string

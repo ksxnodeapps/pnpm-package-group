@@ -150,6 +150,12 @@ describe('program', () => {
       )
 
       runTest(
+        '--latest',
+        trackSpawnSnap(['--latest'], ...xpath),
+        ['latest', 'enable-latest']
+      )
+
+      runTest(
         '--quiet',
         trackSpawnSnap(['--quiet'], ...xpath),
         ['quiet', 'enable-quiet']

@@ -19,6 +19,7 @@ Options:
                                                   [string] [default: \\"__tree__\\"]
   --packages-location, --pkg-loc  Directory that contains package.json and
                                   node_modules    [string] [default: \\"__pkgs__\\"]
+  --latest, -u, --update          Add '@latest' suffix[boolean] [default: false]
   --pnpm                          Program to call     [string] [default: \\"pnpm\\"]
   --shell                         Whether shell is used[boolean] [default: true]
   --quiet                         Don't print anything[boolean] [default: false]
@@ -52,6 +53,23 @@ Examples:
 exports[`program being invoked with neither arguments nor stdin  1`] = `
 Object {
   "argv": Array [],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
   "error": undefined,
   "signal": null,
   "status": 7,
@@ -199,6 +217,23 @@ Object {
 }
 `;
 
+exports[`program being invoked with paths ../../input/invalid-schema.yaml --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
 exports[`program being invoked with paths ../../input/invalid-schema.yaml --local=explicitly-specified-target 1`] = `
 Object {
   "argv": Array [
@@ -309,6 +344,23 @@ exports[`program being invoked with paths ../../input/invalid-schema.yaml withou
 Object {
   "argv": Array [
     "../../input/invalid-schema.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/invalid-syntax.txt --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
   ],
   "error": undefined,
   "signal": null,
@@ -447,6 +499,23 @@ Object {
 [ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
     abc: def: ghi
             ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml ../../input/invalid-syntax.txt --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
 
 ",
   "stdout": "(EMPTY STRING)",
@@ -592,6 +661,23 @@ Object {
 }
 `;
 
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
 exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-schema.yaml --local=explicitly-specified-target 1`] = `
 Object {
   "argv": Array [
@@ -706,6 +792,23 @@ Object {
   "argv": Array [
     "../../input/valid.yaml",
     "../../input/invalid-schema.yaml",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml ../../input/invalid-syntax.txt --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
   ],
   "error": undefined,
   "signal": null,
@@ -848,6 +951,23 @@ Object {
 [ERROR] (schema) incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 9:
     abc: def: ghi
             ^
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
 
 ",
   "stdout": "(EMPTY STRING)",
@@ -1292,6 +1412,23 @@ Called fake pnpm with arguments: [ 'install', '--save', 'p' ]
 }
 `;
 
+exports[`program being invoked with paths ../../input/valid.yaml/DividedFlat --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
 exports[`program being invoked with paths ../../input/valid.yaml/DividedFlat --local=explicitly-specified-target 1`] = `
 Object {
   "argv": Array [
@@ -1479,6 +1616,23 @@ Called fake pnpm with arguments: [ 'install', '--save', 'k', 'n', 'p', 't', 'v' 
 }
 `;
 
+exports[`program being invoked with paths ../../input/valid.yaml/Flat --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
 exports[`program being invoked with paths ../../input/valid.yaml/Flat --local=explicitly-specified-target 1`] = `
 Object {
   "argv": Array [
@@ -1495,7 +1649,7 @@ Object {
 [INFO] No global packages. Skipping.
 [INFO] BEGIN LOCAL
 [INFO] Installing local packages
-[INFO] Location: 
+[INFO] Location:
 [INFO] Packages: c, d, f, g, k, n, p, t, v
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
@@ -1526,7 +1680,7 @@ Object {
 [INFO] No global packages. Skipping.
 [INFO] BEGIN LOCAL
 [INFO] Installing local packages
-[INFO] Location: 
+[INFO] Location:
 [INFO] Packages: c, d, f, g, k, n, p, t, v
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
@@ -1556,7 +1710,7 @@ Object {
 [INFO] No global packages. Skipping.
 [INFO] BEGIN LOCAL
 [INFO] Installing local packages
-[INFO] Location: 
+[INFO] Location:
 [INFO] Packages: c, d, f, g, k, n, p, t, v
 This is alternate pnpm
 [INFO] Step Result { status: 0, signal: null, error: undefined }
@@ -1636,7 +1790,7 @@ Object {
 [INFO] No global packages. Skipping.
 [INFO] BEGIN LOCAL
 [INFO] Installing local packages
-[INFO] Location: 
+[INFO] Location:
 [INFO] Packages: c, d, f, g, k, n, p, t, v
 Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k', 'n', 'p', 't', 'v' ]
 [INFO] Step Result { status: 0, signal: null, error: undefined }
@@ -1647,6 +1801,23 @@ Called fake pnpm with arguments: [ 'install', '--save', 'c', 'd', 'f', 'g', 'k',
 [INFO] END
 
 ",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Flat/i/l --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
 }
 `;
 
@@ -1869,6 +2040,23 @@ Called fake pnpm with arguments: [ 'install', '--save', 'v' ]
 }
 `;
 
+exports[`program being invoked with paths ../../input/valid.yaml/Global --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
 exports[`program being invoked with paths ../../input/valid.yaml/Global --local=explicitly-specified-target 1`] = `
 Object {
   "argv": Array [
@@ -2028,6 +2216,23 @@ Called fake pnpm with arguments: [ 'install', '--global', 'c', 'd', 'f', 'g', 'k
 }
 `;
 
+exports[`program being invoked with paths ../../input/valid.yaml/Global/i/l/p --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
 exports[`program being invoked with paths ../../input/valid.yaml/Global/i/l/p --local=explicitly-specified-target 1`] = `
 Object {
   "argv": Array [
@@ -2145,6 +2350,23 @@ Object {
   "stderr": "
 
 [ERROR] (schema) Cannot convert undefined or null to object
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/Nested --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
 
 ",
   "stdout": "(EMPTY STRING)",
@@ -2354,6 +2576,23 @@ Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
 }
 `;
 
+exports[`program being invoked with paths ../../input/valid.yaml/Nested/c --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
+}
+`;
+
 exports[`program being invoked with paths ../../input/valid.yaml/Nested/c --local=explicitly-specified-target 1`] = `
 Object {
   "argv": Array [
@@ -2538,6 +2777,23 @@ Called fake pnpm with arguments: [ 'install', '--save', 'f' ]
 [INFO] END
 
 ",
+}
+`;
+
+exports[`program being invoked with paths ../../input/valid.yaml/SelectiveNested --latest 1`] = `
+Object {
+  "argv": Array [
+    "--latest",
+  ],
+  "error": undefined,
+  "signal": null,
+  "status": 7,
+  "stderr": "
+
+[ERROR] (schema) Invalid type of tree
+
+",
+  "stdout": "(EMPTY STRING)",
 }
 `;
 

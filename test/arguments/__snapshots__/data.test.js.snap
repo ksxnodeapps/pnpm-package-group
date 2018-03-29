@@ -40,6 +40,15 @@ Object {
       "help": Object {
         "alias": "h",
       },
+      "latest": Object {
+        "alias": Array [
+          "u",
+          "update",
+        ],
+        "default": false,
+        "describe": "Add '@latest' suffix",
+        "type": "boolean",
+      },
       "local": Object {
         "alias": "l",
         "default": "__tree__",
@@ -123,6 +132,15 @@ Object {
       },
       "help": Object {
         "alias": "h",
+      },
+      "latest": Object {
+        "alias": Array [
+          "u",
+          "update",
+        ],
+        "default": false,
+        "describe": "Add '@latest' suffix",
+        "type": "boolean",
       },
       "local": Object {
         "alias": "l",
