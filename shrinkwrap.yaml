@@ -1,17 +1,18 @@
 dependencies:
-  '@types/execa': 0.9.0
-  execa: 0.10.0
+  deepmerge: 2.1.0
   fs-force: 3.1.1
   get-stdin: 6.0.0
   js-yaml: 3.11.0
   number-enum: 2.1.1
-  pnpm: 1.35.10
+  ramda: 0.25.0
   string-template: 1.0.0
   yargs: 11.0.0
 devDependencies:
   '@pnpm/types': 1.7.0
+  '@types/deepmerge': 2.1.0
   '@types/get-stdin': 5.0.1
   '@types/js-yaml': 3.10.1
+  '@types/ramda': 0.25.21
   '@types/string-template': 1.0.2
   jest-cli: 22.4.2
   just-try: 2.0.1
@@ -36,12 +37,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-pn7g4uxcofWTNG/cxmKvkMK2lxr4OUIhrQDrEVYEdVhW0WkWztsHkFrYjFgfNzPbYu3ITlB3T6aSVjCoJQTOlw==
-  /@types/execa/0.9.0:
-    dependencies:
-      '@types/node': 9.4.7
-    dev: false
+  /@types/deepmerge/2.1.0:
+    dev: true
     resolution:
-      integrity: sha512-mgfd93RhzjYBUHHV532turHC2j4l/qxsF/PbfDmprHDEUHmNZGlDn1CEsulGK3AfsPdhkWzZQT/S/k0UGhLGsA==
+      integrity: sha512-/0Ct/q5g+SgaACZ+A0ylY3071nEBN7QDnTWiCtaB3fx24UpoAQXf25yNVloOYVUis7jytM1F1WC78+EOwXkQJQ==
   /@types/get-stdin/5.0.1:
     dependencies:
       '@types/node': 9.4.7
@@ -53,9 +52,14 @@ packages:
     resolution:
       integrity: sha512-IpKg0KGIUNcydttaGURhSLrq1eSNoSjN7T1MokAuasIPBKzsHxcz3MAdFGzasmYQVWf6XxG+jQTJ9UFOL29Ubg==
   /@types/node/9.4.7:
+    dev: true
     resolution:
       integrity: sha512-4Ba90mWNx8ddbafuyGGwjkZMigi+AWfYLSDCpovwsE63ia8w93r3oJ8PIAQc3y8U+XHcnMOHPIzNe3o438Ywcw==
       tarball: 'http://registry.npmjs.org/@types/node/-/node-9.4.7.tgz'
+  /@types/ramda/0.25.21:
+    dev: true
+    resolution:
+      integrity: sha512-y4Dx3t+EA5Y+s87cwUoIzo0Tsj9z7QCu4gaXrdFln4wQRgk9igBskEEe7gZ0PG8dSXtQb29oA3RS//3XquHdiw==
   /@types/string-template/1.0.2:
     dev: true
     resolution:
@@ -793,18 +797,6 @@ packages:
       which: 1.3.0
     resolution:
       integrity: sha1-6L0O/uWPz/b4+UUQoKVUu/ojVEk=
-  /cross-spawn/6.0.5:
-    dependencies:
-      nice-try: 1.0.4
-      path-key: 2.0.1
-      semver: 5.5.0
-      shebang-command: 1.2.0
-      which: 1.3.0
-    dev: false
-    engines:
-      node: '>=4.8'
-    resolution:
-      integrity: sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ==
   /cryptiles/3.1.2:
     dependencies:
       boom: 5.2.0
@@ -874,6 +866,12 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha1-YelrWbVV4sx14gQN3Ufwso6B/sw=
+  /deepmerge/2.1.0:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-Q89Z26KAfA3lpPGhbF6XMfYAm3jIV3avViy6KOJ2JLzFbeWHOvPQUu5aSJIWXap3gDZC2y1eF5HXEPI2wGqgvw==
   /default-require-extensions/1.0.0:
     dependencies:
       strip-bom: 2.0.0
@@ -1273,20 +1271,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-aLt95pexaugVtQerpmE51+4QfWrNc304uez7jvj6fWnN8GeEHpttB8F36n8N7uVhUMbH/1enbxQ9HImZ4w/9qg==
-  /execa/0.10.0:
-    dependencies:
-      cross-spawn: 6.0.5
-      get-stream: 3.0.0
-      is-stream: 1.1.0
-      npm-run-path: 2.0.2
-      p-finally: 1.0.0
-      signal-exit: 3.0.2
-      strip-eof: 1.0.0
-    dev: false
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha512-7XOMnz8Ynx1gGo/3hyV9loYNPWM94jG3+3T3Y8tsfSstFmETmENCMU/A/zj8Lyaj1lkgEepKepvd6240tBRvlw==
   /execa/0.7.0:
     dependencies:
       cross-spawn: 5.1.0
@@ -3008,10 +2992,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
-  /nice-try/1.0.4:
-    dev: false
-    resolution:
-      integrity: sha512-2NpiFHqC87y/zFke0fC0spBXL3bBsoh/p5H1EFhshxjCR5+0g2d6BiXbUFz9v1sAcxsk2htp2eQnNIci2dIYcA==
   /node-fetch/1.7.3:
     dependencies:
       encoding: 0.1.12
@@ -3383,12 +3363,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
-  /pnpm/1.35.10:
-    dev: false
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha1-GoqqiuIjN2UnSWHTDOw4+JFL+gc=
   /posix-character-classes/0.1.1:
     dev: true
     engines:
@@ -3473,6 +3447,10 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-eRzhrN1WSINYCDCbrz796z37LOe3m5tmW7RQf6oBntukAG1nmovJvhnwHHRMAfeoItc1m2Hk02WER2aQ/iqs+A==
+  /ramda/0.25.0:
+    dev: false
+    resolution:
+      integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
   /randomatic/1.1.7:
     dependencies:
       is-number: 3.0.0
@@ -3783,6 +3761,7 @@ packages:
     resolution:
       integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
   /semver/5.5.0:
+    dev: true
     resolution:
       integrity: sha512-4SJ3dm0WAwWy/NVeioZh5AntkdJoWKxHxcmyP622fOkgHa4z3R0TdBJICINyaSDE6uNwVc8gZr+ZinwZAH4xIA==
   /set-blocking/2.0.0:
@@ -4586,6 +4565,7 @@ packages:
     dev: false
     name: fs-force-action-as-string
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/ksxnodemodules/fs-force-action-as-string/tar.gz/HEAD'
     version: 0.0.0
   github.com/ksxnodemodules/fs-force-utils/045ba6b68a3f00598173a3aaf8c3b8c14ff3b62f:
@@ -4596,6 +4576,7 @@ packages:
       node: '>= 6.0.0'
     name: fs-force-utils
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/ksxnodemodules/fs-force-utils/tar.gz/045ba6b68a3f00598173a3aaf8c3b8c14ff3b62f'
     version: 0.0.0
   github.com/ksxnodemodules/promise-queue/5773019c5b20c3ccf3a6e888a502af6aac56d88c:
@@ -4606,6 +4587,7 @@ packages:
       node: '>=6.0.0'
     name: promise-queue
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/ksxnodemodules/promise-queue/tar.gz/5773019c5b20c3ccf3a6e888a502af6aac56d88c'
     version: 1.0.1
 registry: 'https://registry.npmjs.org/'
@@ -4613,18 +4595,19 @@ shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
   '@pnpm/types': ^1.7.0
-  '@types/execa': ^0.9.0
+  '@types/deepmerge': ^2.1.0
   '@types/get-stdin': ^5.0.1
   '@types/js-yaml': ^3.10.1
+  '@types/ramda': ^0.25.20
   '@types/string-template': ^1.0.2
-  execa: ^0.10.0
+  deepmerge: ^2.1.0
   fs-force: ^3.1.1
   get-stdin: ^6.0.0
   jest-cli: ^22.1.4
   js-yaml: ^3.10.0
   just-try: ^2.0.1
   number-enum: ^2.1.1
-  pnpm: ^1.30.2
+  ramda: ^0.25.0
   standard: ^11.0.0
   string-template: ^1.0.0
   x-iterable: ^6.0.1
