@@ -5,11 +5,23 @@ const process = require('process')
 const {spawnSync} = require('child_process')
 const fsForce = require('fs-force')
 const {envMod} = require('../lib.dev/path-env')
+const objUtils = require('../lib/object-utils')
 const executable = require.resolve('../index.js')
 
-const env = envMod()
-  .surround(path.resolve(__dirname, 'virtual-env/bin'))
-  .get()
+const env = (() => {
+  const orgEnv = envMod()
+    .surround(path.resolve(__dirname, 'virtual-env/bin'))
+    .get()
+
+  // Eliminate PNPM_PKG_GROUP environment variables
+  const env = objUtils.filterEntries(
+    orgEnv,
+    ([key]) =>
+      !/^PNPM_PKG_GROUP/.test(key)
+  )
+
+  return env
+})()
 
 const mayTest = (() => {
   const {
