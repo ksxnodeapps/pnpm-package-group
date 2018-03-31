@@ -34,3 +34,37 @@ describe('merge function', () => {
     )).toMatchSnapshot()
   })
 })
+
+describe('filterEntries function', () => {
+  const object = {
+    abc: 'abc',
+    def: 'abc',
+    ABC: 'DEF',
+    DEF: 'DEF'
+  }
+
+  const filter = ([key, val]) => key === val
+
+  it('works', () => {
+    expect(
+      subject.filterEntries(object, filter)
+    ).toEqual({
+      abc: 'abc',
+      DEF: 'DEF'
+    })
+  })
+
+  it('stay unchaned', () => {
+    expect(
+      subject.filterEntries(object, filter)
+    ).toMatchSnapshot()
+  })
+
+  it('provides original object as second argument', () => {
+    subject.filterEntries(
+      object,
+      (_, secondArgument) =>
+        expect(secondArgument).toBe(object)
+    )
+  })
+})

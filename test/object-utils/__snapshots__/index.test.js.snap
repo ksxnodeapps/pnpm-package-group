@@ -1,5 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`filterEntries function stay unchaned 1`] = `
+Object {
+  "DEF": "DEF",
+  "abc": "abc",
+}
+`;
+
 exports[`merge function stays unchanged 1`] = `
 Object {
   "a": "A",
