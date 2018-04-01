@@ -25,3 +25,15 @@ Object {
   "f": "F",
 }
 `;
+
+exports[`nestedObject function stays unchaned 1`] = `
+Object {
+  "abc": Object {
+    "def": Object {
+      "ghi": Object {
+        "jkl": "nestedObject first argument",
+      },
+    },
+  },
+}
+`;

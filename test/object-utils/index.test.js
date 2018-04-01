@@ -35,6 +35,16 @@ describe('merge function', () => {
   })
 })
 
+describe('nestedObject function', () => {
+  const value = 'nestedObject first argument'
+  const path = ['abc', 'def', 'ghi', 'jkl']
+  const received = subject.nestedObject(value, path)
+  const expected = {abc: {def: {ghi: {jkl: value}}}}
+
+  it('works', () => expect(received).toEqual(expected))
+  it('stays unchaned', () => expect(received).toMatchSnapshot())
+})
+
 describe('filterEntries function', () => {
   const object = {
     abc: 'abc',
