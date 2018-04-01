@@ -161,6 +161,15 @@ describe('program', () => {
       )
 
       runTest(
+        '--preserve-property-path --local=enable-preserve-property-path',
+        trackSpawnSnap([
+          '--preserve-property-path',
+          '--local=enable-preserve-property-path'
+        ]),
+        ['preserve-property-path', 'enable-preserve-property-path']
+      )
+
+      runTest(
         '--latest',
         trackSpawnSnap(['--latest'], ...xpath),
         ['latest', 'enable-latest']

@@ -72,6 +72,11 @@ Object {
         "describe": "Program to call",
         "type": "string",
       },
+      "preserve-property-path": Object {
+        "default": false,
+        "describe": "Whether property path is appended to '--local'",
+        "type": "boolean",
+      },
       "quiet": Object {
         "default": false,
         "describe": "Don't print anything",
@@ -164,6 +169,11 @@ Object {
         "default": "pnpm",
         "describe": "Program to call",
         "type": "string",
+      },
+      "preserve-property-path": Object {
+        "default": false,
+        "describe": "Whether property path is appended to '--local'",
+        "type": "boolean",
       },
       "quiet": Object {
         "default": false,
