@@ -155,8 +155,7 @@ describe('program', () => {
         '--packages-location=top/middle/bottom --local=explicitly-specified-pkgloc',
         trackSpawnSnap([
           '--packages-location=top/middle/bottom',
-          '--local=explicitly-specified-pkgloc',
-          ...xpath
+          '--local=explicitly-specified-pkgloc'
         ]),
         ['pkgloc', 'specified-pkgloc']
       )
