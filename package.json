@@ -25,7 +25,7 @@
     "fs-force": "^3.1.1",
     "get-stdin": "^6.0.0",
     "js-yaml": "^3.10.0",
-    "number-enum": "^2.1.1",
+    "number-enum": "^3.0.0",
     "ramda": "^0.25.0",
     "string-template": "^1.0.0",
     "yargs": "^11.0.0"
