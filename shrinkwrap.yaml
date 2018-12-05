@@ -8,7 +8,7 @@ dependencies:
   string-template: 1.0.0
   yargs: 11.1.0
 devDependencies:
-  '@pnpm/types': 1.8.0
+  '@pnpm/types': 2.0.0
   '@types/deepmerge': 2.2.0
   '@types/get-stdin': 5.0.1
   '@types/js-yaml': 3.11.2
@@ -46,10 +46,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-oouEibCbHMVdZSDlJBO6bZmID/zA/G/Qx3H1d3rSNPTD+L8UNKvCat7aKWSJ74zYbm5zWGh0GQN0hKj8zYFTCg==
-  /@pnpm/types/1.8.0:
+  /@pnpm/types/2.0.0:
     dev: true
+    engines:
+      node: '>=6'
     resolution:
-      integrity: sha512-NsEzBVa5aMgn/n79piyJtpUQFzJ97tB2R2r8PSJlLnMA6LJmchKuv7ATN+/nZH/3QRd/+uFXEq07/i/ajsqVGQ==
+      integrity: sha512-jBLjrZjafStD0DFjnsiiGVXclkLieRPjfg6fyHI1rGvvACMPOW/sNweFBCxKI7B2o7U5mdjVX3OgKPnhXx70zw==
   /@types/deepmerge/2.2.0:
     dependencies:
       deepmerge: 3.0.0
@@ -4495,7 +4497,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  '@pnpm/types': ^1.7.0
+  '@pnpm/types': ^2.0.0
   '@types/deepmerge': ^2.1.0
   '@types/get-stdin': ^5.0.1
   '@types/js-yaml': ^3.10.1
