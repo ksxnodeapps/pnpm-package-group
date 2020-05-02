@@ -26,7 +26,7 @@
     "get-stdin": "^7.0.0",
     "js-yaml": "^3.10.0",
     "number-enum": "^3.0.0",
-    "ramda": "^0.26.0",
+    "ramda": "^0.27.0",
     "string-template": "^1.0.0",
     "yargs": "^11.0.0"
   },
@@ -35,7 +35,7 @@
     "@types/deepmerge": "^2.1.0",
     "@types/get-stdin": "^5.0.1",
     "@types/js-yaml": "^3.10.1",
-    "@types/ramda": "^0.26.0",
+    "@types/ramda": "^0.27.0",
     "@types/string-template": "^1.0.2",
     "jest-cli": "^23.0.0",
     "just-try": "^2.0.1",
