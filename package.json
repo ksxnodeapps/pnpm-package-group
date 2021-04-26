@@ -31,7 +31,7 @@
     "yargs": "^11.0.0"
   },
   "devDependencies": {
-    "@pnpm/types": "^1.7.0",
+    "@pnpm/types": "^7.0.0",
     "@types/deepmerge": "^2.1.0",
     "@types/get-stdin": "^5.0.1",
     "@types/js-yaml": "^3.10.1",
